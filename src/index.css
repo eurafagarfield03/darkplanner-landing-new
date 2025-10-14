@@ -67,6 +67,21 @@ All colors MUST be HSL.
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold;
   }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Remove scrollbar on scroll containers */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @layer utilities {
@@ -82,5 +97,28 @@ All colors MUST be HSL.
 
   .glow-effect {
     box-shadow: var(--shadow-glow);
+  }
+  
+  /* Hover 3D effect */
+  .hover-3d {
+    transition: all 0.3s ease;
+  }
+  
+  .hover-3d:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) scale(1.02);
+  }
+  
+  /* Gradient border animation */
+  @keyframes gradient-border {
+    0%, 100% {
+      border-color: hsl(188 94% 43%);
+    }
+    50% {
+      border-color: hsl(217 91% 60%);
+    }
+  }
+  
+  .animate-gradient-border {
+    animation: gradient-border 3s ease-in-out infinite;
   }
 }
