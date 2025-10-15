@@ -74,17 +74,17 @@ export const StatsCounter = () => {
         <div className="glass-card rounded-3xl p-12 md:p-16 border-2 border-primary/20">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-black mb-3">
-              Números que comprovam
+              A realidade de quem usa
             </h2>
             <p className="text-muted-foreground text-lg">
-              Resultados reais de creators usando Dark Planner
+              Números reais, creators reais
             </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-12">
             <StatCounter end={2000} label="Creators Ativos" suffix="+" />
-            <StatCounter end={5} label="Milhões de Vídeos" suffix="M+" />
-            <StatCounter end={20} label="Horas Economizadas" suffix="h/semana" />
+            <StatCounter end={15} label="Vídeos por Semana" suffix="+" />
+            <StatCounter end={5} label="Horas Economizadas" suffix="h/dia" />
             <StatCounter end={300} label="Crescimento Médio" suffix="%" />
           </div>
         </div>

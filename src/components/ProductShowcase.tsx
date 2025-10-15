@@ -9,34 +9,34 @@ import viralVideos from "@/assets/viral-videos.png";
 const tools = [
   {
     id: "dashboard",
-    label: "Dashboard",
+    label: "Dashboard Central",
     icon: BarChart3,
-    title: "Visão Geral Completa",
-    description: "Acompanhe todos os seus canais, vídeos e métricas em tempo real",
+    title: "Todo o sistema em uma tela",
+    description: "Veja seus canais, próximos vídeos, roteiros pendentes e prompts mais usados. Tudo organizado para você começar o dia sabendo exatamente o que fazer.",
     image: dashboardPreview,
   },
   {
     id: "channels",
     label: "Gestão de Canais",
     icon: VideoIcon,
-    title: "Gerencie Múltiplos Canais",
-    description: "Organize e planeje conteúdo para todos os seus canais em um só lugar",
+    title: "Quantos canais você quiser",
+    description: "Cada canal tem suas pastas, roteiros, prompts e referências. Você alterna entre eles em 1 clique. Escale sem confusão.",
     image: channelManagement,
   },
   {
     id: "srt",
     label: "Gerador SRT",
     icon: FileText,
-    title: "Legendas Profissionais",
-    description: "Crie legendas automaticamente com presets otimizados",
+    title: "Legendas perfeitas para o CapCut",
+    description: "Cole seu roteiro, ajuste o timing e gere o arquivo SRT. Importa direto no CapCut com as palavras sincronizadas. Economiza 20+ minutos por vídeo.",
     image: srtGenerator,
   },
   {
     id: "viral",
-    label: "Vídeos Virais",
+    label: "Buscador de Virais",
     icon: TrendingUp,
-    title: "Encontre Tendências",
-    description: "Descubra vídeos virais para inspirar seu próximo conteúdo",
+    title: "Copie o que está funcionando",
+    description: "Busque vídeos virais filtrados por país, views, data. Veja o que está explodindo agora e adapte para o seu canal. Pare de adivinhar.",
     image: viralVideos,
   },
 ];
@@ -52,10 +52,10 @@ export const ProductShowcase = () => {
       <div className="container max-w-7xl relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-6xl font-black mb-6">
-            Veja o <span className="text-gradient">Dark Planner</span> em ação
+            Como funciona <span className="text-gradient">na prática</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Interface intuitiva com todas as ferramentas que você precisa para escalar seus canais
+            Veja as principais ferramentas do sistema em ação
           </p>
         </div>
 
@@ -99,14 +99,14 @@ export const ProductShowcase = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-3 pt-4">
-                      <div className="px-4 py-2 rounded-full bg-primary/10 border border-primary/30">
-                        <span className="text-sm font-semibold">✓ Interface Intuitiva</span>
+                      <div className="px-4 py-2 rounded-full bg-success/10 border border-success/30">
+                        <span className="text-sm font-semibold text-success">✓ Rápido e simples</span>
                       </div>
-                      <div className="px-4 py-2 rounded-full bg-primary/10 border border-primary/30">
-                        <span className="text-sm font-semibold">✓ Automação IA</span>
+                      <div className="px-4 py-2 rounded-full bg-success/10 border border-success/30">
+                        <span className="text-sm font-semibold text-success">✓ Economiza horas</span>
                       </div>
-                      <div className="px-4 py-2 rounded-full bg-primary/10 border border-primary/30">
-                        <span className="text-sm font-semibold">✓ Resultados Rápidos</span>
+                      <div className="px-4 py-2 rounded-full bg-success/10 border border-success/30">
+                        <span className="text-sm font-semibold text-success">✓ Aumenta produção</span>
                       </div>
                     </div>
                   </div>

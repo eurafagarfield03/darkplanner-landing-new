@@ -4,49 +4,49 @@ const tools = [
   {
     icon: Calendar,
     name: "Gestão de Canais",
-    description: "Organize múltiplos canais e planeje seu conteúdo mensal",
+    description: "Crie quantos canais quiser. Cada um com suas pastas, roteiros e referências separadas.",
     color: "from-cyan-500 to-blue-500",
   },
   {
     icon: FileText,
-    name: "Editor de Roteiro",
-    description: "Escreva roteiros com contador de tempo e caracteres",
+    name: "Biblioteca de Prompts",
+    description: "Salve todos os prompts que funcionam. Reutilize o que já deu certo em segundos.",
     color: "from-blue-500 to-purple-500",
   },
   {
     icon: Video,
-    name: "Gerador de SRT",
-    description: "Crie legendas profissionais automaticamente",
+    name: "Gestão de Roteiros",
+    description: "Conecte roteiros aos vídeos. Nunca mais procure \"aquele\" roteiro específico.",
     color: "from-purple-500 to-pink-500",
   },
   {
     icon: Scissors,
-    name: "Divisor de Texto",
-    description: "Divida textos longos para diferentes plataformas",
+    name: "Gerador de SRT",
+    description: "Crie legendas para CapCut com timestamp perfeito. Cole e pronto.",
     color: "from-pink-500 to-red-500",
   },
   {
     icon: TrendingUp,
-    name: "Vídeos Virais",
-    description: "Encontre tendências e vídeos que estão bombando",
+    name: "Buscador de Virais",
+    description: "Encontre vídeos que estão explodindo AGORA. Filtre por views, país, data.",
     color: "from-red-500 to-orange-500",
   },
   {
     icon: Search,
-    name: "Referências de Canais",
-    description: "Acompanhe e analise canais de sucesso no seu nicho",
+    name: "Referências de Thumbnails",
+    description: "Salve thumbnails que converteram. Compare antes de publicar.",
     color: "from-orange-500 to-yellow-500",
   },
   {
     icon: BarChart,
-    name: "Analytics",
-    description: "Acompanhe o desempenho de todos os seus vídeos",
+    name: "Planejamento de Vídeos",
+    description: "Veja os próximos 30 dias do canal. Saiba exatamente o que produzir.",
     color: "from-yellow-500 to-green-500",
   },
   {
     icon: Sparkles,
-    name: "IA Integrada",
-    description: "Geração automática de ideias e otimizações",
+    name: "Biblioteca de Referências",
+    description: "Salve canais, links, ideias. Acesse tudo em um clique quando precisar.",
     color: "from-green-500 to-cyan-500",
   },
 ];
@@ -57,10 +57,10 @@ export const ToolsGrid = () => {
       <div className="container max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            <span className="text-gradient">8 ferramentas poderosas</span> em uma plataforma
+            Tudo que você precisa <span className="text-gradient">em um lugar</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Tudo que você precisa para produzir, planejar e escalar seus canais faceless
+            8 ferramentas que eliminam o caos e multiplicam sua produção
           </p>
         </div>
 

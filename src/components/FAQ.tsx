@@ -8,28 +8,28 @@ import { HelpCircle } from "lucide-react";
 
 const faqs = [
   {
-    question: "Dark Planner funciona para iniciantes?",
-    answer: "Sim! O Dark Planner foi projetado para ser intuitivo tanto para iniciantes quanto para creators experientes. Temos tutoriais completos e suporte dedicado para te ajudar a começar."
+    question: "Posso usar em quantos canais?",
+    answer: "Sim! Você pode criar e gerenciar quantos canais quiser. Não há limite de projetos em nenhum plano. Creators do Dark Planner gerenciam de 2 a 15+ canais simultaneamente."
   },
   {
-    question: "Posso gerenciar quantos canais?",
-    answer: "Você pode gerenciar quantos canais quiser! Não há limite de canais na plataforma. Muitos dos nossos usuários gerenciam 5+ canais simultaneamente."
+    question: "Funciona para qualquer nicho Dark?",
+    answer: "Sim! O Dark Planner foi criado para organizar qualquer tipo de canal faceless: curiosidades, listas, mistérios, tecnologia, finanças, automação, história, ciência, etc. A estrutura se adapta a qualquer nicho."
   },
   {
-    question: "O Dark Planner tem integração com YouTube?",
-    answer: "Sim! Você pode conectar seus canais do YouTube e importar dados diretamente, além de acompanhar métricas e analytics em tempo real."
+    question: "É difícil de usar?",
+    answer: "Não! A interface foi pensada para ser intuitiva. Em 5 minutos você já estará cadastrando seus primeiros prompts e organizando seus canais. Não precisa de conhecimento técnico."
   },
   {
-    question: "Como funciona o teste grátis?",
-    answer: "Oferecemos 7 dias de teste grátis com acesso completo a todas as funcionalidades. Não é necessário cartão de crédito para começar."
+    question: "Posso cancelar quando quiser?",
+    answer: "Sim! A assinatura é recorrente mas você pode cancelar a qualquer momento sem multas ou taxas de cancelamento. Seu acesso continua até o fim do período pago."
   },
   {
-    question: "Posso cancelar a qualquer momento?",
-    answer: "Sim! Você pode cancelar sua assinatura a qualquer momento sem burocracia. Sem taxas de cancelamento ou multas."
+    question: "Tem garantia?",
+    answer: "Sim! Você tem 7 dias para testar todos os recursos após a compra. Se não gostar por qualquer motivo, é só pedir reembolso e devolvemos 100% do valor. Sem perguntas, sem burocracia."
   },
   {
-    question: "Vocês oferecem suporte?",
-    answer: "Sim! Oferecemos suporte via chat, email e uma base de conhecimento completa com tutoriais e guias passo a passo."
+    question: "Preciso instalar algum programa?",
+    answer: "Não! O Dark Planner funciona 100% online. Basta acessar pelo navegador (Chrome, Firefox, Safari, Edge) de qualquer dispositivo. Você pode usar no computador, tablet ou celular."
   }
 ];
 
@@ -44,10 +44,10 @@ export const FAQ = () => {
           </div>
           
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            Perguntas <span className="text-gradient">frequentes</span>
+            Perguntas <span className="text-gradient">Frequentes</span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Tudo que você precisa saber sobre o Dark Planner
+            Tire suas dúvidas antes de começar
           </p>
         </div>
 

@@ -3,18 +3,18 @@ import { AlertCircle, Clock, BarChart3 } from "lucide-react";
 const painPoints = [
   {
     icon: Clock,
-    title: "Perda de Tempo",
-    description: "Horas gastas em tarefas repetitivas que não geram resultado"
+    title: "Tempo jogado fora",
+    description: "2-3 horas por dia procurando arquivos, prompts e referências. Se seu tempo vale R$ 50/hora, você perde R$ 3.000/mês só em desorganização."
   },
   {
     icon: BarChart3,
-    title: "Falta de Consistência",
-    description: "Dificuldade em manter uma rotina de publicações diárias"
+    title: "Zero consistência",
+    description: "Você fez um vídeo viral, mas não consegue replicar. Porque? Não tem sistema. Seu canal cresce aos trancos, sem previsibilidade."
   },
   {
     icon: AlertCircle,
-    title: "Desorganização Total",
-    description: "Ideias perdidas, prazos estourados e caos na produção"
+    title: "Produção travada",
+    description: "Você tem capacidade, mas só consegue fazer 2-3 vídeos/semana. O caos te impede de escalar. Concorrentes organizados estão passando na frente."
   }
 ];
 
@@ -24,10 +24,10 @@ export const PainPoints = () => {
       <div className="container max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            Você está <span className="text-gradient">perdendo dinheiro</span>
+            O que você está <span className="text-danger">perdendo agora</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Enquanto você luta com a desorganização, seus concorrentes estão escalando
+            Cada dia sem sistema é dinheiro jogado fora
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export const PainPoints = () => {
 
         <div className="text-center mt-12">
           <p className="text-2xl font-bold text-destructive">
-            Cada dia sem sistema = Dinheiro jogado fora 💸
+            💸 Cada minuto conta quando você está escalando
           </p>
         </div>
       </div>

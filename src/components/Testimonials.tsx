@@ -2,25 +2,25 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "João Silva",
-    role: "Creator Dark • 3 canais",
-    content: "Dark Planner mudou completamente meu workflow. Consegui escalar de 1 para 3 canais mantendo a qualidade. Economizo pelo menos 15 horas por semana!",
+    name: "Carlos M.",
+    role: "3 Canais Dark • 150K inscritos",
+    content: "Tinha prompts soltos em 3 docs diferentes. Agora tá tudo aqui. Produção subiu 300% e eu sei exatamente onde tá cada coisa.",
     rating: 5,
-    avatar: "🎯"
+    avatar: "C"
   },
   {
-    name: "Maria Santos",
-    role: "Produtora de Conteúdo",
-    content: "A ferramenta de planejamento mensal é sensacional. Consigo visualizar todo meu conteúdo e nunca mais perco prazos. Vale cada centavo!",
+    name: "Ana Ribeiro",
+    role: "Canal de curiosidades • 80K",
+    content: "Salvei todos os vídeos que deram mais de 500K views. Agora só adapto o que já funcionou. Cresci 70K em 2 meses.",
     rating: 5,
-    avatar: "✨"
+    avatar: "A"
   },
   {
-    name: "Pedro Costa",
-    role: "Creator Faceless • 5 canais",
-    content: "Gerencio 5 canais sozinho graças ao Dark Planner. O sistema de automação e templates me permitiu escalar sem contratar equipe.",
+    name: "Marcos Silva",
+    role: "5 canais • 400K total",
+    content: "Gerencio 5 canais sozinho com o Planner. Cada canal tem sua pasta, seus prompts. Escalo sem contratar ninguém.",
     rating: 5,
-    avatar: "🚀"
+    avatar: "M"
   }
 ];
 
@@ -30,10 +30,10 @@ export const Testimonials = () => {
       <div className="container max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            O que dizem nossos <span className="text-gradient">creators</span>
+            Quem usa, <span className="text-gradient">recomenda</span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Milhares de creators já transformaram seus canais
+            Veja o que creators reais estão dizendo
           </p>
         </div>
 

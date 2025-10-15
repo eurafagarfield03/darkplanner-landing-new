@@ -15,11 +15,11 @@ export const CTA = () => {
             </div>
 
             <h2 className="text-4xl md:text-6xl font-black">
-              Comece a escalar <span className="text-gradient">hoje mesmo</span>
+              Hora de organizar e <span className="text-gradient">multiplicar</span>
             </h2>
 
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Junte-se a milhares de creators que já transformaram seus canais com Dark Planner
+              Você já sabe criar conteúdo. Agora aprenda a escalar de verdade.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
@@ -33,7 +33,7 @@ export const CTA = () => {
             </div>
 
             <p className="text-sm text-muted-foreground font-medium">
-              ✓ 7 dias grátis • ✓ Cancele quando quiser • ✓ Suporte dedicado
+              ✓ Teste 7 dias grátis • ✓ Cancele quando quiser • ✓ Garantia total
             </p>
           </div>
         </div>

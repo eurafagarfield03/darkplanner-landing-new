@@ -9,25 +9,25 @@ export const Hero = () => {
       <div className="container max-w-7xl">
         <div className="text-center space-y-8 animate-fade-in">
           {/* Badge */}
-          <Badge className="bg-gradient-to-r from-primary/20 to-secondary/20 border-primary/50 text-primary px-6 py-2 text-sm font-bold animate-fade-in-down">
-            <Sparkles className="w-4 h-4 mr-2" />
-            Ferramenta #1 para Creators Dark
+          <Badge className="bg-gradient-to-r from-success/20 to-success/10 border-success text-success px-6 py-3 text-base font-bold animate-fade-in-down">
+            <Sparkles className="w-5 h-5 mr-2" />
+            +2000 creators já usam
           </Badge>
 
           {/* Headline */}
           <h1 className="text-5xl md:text-7xl font-black leading-tight max-w-5xl mx-auto">
-            Dark Planner
+            O sistema definitivo
             <br />
-            <span className="text-gradient">O sistema completo</span>
-            <br />
-            para canais faceless
+            <span className="text-gradient">para canais Dark</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-semibold">
-            Escale sua produção, gerencie múltiplos canais e poste todos os dias.
-            <br />
-            Tudo em um único lugar.
+          <p className="text-2xl md:text-3xl text-foreground max-w-3xl mx-auto leading-relaxed font-bold mb-4">
+            Organize, escale e domine seus canais faceless
+          </p>
+          
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Centralize prompts, roteiros, thumbnails e multiplique sua produção. De 1 vídeo por semana para 15+ vídeos. Simples assim.
           </p>
 
           {/* CTA Buttons */}
@@ -50,22 +50,22 @@ export const Hero = () => {
 
           {/* Microcopy */}
           <p className="text-sm text-muted-foreground font-medium">
-            ✨ Sem cartão de crédito • Cancele quando quiser
+            ✓ Teste 7 dias grátis • ✓ Cancele quando quiser • ✓ Suporte dedicado
           </p>
 
           {/* Trust Items */}
           <div className="flex flex-wrap items-center justify-center gap-8 pt-8">
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Users className="w-5 h-5 text-primary" />
-              <span className="font-semibold">2.000+ creators</span>
+            <div className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+              <CheckCircle2 className="w-5 h-5 text-success" />
+              <span className="font-semibold">Sem cartão de crédito</span>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <TrendingUp className="w-5 h-5 text-primary" />
-              <span className="font-semibold">5M+ vídeos gerados</span>
+            <div className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+              <CheckCircle2 className="w-5 h-5 text-success" />
+              <span className="font-semibold">Acesso imediato</span>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Clock className="w-5 h-5 text-primary" />
-              <span className="font-semibold">Economize 20h/semana</span>
+            <div className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+              <CheckCircle2 className="w-5 h-5 text-success" />
+              <span className="font-semibold">Suporte em português</span>
             </div>
           </div>
         </div>
