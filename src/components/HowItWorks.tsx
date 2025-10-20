@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Users, TrendingUp, Scissors, FileText, BookmarkCheck, MessageSquare, Youtube, LayoutDashboard } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -80,6 +80,18 @@ const features = [
 
 export const HowItWorks = () => {
   const [activeTab, setActiveTab] = useState(features[0].id);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTab((currentTab) => {
+        const currentIndex = features.findIndex((f) => f.id === currentTab);
+        const nextIndex = (currentIndex + 1) % features.length;
+        return features[nextIndex].id;
+      });
+    }, 5000); // Muda a cada 5 segundos
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section id="como-funciona" className="py-20 relative overflow-hidden">
