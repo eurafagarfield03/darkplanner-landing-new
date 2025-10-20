@@ -1,4 +1,4 @@
-import { Shield, ArrowRight } from "lucide-react";
+import { Shield, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Guarantee = () => {
@@ -14,20 +14,23 @@ export const Guarantee = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-black mb-4">
-              🛡️ Garantia Incondicional de <span className="text-gradient">7 Dias</span>
+              Garantia Incondicional de <span className="text-gradient">7 Dias</span>
             </h2>
 
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Teste o Dark Planner por 7 dias completos. Explore todas as ferramentas, organize seus canais, teste o Buscador de Virais. Se você não sentir que está economizando tempo e produzindo mais, devolvemos 100% do seu dinheiro.
             </p>
 
-            <div className="glass-card rounded-2xl p-6 max-w-2xl mx-auto">
-              <p className="text-2xl font-black mb-2">
+            <div className="glass-card rounded-2xl p-6 max-w-2xl mx-auto border-2 border-primary/30">
+              <p className="text-2xl font-black mb-3">
                 Sem perguntas. Sem burocracia. Sem letras miúdas.
               </p>
-              <p className="text-success font-bold">
-                ✅ Reembolso total em até 48 horas após solicitação
-              </p>
+              <div className="flex items-center justify-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-primary" />
+                <p className="text-primary font-bold text-lg">
+                  Reembolso total em até 48 horas após solicitação
+                </p>
+              </div>
             </div>
 
             <div className="pt-4">
@@ -49,9 +52,22 @@ export const Guarantee = () => {
                 <ArrowRight className="w-6 h-6 ml-2" />
               </Button>
 
-              <p className="text-sm text-muted-foreground font-medium mt-6">
-                ✓ Acesso imediato após pagamento • ✓ Garantia de 7 dias • ✓ Cancele quando quiser
-              </p>
+              <div className="flex flex-wrap items-center justify-center gap-4 mt-6 text-sm text-muted-foreground font-medium">
+                <div className="flex items-center gap-1">
+                  <CheckCircle2 className="w-4 h-4 text-primary" />
+                  <span>Acesso imediato após pagamento</span>
+                </div>
+                <span>•</span>
+                <div className="flex items-center gap-1">
+                  <CheckCircle2 className="w-4 h-4 text-primary" />
+                  <span>Garantia de 7 dias</span>
+                </div>
+                <span>•</span>
+                <div className="flex items-center gap-1">
+                  <CheckCircle2 className="w-4 h-4 text-primary" />
+                  <span>Cancele quando quiser</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

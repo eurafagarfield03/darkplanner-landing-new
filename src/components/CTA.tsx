@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { Sparkles, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const CTA = () => {
   return (
@@ -32,9 +32,22 @@ export const CTA = () => {
               </Button>
             </div>
 
-            <p className="text-sm text-muted-foreground font-medium">
-              ✓ Teste 7 dias grátis • ✓ Cancele quando quiser • ✓ Garantia total
-            </p>
+            <div className="flex flex-wrap items-center justify-center gap-3 mt-6 text-sm text-muted-foreground font-medium">
+              <div className="flex items-center gap-1">
+                <CheckCircle2 className="w-4 h-4 text-primary" />
+                <span>Teste 7 dias grátis</span>
+              </div>
+              <span>•</span>
+              <div className="flex items-center gap-1">
+                <CheckCircle2 className="w-4 h-4 text-primary" />
+                <span>Cancele quando quiser</span>
+              </div>
+              <span>•</span>
+              <div className="flex items-center gap-1">
+                <CheckCircle2 className="w-4 h-4 text-primary" />
+                <span>Garantia total</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

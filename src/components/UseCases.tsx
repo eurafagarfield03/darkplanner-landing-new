@@ -1,4 +1,4 @@
-import { TrendingUp, Zap, Search, BarChart3 } from "lucide-react";
+import { TrendingUp, Zap, Search, BarChart3, CheckCircle2 } from "lucide-react";
 
 const cases = [
   {
@@ -70,8 +70,9 @@ export const UseCases = () => {
                     {useCase.description}
                   </p>
 
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-success/10 border border-success/30">
-                    <span className="text-success font-bold text-sm">✅ {useCase.result}</span>
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30">
+                    <CheckCircle2 className="w-4 h-4 text-primary" />
+                    <span className="text-primary font-bold text-sm">{useCase.result}</span>
                   </div>
                 </div>
               </div>

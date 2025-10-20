@@ -1,19 +1,19 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Search, Image, FileText } from "lucide-react";
 
 const problems = [
   {
-    emoji: "😤",
+    icon: Search,
     title: '"Onde salvei aquele prompt?"',
     description: "Você perde 30+ minutos procurando prompts em conversas antigas do ChatGPT ou arquivos de texto soltos",
   },
   {
-    emoji: "🤦",
+    icon: Image,
     title: '"Qual thumbnail era dessa?"',
     description: "Na hora do upload, você não lembra qual referência de thumbnail usar porque não anotou em lugar nenhum",
   },
   {
-    emoji: "😩",
+    icon: FileText,
     title: '"Esse roteiro é de qual vídeo?"',
     description: "Roteiros salvos aleatoriamente sem conexão com os títulos dos vídeos causam confusão total",
   },
@@ -41,7 +41,9 @@ export const BeforeAfter = () => {
               className="glass-card rounded-3xl p-8 border-2 border-destructive/30 hover:border-destructive/50 transition-all duration-300 hover:-translate-y-2 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-6xl mb-6 text-center">{problem.emoji}</div>
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-destructive/20 to-destructive/10 flex items-center justify-center mb-6 mx-auto">
+                <problem.icon className="w-8 h-8 text-destructive" />
+              </div>
               <h3 className="text-xl font-black mb-4 text-center">{problem.title}</h3>
               <p className="text-muted-foreground text-center leading-relaxed">
                 {problem.description}

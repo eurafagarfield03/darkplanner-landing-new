@@ -47,9 +47,10 @@ export const PainPoints = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-2xl font-bold text-destructive">
-            💸 Cada minuto conta quando você está escalando
+        <div className="text-center mt-12 glass-card rounded-2xl p-6 max-w-2xl mx-auto border-2 border-destructive/30">
+          <p className="text-2xl font-bold text-destructive flex items-center justify-center gap-3">
+            <AlertCircle className="w-7 h-7" />
+            Cada minuto conta quando você está escalando
           </p>
         </div>
       </div>

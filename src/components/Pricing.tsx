@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, Clock, Zap, Gift } from "lucide-react";
+import { Check, Clock, Zap, Gift, Shield, CheckCircle2, Lock, MessageCircle } from "lucide-react";
 
 const plans = [
   {
@@ -63,7 +63,7 @@ const plans = [
       { text: "Acesso antecipado a novas ferramentas", highlight: true, icon: Gift },
       { text: "Atualizações mensais garantidas", highlight: false },
     ],
-    cta: "🚀 Garantir Master Agora",
+    cta: "Garantir Master Agora",
     popular: false,
   },
 ];
@@ -76,12 +76,15 @@ export const Pricing = () => {
           <h2 className="text-4xl md:text-5xl font-black mb-4">
             Escolha o plano ideal para <span className="text-gradient">seu crescimento</span>
           </h2>
-          <p className="text-xl text-muted-foreground mb-2">
+          <p className="text-xl text-muted-foreground mb-4">
             Todos os planos incluem acesso às ferramentas principais. Escolha a frequência que faz mais sentido para você.
           </p>
-          <p className="text-destructive font-bold text-lg">
-            ⏰ Oferta de Lançamento: 37% OFF no plano mensal • Termina em breve
-          </p>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-destructive/10 border border-destructive/30">
+            <Clock className="w-4 h-4 text-destructive" />
+            <span className="text-destructive font-bold text-sm">
+              Oferta de Lançamento: 37% OFF no plano mensal • Termina em breve
+            </span>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -143,21 +146,53 @@ export const Pricing = () => {
                     : ""
                 }`}
               >
+                {plan.name === "MASTER" && <Zap className="w-5 h-5 mr-2" />}
                 {plan.cta}
               </Button>
 
-              <p className="text-xs text-center text-muted-foreground mt-4">
-                ✓ Acesso imediato • ✓ Garantia de 7 dias • ✓ Cancele quando quiser
-              </p>
+              <div className="flex flex-wrap items-center justify-center gap-2 mt-4 text-xs text-muted-foreground">
+                <div className="flex items-center gap-1">
+                  <CheckCircle2 className="w-3 h-3 text-primary" />
+                  <span>Acesso imediato</span>
+                </div>
+                <span>•</span>
+                <div className="flex items-center gap-1">
+                  <Shield className="w-3 h-3 text-primary" />
+                  <span>Garantia de 7 dias</span>
+                </div>
+                <span>•</span>
+                <div className="flex items-center gap-1">
+                  <CheckCircle2 className="w-3 h-3 text-primary" />
+                  <span>Cancele quando quiser</span>
+                </div>
+              </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center glass-card rounded-2xl p-6 max-w-2xl mx-auto">
-          <p className="font-bold text-lg mb-2">✅ Garantia incondicional de 7 dias em todos os planos</p>
-          <p className="text-sm text-muted-foreground">
-            🔒 Pagamento 100% seguro • ⚡ Acesso imediato após pagamento • 💬 Suporte em português
-          </p>
+        <div className="text-center glass-card rounded-2xl p-6 max-w-3xl mx-auto border-2 border-primary/30">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-bold">
+            <div className="flex items-center gap-2">
+              <Shield className="w-5 h-5 text-primary" />
+              <span>Garantia incondicional de 7 dias em todos os planos</span>
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-4 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <Lock className="w-4 h-4 text-primary" />
+              <span>Pagamento 100% seguro</span>
+            </div>
+            <span>•</span>
+            <div className="flex items-center gap-2">
+              <Zap className="w-4 h-4 text-primary" />
+              <span>Acesso imediato após pagamento</span>
+            </div>
+            <span>•</span>
+            <div className="flex items-center gap-2">
+              <MessageCircle className="w-4 h-4 text-primary" />
+              <span>Suporte em português</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
