@@ -14,12 +14,8 @@ export const Hero = () => {
       <div className="container max-w-7xl relative z-10">
         <div className="text-center space-y-8 animate-fade-in">
           {/* Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight max-w-6xl mx-auto mb-8">
-            Organize, Planeje e Escale:
-            <br />
-            <span className="text-gradient">Sistema Completo Para Gerenciar</span>
-            <br />
-            Seus Canais Dark e Sua Equipe
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-black leading-tight max-w-5xl mx-auto mb-8">
+            Organize, Planeje e Escale: Sistema Completo Para Gerenciar Seus Canais Dark e Sua Equipe
           </h1>
 
           {/* Subheadline */}
