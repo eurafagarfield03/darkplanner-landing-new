@@ -9,8 +9,8 @@ export const Hero = () => {
       <div className="container max-w-7xl">
         <div className="text-center space-y-8 animate-fade-in">
           {/* Badge */}
-          <Badge className="inline-flex bg-gradient-to-r from-primary/30 to-secondary/30 border-2 border-primary/50 text-primary px-6 py-3 text-base font-bold animate-fade-in-down backdrop-blur-sm">
-            <Sparkles className="w-5 h-5 mr-2" />
+          <Badge className="inline-flex bg-primary/10 border-2 border-primary text-foreground px-6 py-3 text-base font-bold animate-fade-in-down backdrop-blur-sm">
+            <Sparkles className="w-5 h-5 mr-2 text-primary" />
             Criado por equipe que gerencia +15 canais Dark com 50M+ views
           </Badge>
 
