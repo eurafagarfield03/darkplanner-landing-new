@@ -54,7 +54,7 @@ const useCases = [
 
 export const SocialProof = () => {
   return (
-    <section className="py-24 px-6">
+    <section className="py-24 px-4 md:px-6 overflow-x-hidden">
       <div className="container max-w-7xl space-y-24">
         {/* Stats */}
         <div>

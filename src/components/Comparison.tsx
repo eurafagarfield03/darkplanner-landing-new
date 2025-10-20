@@ -18,7 +18,7 @@ const withItems = [
 
 export const Comparison = () => {
   return (
-    <section className="py-24 px-6">
+    <section className="py-24 px-4 md:px-6 overflow-x-hidden">
       <div className="container max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
