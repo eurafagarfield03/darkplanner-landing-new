@@ -45,7 +45,7 @@ const tools = [
   },
   {
     icon: Sparkles,
-    name: "Biblioteca de Referências",
+    name: "Comunidade",
     description: "Salve canais, links, ideias. Acesse tudo em um clique quando precisar.",
     color: "from-green-500 to-cyan-500",
   },
