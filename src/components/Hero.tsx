@@ -15,10 +15,8 @@ export const Hero = () => {
           </Badge>
 
           {/* Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight max-w-5xl mx-auto mb-6">
-            Produza <span className="text-gradient">3-5 vídeos por dia</span> sem perder
-            <br />
-            roteiros, prompts ou thumbnails
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black leading-tight max-w-5xl mx-auto mb-6">
+            Produza <span className="text-gradient">3-5 vídeos por dia</span> sem perder roteiros, prompts ou thumbnails
           </h1>
 
           {/* Subheadline */}
