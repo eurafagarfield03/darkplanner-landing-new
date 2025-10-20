@@ -4,7 +4,6 @@ import { SectionConnector } from "@/components/SectionConnector";
 import { ProblemSolution } from "@/components/ProblemSolution";
 import { HowItWorks } from "@/components/HowItWorks";
 import { ToolsGrid } from "@/components/ToolsGrid";
-import { CreatorStory } from "@/components/CreatorStory";
 import { SocialProof } from "@/components/SocialProof";
 import { Comparison } from "@/components/Comparison";
 import { FAQ } from "@/components/FAQ";
@@ -23,8 +22,6 @@ const Index = () => {
       <HowItWorks />
       <SectionConnector />
       <ToolsGrid />
-      <SectionConnector />
-      <CreatorStory />
       <SectionConnector />
       <SocialProof />
       <SectionConnector />
