@@ -94,11 +94,11 @@ export const HowItWorks = () => {
   }, []);
 
   return (
-    <section className="py-20 relative overflow-x-hidden">
+    <section className="py-20 px-4 md:px-6 relative overflow-x-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background"></div>
       
       <div className="container max-w-7xl relative z-10">
-        <div className="text-center mb-16 space-y-4">
+        <div className="text-center mb-16 space-y-4 px-2">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-black">
             Como Funciona <span className="text-gradient">na Prática</span>
           </h2>
@@ -127,14 +127,14 @@ export const HowItWorks = () => {
               value={feature.id}
               className="mt-8 animate-fade-in"
             >
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="space-y-6 order-2 md:order-1">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary">
-                    <feature.icon className="w-5 h-5" />
-                    <span className="text-sm font-semibold">{feature.label}</span>
+              <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center px-2 md:px-0">
+                <div className="space-y-4 md:space-y-6 order-2 md:order-1">
+                  <div className="inline-flex items-center gap-2 px-3 md:px-4 py-2 rounded-full bg-primary/10 text-primary">
+                    <feature.icon className="w-4 h-4 md:w-5 md:h-5" />
+                    <span className="text-xs md:text-sm font-semibold">{feature.label}</span>
                   </div>
                   
-                  <h3 className="text-xl md:text-2xl lg:text-3xl font-black leading-tight">
+                  <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-black leading-tight">
                     {feature.title}
                   </h3>
                   
@@ -142,10 +142,10 @@ export const HowItWorks = () => {
                     {feature.description}
                   </p>
 
-                  <div className="pt-4">
+                  <div className="pt-2 md:pt-4">
                     <a
                       href="#pricing"
-                      className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all hover:scale-105"
+                      className="inline-flex items-center justify-center px-4 md:px-8 py-3 md:py-4 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all hover:scale-105 text-sm md:text-base"
                     >
                       Começar Agora
                     </a>
