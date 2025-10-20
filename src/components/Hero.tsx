@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles, Play, CheckCircle2, TrendingUp, Users, Clock } from "lucide-react";
-import heroDashboard from "@/assets/hero-dashboard-new.png";
+import heroDashboard from "@/assets/hero-dashboard-real.png";
 
 export const Hero = () => {
   return (
