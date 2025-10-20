@@ -11,7 +11,7 @@ export const Hero = () => {
           {/* Badge */}
           <Badge className="inline-flex bg-primary/10 border-2 border-primary text-foreground px-6 py-3 text-base font-bold animate-fade-in-down backdrop-blur-sm">
             <Sparkles className="w-5 h-5 mr-2 text-primary" />
-            Criado por equipe que gerencia +15 canais Dark com 50M+ views
+            Criado pela equipe por trás de +15 canais Dark e 50M+ de visualizações
           </Badge>
 
           {/* Headline */}
