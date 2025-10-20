@@ -3,7 +3,7 @@ import { Hero } from "@/components/Hero";
 import { SectionConnector } from "@/components/SectionConnector";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { PainPoints } from "@/components/PainPoints";
-import { ProductShowcase } from "@/components/ProductShowcase";
+import { HowItWorks } from "@/components/HowItWorks";
 import { ToolsGrid } from "@/components/ToolsGrid";
 import { Comparison } from "@/components/Comparison";
 import { StatsCounter } from "@/components/StatsCounter";
@@ -26,7 +26,7 @@ const Index = () => {
       <SectionConnector />
       <PainPoints />
       <SectionConnector />
-      <ProductShowcase />
+      <HowItWorks />
       <SectionConnector />
       <ToolsGrid />
       <SectionConnector />
