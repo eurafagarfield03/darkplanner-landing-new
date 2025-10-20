@@ -36,15 +36,15 @@ export const Hero = () => {
         </div>
 
         {/* Hero Image */}
-        <div className="mt-24 animate-scale-in">
-          <div className="relative max-w-6xl mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-3xl"></div>
-            <div className="absolute -inset-4 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 rounded-3xl blur-2xl animate-pulse"></div>
-            <img 
-              src={heroDashboard} 
-              alt="Dark Planner - Sistema completo para gerenciar canais dark e equipes" 
-              className="relative rounded-3xl border border-foreground/10 shadow-2xl w-full transform hover:scale-[1.02] transition-transform duration-500"
-            />
+        <div className="mt-24">
+          <div className="relative max-w-6xl mx-auto perspective-1000">
+            <div className="hero-image-wrapper rounded-3xl overflow-hidden">
+              <img 
+                src={heroDashboard} 
+                alt="Dark Planner - Sistema completo para gerenciar canais dark e equipes" 
+                className="relative rounded-3xl border-2 border-primary/20 w-full transform transition-all duration-500 hover:scale-[1.03]"
+              />
+            </div>
           </div>
         </div>
       </div>
