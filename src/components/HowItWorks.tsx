@@ -99,10 +99,10 @@ export const HowItWorks = () => {
       
       <div className="container max-w-7xl relative z-10">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl md:text-5xl font-black">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-black">
             Como Funciona <span className="text-gradient">na Prática</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
             Explore cada funcionalidade do Dark Planner de forma interativa
           </p>
         </div>
@@ -113,10 +113,10 @@ export const HowItWorks = () => {
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
-                className="flex flex-col items-center gap-2 p-4 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all hover:scale-105"
+                className="flex flex-col items-center gap-2 p-3 md:p-4 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all hover:scale-105"
               >
-                <feature.icon className="w-5 h-5" />
-                <span className="text-xs font-medium text-center">{feature.label}</span>
+                <feature.icon className="w-4 h-4 md:w-5 md:h-5" />
+                <span className="text-[10px] md:text-xs font-medium text-center leading-tight">{feature.label}</span>
               </TabsTrigger>
             ))}
           </TabsList>
@@ -134,11 +134,11 @@ export const HowItWorks = () => {
                     <span className="text-sm font-semibold">{feature.label}</span>
                   </div>
                   
-                  <h3 className="text-3xl md:text-4xl font-black leading-tight">
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-black leading-tight">
                     {feature.title}
                   </h3>
                   
-                  <p className="text-muted-foreground text-lg leading-relaxed">
+                  <p className="text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed">
                     {feature.description}
                   </p>
 

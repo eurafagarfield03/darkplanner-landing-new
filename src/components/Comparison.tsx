@@ -21,10 +21,10 @@ export const Comparison = () => {
     <section className="py-24 px-6">
       <div className="container max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black mb-4">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
             A diferença entre produzir <span className="text-gradient">1 vídeo por semana</span> e <span className="text-gradient">5 por dia</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
             Não é falta de ideias. É falta de organização.
           </p>
         </div>
@@ -36,14 +36,14 @@ export const Comparison = () => {
               <div className="w-12 h-12 rounded-xl bg-destructive/20 flex items-center justify-center">
                 <X className="w-6 h-6 text-destructive" />
               </div>
-              <h3 className="text-2xl font-black">Sem Dark Planner</h3>
+              <h3 className="text-xl md:text-2xl font-black">Sem Dark Planner</h3>
             </div>
 
             <ul className="space-y-4">
               {withoutItems.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <X className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">{item}</span>
+                  <span className="text-sm md:text-base text-muted-foreground">{item}</span>
                 </li>
               ))}
             </ul>
@@ -55,14 +55,14 @@ export const Comparison = () => {
               <div className="w-12 h-12 rounded-xl bg-success/20 flex items-center justify-center">
                 <Check className="w-6 h-6 text-success" />
               </div>
-              <h3 className="text-2xl font-black">Com Dark Planner</h3>
+              <h3 className="text-xl md:text-2xl font-black">Com Dark Planner</h3>
             </div>
 
             <ul className="space-y-4">
               {withItems.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground font-medium">{item}</span>
+                  <span className="text-sm md:text-base text-foreground font-medium">{item}</span>
                 </li>
               ))}
             </ul>

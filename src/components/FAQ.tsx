@@ -43,10 +43,10 @@ export const FAQ = () => {
             <span className="font-bold text-primary">FAQ</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-black mb-4">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
             Perguntas <span className="text-gradient">Frequentes</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
             Tire suas dúvidas antes de começar
           </p>
         </div>
@@ -58,10 +58,10 @@ export const FAQ = () => {
               value={`item-${index}`}
               className="glass-card rounded-2xl px-6 border-2 border-border hover:border-primary/50 transition-all"
             >
-              <AccordionTrigger className="text-left font-bold text-lg hover:text-primary transition-colors py-6">
+              <AccordionTrigger className="text-left font-bold text-base md:text-lg hover:text-primary transition-colors py-6">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+              <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed pb-6">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

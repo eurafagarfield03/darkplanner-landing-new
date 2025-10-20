@@ -43,10 +43,10 @@ export const ProblemSolution = () => {
         {/* Problems */}
         <div className="mb-24">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-4">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
               O que você está <span className="text-destructive">perdendo agora</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
               Cada dia sem sistema é dinheiro e tempo jogados fora
             </p>
           </div>
@@ -60,8 +60,8 @@ export const ProblemSolution = () => {
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-destructive/20 to-destructive/10 flex items-center justify-center mb-6">
                   <point.icon className="w-8 h-8 text-destructive" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">{point.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{point.description}</p>
+                <h3 className="text-lg md:text-xl font-bold mb-3">{point.title}</h3>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{point.description}</p>
               </div>
             ))}
           </div>
@@ -79,10 +79,10 @@ export const ProblemSolution = () => {
         {/* Solutions */}
         <div>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-4">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
               A <span className="text-gradient">solução completa</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
               Sistema profissional para organizar e escalar seus canais dark
             </p>
           </div>
@@ -96,8 +96,8 @@ export const ProblemSolution = () => {
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">{solution.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{solution.description}</p>
+                <h3 className="text-lg md:text-xl font-bold mb-3">{solution.title}</h3>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{solution.description}</p>
               </div>
             ))}
           </div>

@@ -26,12 +26,12 @@ export const Hero = () => {
           </div>
           
           {/* Headline */}
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-black leading-tight max-w-5xl mx-auto mb-8">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black leading-tight max-w-5xl mx-auto mb-8">
             Organize, Planeje e Escale: Sistema Completo Para Gerenciar Seus Canais Dark e Sua Equipe
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Centralize prompts, roteiros, thumbnails e multiplique sua produção. De 1 vídeo por dia para 15+ vídeos.
           </p>
 

@@ -59,10 +59,10 @@ export const SocialProof = () => {
         {/* Stats */}
         <div>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-4">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
               Números que <span className="text-gradient">provam</span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
               Resultados reais de creators reais
             </p>
           </div>
@@ -74,8 +74,8 @@ export const SocialProof = () => {
                 className="glass-card rounded-2xl p-8 text-center hover:border-primary/50 transition-all hover:-translate-y-2"
               >
                 <stat.icon className="w-10 h-10 text-primary mx-auto mb-4" />
-                <div className="text-4xl font-black text-gradient mb-2">{stat.value}</div>
-                <div className="text-muted-foreground font-medium">{stat.label}</div>
+                <div className="text-3xl md:text-4xl font-black text-gradient mb-2">{stat.value}</div>
+                <div className="text-sm md:text-base text-muted-foreground font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -84,7 +84,7 @@ export const SocialProof = () => {
         {/* Testimonials */}
         <div>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-4">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
               O que dizem quem <span className="text-gradient">já usa</span>
             </h2>
           </div>
@@ -103,7 +103,7 @@ export const SocialProof = () => {
                   ))}
                 </div>
 
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
                   "{testimonial.content}"
                 </p>
 
@@ -124,10 +124,10 @@ export const SocialProof = () => {
         {/* Use Cases */}
         <div>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-4">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
               Para qualquer <span className="text-gradient">estágio</span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
               Do creator solo ao multi-canal com equipe
             </p>
           </div>
@@ -138,7 +138,7 @@ export const SocialProof = () => {
                 key={index}
                 className="glass-card rounded-2xl p-8 hover:border-primary/50 transition-all hover:-translate-y-2"
               >
-                <div className="text-2xl font-black mb-2">{useCase.profile}</div>
+                <div className="text-xl md:text-2xl font-black mb-2">{useCase.profile}</div>
                 <div className="text-primary font-bold mb-4">{useCase.channels}</div>
                 <div className="space-y-3">
                   <div>

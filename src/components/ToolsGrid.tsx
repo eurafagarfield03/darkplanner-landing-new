@@ -56,10 +56,10 @@ export const ToolsGrid = () => {
     <section id="tools" className="py-24 px-6">
       <div className="container max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black mb-4">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
             Tudo que você precisa <span className="text-gradient">em um lugar</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
             8 ferramentas que eliminam o caos e multiplicam sua produção
           </p>
         </div>
@@ -74,7 +74,7 @@ export const ToolsGrid = () => {
               <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                 <tool.icon className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">
+              <h3 className="text-base md:text-lg font-bold mb-2 group-hover:text-primary transition-colors">
                 {tool.name}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">

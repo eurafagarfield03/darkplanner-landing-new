@@ -73,10 +73,10 @@ export const Pricing = () => {
     <section className="py-24 px-6" id="pricing">
       <div className="container max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black mb-4">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
             Escolha o plano ideal para <span className="text-gradient">seu crescimento</span>
           </h2>
-          <p className="text-xl text-muted-foreground mb-4">
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-4">
             Todos os planos incluem acesso às ferramentas principais. Escolha a frequência que faz mais sentido para você.
           </p>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-destructive/10 border border-destructive/30">
@@ -102,15 +102,15 @@ export const Pricing = () => {
               )}
 
               <div className="mb-6">
-                <h3 className="text-2xl font-black mb-1">{plan.name}</h3>
-                <p className="text-muted-foreground text-sm">{plan.subtitle}</p>
+                <h3 className="text-xl md:text-2xl font-black mb-1">{plan.name}</h3>
+                <p className="text-muted-foreground text-xs md:text-sm">{plan.subtitle}</p>
               </div>
 
               <div className="mb-6">
                 <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-sm text-muted-foreground">R$</span>
-                  <span className="text-5xl font-black">{plan.price}</span>
-                  <span className="text-muted-foreground">{plan.period}</span>
+                  <span className="text-xs md:text-sm text-muted-foreground">R$</span>
+                  <span className="text-4xl md:text-5xl lg:text-6xl font-black">{plan.price}</span>
+                  <span className="text-sm md:text-base text-muted-foreground">{plan.period}</span>
                 </div>
                 {plan.originalPrice && (
                   <p className="text-sm text-muted-foreground line-through mb-1">
