@@ -16,6 +16,15 @@ export const Hero = () => {
 
       <div className="container max-w-7xl relative z-10">
         <div className="text-center space-y-8 animate-fade-in">
+          {/* Badge */}
+          <div className="inline-block">
+            <div className="glass-card px-6 py-3 rounded-full border border-primary/20">
+              <p className="text-sm md:text-base font-semibold text-gradient">
+                Criado por equipe que gerencia +15 canais Dark com +100M views
+              </p>
+            </div>
+          </div>
+          
           {/* Headline */}
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-black leading-tight max-w-5xl mx-auto mb-8">
             Organize, Planeje e Escale: Sistema Completo Para Gerenciar Seus Canais Dark e Sua Equipe
