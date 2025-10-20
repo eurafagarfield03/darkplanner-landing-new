@@ -33,8 +33,8 @@ const tools = [
   },
   {
     icon: Search,
-    name: "Referências de Thumbnails",
-    description: "Salve thumbnails que converteram. Compare antes de publicar.",
+    name: "Referências de Canais",
+    description: "Salve canais, links e ideias. Acesse tudo em um clique quando precisar.",
     color: "from-orange-500 to-yellow-500",
   },
   {
