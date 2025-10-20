@@ -27,17 +27,12 @@ export const Hero = () => {
           <div className="pt-6">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white px-16 py-8 text-xl font-black rounded-full glow-effect animate-glow-pulse"
+              className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white px-12 py-6 text-lg font-black rounded-full glow-effect"
             >
-              Começar Agora com 7 Dias de Garantia
-              <TrendingUp className="w-6 h-6 ml-3" />
+              Quero Organizar Meus Canais Agora
+              <TrendingUp className="w-5 h-5 ml-2" />
             </Button>
           </div>
-
-          {/* Microcopy */}
-          <p className="text-sm text-muted-foreground font-medium pt-4">
-            Garantia incondicional de 7 dias • Acesso imediato • Cancele quando quiser
-          </p>
         </div>
 
         {/* Hero Image */}
