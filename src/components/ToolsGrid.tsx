@@ -64,11 +64,11 @@ export const ToolsGrid = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 px-2 md:px-0">
           {tools.map((tool, index) => (
             <div
               key={index}
-              className="glass-card rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 group cursor-pointer animate-fade-in"
+              className="glass-card rounded-2xl p-4 md:p-6 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 group cursor-pointer animate-fade-in"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${tool.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>

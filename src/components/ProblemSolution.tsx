@@ -51,11 +51,11 @@ export const ProblemSolution = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 px-2 md:px-0">
             {problems.map((point, index) => (
               <div 
                 key={index}
-                className="glass-card rounded-2xl p-8 border-2 border-destructive/30 hover:border-destructive/60 transition-all hover:-translate-y-2"
+                className="glass-card rounded-2xl p-6 md:p-8 border-2 border-destructive/30 hover:border-destructive/60 transition-all hover:-translate-y-2"
               >
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-destructive/20 to-destructive/10 flex items-center justify-center mb-6">
                   <point.icon className="w-8 h-8 text-destructive" />
@@ -87,12 +87,12 @@ export const ProblemSolution = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {solutions.map((solution, index) => (
-              <div 
-                key={index}
-                className="glass-card rounded-2xl p-8 border-2 border-primary/30 hover:border-primary/60 transition-all hover:-translate-y-2"
-              >
+        <div className="grid md:grid-cols-3 gap-4 md:gap-6 px-2 md:px-0">
+          {solutions.map((solution, index) => (
+            <div 
+              key={index}
+              className="glass-card rounded-2xl p-6 md:p-8 border-2 border-primary/30 hover:border-primary/60 transition-all hover:-translate-y-2"
+            >
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-primary" />
                 </div>

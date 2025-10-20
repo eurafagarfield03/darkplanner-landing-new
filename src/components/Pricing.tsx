@@ -87,12 +87,12 @@ export const Pricing = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-4 md:gap-8 mb-12 px-2 md:px-0">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`glass-card rounded-3xl p-8 border-2 transition-all duration-300 hover:-translate-y-2 relative ${
-                plan.popular ? "border-primary shadow-2xl scale-105" : "border-border"
+              className={`glass-card rounded-3xl p-6 md:p-8 border-2 transition-all duration-300 hover:-translate-y-2 relative ${
+                plan.popular ? "border-primary shadow-2xl md:scale-105" : "border-border"
               }`}
             >
               {plan.popular && (
@@ -107,10 +107,10 @@ export const Pricing = () => {
               </div>
 
               <div className="mb-6">
-                <div className="flex items-baseline gap-2 mb-2">
+                <div className="flex flex-wrap items-baseline gap-1 md:gap-2 mb-2">
                   <span className="text-xs md:text-sm text-muted-foreground">R$</span>
-                  <span className="text-4xl md:text-5xl lg:text-6xl font-black">{plan.price}</span>
-                  <span className="text-sm md:text-base text-muted-foreground">{plan.period}</span>
+                  <span className="text-3xl md:text-4xl lg:text-5xl font-black break-words">{plan.price}</span>
+                  <span className="text-xs md:text-sm text-muted-foreground">{plan.period}</span>
                 </div>
                 {plan.originalPrice && (
                   <p className="text-sm text-muted-foreground line-through mb-1">
@@ -140,7 +140,7 @@ export const Pricing = () => {
 
               <Button
                 size="lg"
-                className={`w-full font-black text-lg ${
+                className={`w-full font-black text-base md:text-lg ${
                   plan.popular
                     ? "bg-gradient-to-r from-primary to-secondary hover:opacity-90"
                     : ""

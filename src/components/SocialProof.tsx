@@ -67,15 +67,15 @@ export const SocialProof = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 px-2 md:px-0">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="glass-card rounded-2xl p-8 text-center hover:border-primary/50 transition-all hover:-translate-y-2"
+                className="glass-card rounded-2xl p-6 md:p-8 text-center hover:border-primary/50 transition-all hover:-translate-y-2"
               >
-                <stat.icon className="w-10 h-10 text-primary mx-auto mb-4" />
-                <div className="text-3xl md:text-4xl font-black text-gradient mb-2">{stat.value}</div>
-                <div className="text-sm md:text-base text-muted-foreground font-medium">{stat.label}</div>
+                <stat.icon className="w-8 h-8 md:w-10 md:h-10 text-primary mx-auto mb-4" />
+                <div className="text-2xl md:text-3xl lg:text-4xl font-black text-gradient mb-2">{stat.value}</div>
+                <div className="text-xs md:text-sm lg:text-base text-muted-foreground font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -89,11 +89,11 @@ export const SocialProof = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 px-2 md:px-0">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="glass-card rounded-2xl p-8 hover:border-primary/50 transition-all hover:-translate-y-2"
+                className="glass-card rounded-2xl p-6 md:p-8 hover:border-primary/50 transition-all hover:-translate-y-2"
               >
                 <Quote className="w-10 h-10 text-primary mb-4 opacity-50" />
                 
@@ -132,11 +132,11 @@ export const SocialProof = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 px-2 md:px-0">
             {useCases.map((useCase, index) => (
               <div
                 key={index}
-                className="glass-card rounded-2xl p-8 hover:border-primary/50 transition-all hover:-translate-y-2"
+                className="glass-card rounded-2xl p-6 md:p-8 hover:border-primary/50 transition-all hover:-translate-y-2"
               >
                 <div className="text-xl md:text-2xl font-black mb-2">{useCase.profile}</div>
                 <div className="text-primary font-bold mb-4">{useCase.channels}</div>

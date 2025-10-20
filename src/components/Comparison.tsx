@@ -29,9 +29,9 @@ export const Comparison = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-6 px-2 md:px-0">
           {/* Sem Dark Planner */}
-          <div className="glass-card rounded-3xl p-8 border-2 border-destructive/30">
+          <div className="glass-card rounded-3xl p-6 md:p-8 border-2 border-destructive/30">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-destructive/20 flex items-center justify-center">
                 <X className="w-6 h-6 text-destructive" />
@@ -50,7 +50,7 @@ export const Comparison = () => {
           </div>
 
           {/* Com Dark Planner */}
-          <div className="glass-card rounded-3xl p-8 border-2 border-success/30 bg-success/5">
+          <div className="glass-card rounded-3xl p-6 md:p-8 border-2 border-success/30 bg-success/5">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-success/20 flex items-center justify-center">
                 <Check className="w-6 h-6 text-success" />
