@@ -46,7 +46,7 @@ const tools = [
   {
     icon: Sparkles,
     name: "Comunidade",
-    description: "Salve canais, links, ideias. Acesse tudo em um clique quando precisar.",
+    description: "Conecte-se com outros creators, compartilhe estratégias e faça networking no grupo exclusivo.",
     color: "from-green-500 to-cyan-500",
   },
 ];
