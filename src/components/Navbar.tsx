@@ -13,11 +13,14 @@ export const Navbar = () => {
         </a>
 
         <div className="hidden md:flex items-center gap-8">
+          <a href="#benefits" className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
+            Benefícios
+          </a>
           <a href="#features" className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
             Recursos
           </a>
           <a href="#pricing" className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
-            Preços
+            Preço
           </a>
           <a href="#faq" className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
             FAQ
@@ -25,11 +28,11 @@ export const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-3">
-          <Button variant="ghost" className="hidden sm:inline-flex">
+          <Button variant="ghost" className="hidden sm:inline-flex font-bold">
             Login
           </Button>
           <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity font-bold">
-            Começar Agora
+            Cadastre-se
           </Button>
         </div>
       </div>

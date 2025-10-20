@@ -42,8 +42,13 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© 2025 Dark Planner. Todos os direitos reservados.</p>
+        <div className="pt-8 border-t border-border text-center">
+          <p className="text-sm text-muted-foreground mb-2">© 2025 Dark Planner • Todos os direitos reservados</p>
+          <p className="text-sm text-muted-foreground">
+            <a href="#" className="hover:text-foreground transition-colors">Termos de uso</a>
+            {" • "}
+            <a href="#" className="hover:text-foreground transition-colors">Política de privacidade</a>
+          </p>
         </div>
       </div>
     </footer>
