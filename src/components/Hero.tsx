@@ -16,9 +16,9 @@ export const Hero = () => {
 
           {/* Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight max-w-5xl mx-auto mb-6">
-            Produza <span className="text-gradient">3-5 vídeos por dia</span>
+            Produza <span className="text-gradient">3-5 vídeos por dia</span> sem perder
             <br />
-            sem perder roteiros, prompts ou thumbnails
+            roteiros, prompts ou thumbnails
           </h1>
 
           {/* Subheadline */}
