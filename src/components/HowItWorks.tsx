@@ -94,7 +94,7 @@ export const HowItWorks = () => {
   }, []);
 
   return (
-    <section id="como-funciona" className="py-20 relative overflow-hidden">
+    <section className="py-20 relative overflow-x-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background"></div>
       
       <div className="container max-w-7xl relative z-10">
@@ -107,13 +107,13 @@ export const HowItWorks = () => {
           </p>
         </div>
 
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-2 h-auto bg-card/50 p-2 mb-8">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full overflow-x-hidden">
+          <TabsList className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-1 md:gap-2 h-auto bg-card/50 p-1 md:p-2 mb-8 w-full">
             {features.map((feature) => (
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
-                className="flex flex-col items-center gap-2 p-3 md:p-4 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all hover:scale-105"
+                className="flex flex-col items-center gap-1 md:gap-2 p-2 md:p-4 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all hover:scale-105"
               >
                 <feature.icon className="w-4 h-4 md:w-5 md:h-5" />
                 <span className="text-[10px] md:text-xs font-medium text-center leading-tight">{feature.label}</span>

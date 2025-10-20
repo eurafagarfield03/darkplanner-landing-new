@@ -62,7 +62,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
     background: linear-gradient(180deg, hsl(220 25% 6%), hsl(220 30% 8%), hsl(220 25% 6%));
     background-attachment: fixed;
   }

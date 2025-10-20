@@ -55,10 +55,10 @@ export const BeforeAfter = () => {
         <div className="text-center">
           <Button 
             size="lg" 
-            className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white px-12 py-7 text-lg font-black rounded-full glow-effect"
+            className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white px-6 md:px-12 py-6 md:py-7 text-base md:text-lg font-black rounded-full glow-effect"
           >
             Sim, quero organizar minha produção agora
-            <ArrowRight className="w-6 h-6 ml-2" />
+            <ArrowRight className="w-5 h-5 md:w-6 md:h-6 ml-2" />
           </Button>
         </div>
       </div>

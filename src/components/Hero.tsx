@@ -39,7 +39,7 @@ export const Hero = () => {
           <div className="pt-6">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white px-12 py-6 text-lg font-black rounded-full glow-effect"
+              className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white px-6 md:px-12 py-6 text-base md:text-lg font-black rounded-full glow-effect"
             >
               Quero Organizar Meus Canais Agora
               <TrendingUp className="w-5 h-5 ml-2" />

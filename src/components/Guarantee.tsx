@@ -46,10 +46,10 @@ export const Guarantee = () => {
 
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white px-16 py-8 text-xl font-black rounded-full glow-effect"
+                className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white px-8 md:px-16 py-6 md:py-8 text-base md:text-lg lg:text-xl font-black rounded-full glow-effect"
               >
                 Sim, quero escalar meus canais agora
-                <ArrowRight className="w-6 h-6 ml-2" />
+                <ArrowRight className="w-5 h-5 md:w-6 md:h-6 ml-2" />
               </Button>
 
               <div className="flex flex-wrap items-center justify-center gap-4 mt-6 text-sm text-muted-foreground font-medium">
