@@ -20,7 +20,7 @@ export const Hero = () => {
           <div className="inline-block">
             <div className="glass-card px-6 py-3 rounded-full border border-primary/20">
               <p className="text-sm md:text-base font-semibold text-gradient">
-                Criado por equipe que gerencia +15 canais Dark com +100M views
+                Criado por equipe que gerencia +15 canais Dark com +50M views
               </p>
             </div>
           </div>
