@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles, Play, CheckCircle2, TrendingUp, Users, Clock } from "lucide-react";
-import heroDashboard from "@/assets/hero-dashboard.jpg";
+import heroDashboard from "@/assets/hero-dashboard-new.png";
 
 export const Hero = () => {
   return (
@@ -25,7 +25,7 @@ export const Hero = () => {
           </p>
           
           <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Chega de perder horas procurando arquivos. Tenha prompts, roteiros e referências organizados em um só lugar — e produza 3x mais vídeos com metade do esforço.
+            Centralize prompts, roteiros, thumbnails e multiplique sua produção. De 1 vídeo por dia para 15+ vídeos. Simples assim.
           </p>
 
           {/* CTA Buttons */}
