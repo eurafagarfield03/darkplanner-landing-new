@@ -16,7 +16,7 @@ export const Navbar = () => {
           <a href="#benefits" className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
             Benefícios
           </a>
-          <a href="#features" className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
+          <a href="#tools" className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
             Recursos
           </a>
           <a href="#pricing" className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
@@ -32,7 +32,7 @@ export const Navbar = () => {
             Login
           </Button>
           <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity font-bold">
-            Cadastre-se
+            Comece agora
           </Button>
         </div>
       </div>

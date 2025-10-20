@@ -53,7 +53,7 @@ const tools = [
 
 export const ToolsGrid = () => {
   return (
-    <section className="py-24 px-6">
+    <section id="tools" className="py-24 px-6">
       <div className="container max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-4">

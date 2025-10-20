@@ -38,7 +38,7 @@ const solutions = [
 
 export const ProblemSolution = () => {
   return (
-    <section className="py-24 px-6">
+    <section id="benefits" className="py-24 px-6">
       <div className="container max-w-7xl">
         {/* Problems */}
         <div className="mb-24">
