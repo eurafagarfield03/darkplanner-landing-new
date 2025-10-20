@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { SectionConnector } from "@/components/SectionConnector";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { PainPoints } from "@/components/PainPoints";
 import { ProductShowcase } from "@/components/ProductShowcase";
@@ -20,18 +21,31 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+      <SectionConnector />
       <BeforeAfter />
+      <SectionConnector />
       <PainPoints />
+      <SectionConnector />
       <ProductShowcase />
+      <SectionConnector />
       <ToolsGrid />
+      <SectionConnector />
       <Comparison />
+      <SectionConnector />
       <StatsCounter />
+      <SectionConnector />
       <Testimonials />
+      <SectionConnector />
       <UseCases />
+      <SectionConnector />
       <Community />
+      <SectionConnector />
       <FAQ />
+      <SectionConnector />
       <Pricing />
+      <SectionConnector />
       <Guarantee />
+      <SectionConnector />
       <CTA />
       <Footer />
     </div>
