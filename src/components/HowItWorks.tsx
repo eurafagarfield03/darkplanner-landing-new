@@ -98,8 +98,8 @@ export const HowItWorks = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background"></div>
       
       <div className="container max-w-7xl relative z-10">
-        <div className="text-center mb-12 md:mb-16 space-y-4 px-2">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-black">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
             Como Funciona <span className="text-gradient">na Prática</span>
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -107,16 +107,16 @@ export const HowItWorks = () => {
           </p>
         </div>
 
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full overflow-x-hidden">
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-1 md:gap-2 h-auto bg-card/50 p-1 md:p-2 mb-8 w-full">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+          <TabsList className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-2 h-auto bg-card/50 p-2 mb-12 w-full max-w-full overflow-visible">
             {features.map((feature) => (
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
-                className="flex flex-col items-center gap-1 md:gap-2 p-2 md:p-4 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all hover:scale-105"
+                className="flex flex-col items-center gap-2 p-3 md:p-4 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all hover:scale-105 rounded-lg"
               >
-                <feature.icon className="w-4 h-4 md:w-5 md:h-5" />
-                <span className="text-[10px] md:text-xs font-medium text-center leading-tight">{feature.label}</span>
+                <feature.icon className="w-5 h-5" />
+                <span className="text-xs font-medium text-center leading-tight">{feature.label}</span>
               </TabsTrigger>
             ))}
           </TabsList>
@@ -125,27 +125,27 @@ export const HowItWorks = () => {
             <TabsContent
               key={feature.id}
               value={feature.id}
-              className="mt-8 animate-fade-in"
+              className="mt-0 animate-fade-in"
             >
-              <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center px-2 md:px-0">
-                <div className="space-y-4 md:space-y-6 order-2 md:order-1">
-                  <div className="inline-flex items-center gap-2 px-3 md:px-4 py-2 rounded-full bg-primary/10 text-primary">
-                    <feature.icon className="w-4 h-4 md:w-5 md:h-5" />
-                    <span className="text-xs md:text-sm font-semibold">{feature.label}</span>
+              <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div className="space-y-6 order-2 md:order-1">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary">
+                    <feature.icon className="w-5 h-5" />
+                    <span className="text-sm font-semibold">{feature.label}</span>
                   </div>
                   
-                  <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-black leading-tight">
+                  <h3 className="text-2xl md:text-3xl font-black leading-tight">
                     {feature.title}
                   </h3>
                   
-                  <p className="text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                     {feature.description}
                   </p>
 
-                  <div className="pt-2 md:pt-4">
+                  <div className="pt-4">
                     <a
                       href="#pricing"
-                      className="inline-flex items-center justify-center px-4 md:px-8 py-3 md:py-4 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all hover:scale-105 text-sm md:text-base"
+                      className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-all hover:scale-105"
                     >
                       Começar Agora
                     </a>
@@ -153,13 +153,12 @@ export const HowItWorks = () => {
                 </div>
 
                 <div className="order-1 md:order-2">
-                  <div className="relative rounded-xl overflow-hidden border-2 border-primary/20 shadow-2xl hover:border-primary/40 transition-all duration-300 hover:scale-[1.02]">
+                  <div className="relative rounded-2xl overflow-hidden border-2 border-primary/20 shadow-2xl hover:border-primary/40 transition-all duration-300">
                     <img
                       src={feature.image}
                       alt={feature.title}
                       className="w-full h-auto"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
                   </div>
                 </div>
               </div>
