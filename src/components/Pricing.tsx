@@ -21,6 +21,7 @@ const plans = [
       { text: "Suporte em português", highlight: false },
     ],
     cta: "Começar com Starter",
+    paymentUrl: "https://pay.kirvano.com/07f5d707-4013-4fa0-af22-102fa24f3203",
     popular: false,
   },
   {
@@ -42,6 +43,7 @@ const plans = [
       { text: "Suporte em português", highlight: false },
     ],
     cta: "Escolher Creator",
+    paymentUrl: "https://pay.kirvano.com/3db0c73c-ddf2-4bc6-b09a-857f53d47c0f",
     popular: true,
   },
   {
@@ -64,6 +66,7 @@ const plans = [
       { text: "Atualizações mensais garantidas", highlight: false },
     ],
     cta: "Garantir Master Agora",
+    paymentUrl: "https://pay.kirvano.com/f5d67c4b-5917-414d-85ce-4428ca475ba7",
     popular: false,
   },
 ];
@@ -145,9 +148,12 @@ export const Pricing = () => {
                     ? "bg-gradient-to-r from-primary to-secondary hover:opacity-90"
                     : ""
                 }`}
+                asChild
               >
-                {plan.name === "MASTER" && <Zap className="w-4 h-4 md:w-5 md:h-5 mr-2" />}
-                {plan.cta}
+                <a href={plan.paymentUrl} target="_blank" rel="noopener noreferrer">
+                  {plan.name === "MASTER" && <Zap className="w-4 h-4 md:w-5 md:h-5 mr-2" />}
+                  {plan.cta}
+                </a>
               </Button>
 
               <div className="flex flex-wrap items-center justify-center gap-1 md:gap-2 mt-3 md:mt-4 text-[10px] md:text-xs text-muted-foreground">
