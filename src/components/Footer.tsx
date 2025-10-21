@@ -1,12 +1,12 @@
+import logo from "@/assets/logo.png";
+
 export const Footer = () => {
   return (
     <footer className="py-12 px-6 border-t border-border">
       <div className="container max-w-6xl">
         <div className="flex flex-col items-center text-center space-y-6">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-              <span className="text-white font-black text-sm">DP</span>
-            </div>
+            <img src={logo} alt="Dark Planner Logo" className="w-8 h-8 rounded-lg" />
             <span className="font-bold text-lg">Dark Planner</span>
           </div>
           <p className="text-sm text-muted-foreground max-w-md">
