@@ -143,14 +143,14 @@ export const Pricing = () => {
 
               <Button
                 size="lg"
-                className={`w-full font-black text-sm md:text-base lg:text-lg py-5 md:py-6 ${
+                className={`w-full font-black text-sm md:text-base lg:text-lg py-5 md:py-6 k-checkout ${
                   plan.popular
                     ? "bg-gradient-to-r from-primary to-secondary hover:opacity-90"
                     : ""
                 }`}
                 asChild
               >
-                <a href={plan.paymentUrl} target="_blank" rel="noopener noreferrer">
+                <a href={plan.paymentUrl} target="_blank" rel="noopener noreferrer" className="k-checkout">
                   {plan.name === "MASTER" && <Zap className="w-4 h-4 md:w-5 md:h-5 mr-2" />}
                   {plan.cta}
                 </a>
