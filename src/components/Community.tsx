@@ -2,7 +2,7 @@ import { MessageCircle, Rocket, Zap } from "lucide-react";
 
 export const Community = () => {
   return (
-    <section className="py-24 px-4 md:px-6 relative overflow-hidden">
+    <section className="py-16 md:py-24 px-4 md:px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-secondary/5 pointer-events-none"></div>
       
       <div className="container max-w-6xl relative z-10">

@@ -94,11 +94,11 @@ export const HowItWorks = () => {
   }, []);
 
   return (
-    <section className="py-20 px-4 md:px-6 relative overflow-x-hidden">
+    <section className="py-16 md:py-24 px-4 md:px-6 relative overflow-x-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background"></div>
       
       <div className="container max-w-7xl relative z-10">
-        <div className="text-center mb-16 space-y-4 px-2">
+        <div className="text-center mb-12 md:mb-16 space-y-4 px-2">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-black">
             Como Funciona <span className="text-gradient">na Prática</span>
           </h2>

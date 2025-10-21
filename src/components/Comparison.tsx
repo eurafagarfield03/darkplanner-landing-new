@@ -18,9 +18,9 @@ const withItems = [
 
 export const Comparison = () => {
   return (
-    <section className="py-24 px-4 md:px-6 overflow-x-hidden">
+    <section className="py-16 md:py-24 px-4 md:px-6 overflow-x-hidden">
       <div className="container max-w-6xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
             A diferença entre produzir <span className="text-gradient">1 vídeo por semana</span> e <span className="text-gradient">5 por dia</span>
           </h2>

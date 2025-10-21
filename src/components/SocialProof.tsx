@@ -54,11 +54,11 @@ const useCases = [
 
 export const SocialProof = () => {
   return (
-    <section className="py-24 px-4 md:px-6 overflow-x-hidden">
+    <section className="py-16 md:py-24 px-4 md:px-6 overflow-x-hidden">
       <div className="container max-w-7xl space-y-24">
         {/* Stats */}
         <div>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
               Números que <span className="text-gradient">provam</span>
             </h2>
@@ -83,7 +83,7 @@ export const SocialProof = () => {
 
         {/* Testimonials */}
         <div>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
               O que dizem quem <span className="text-gradient">já usa</span>
             </h2>
@@ -123,7 +123,7 @@ export const SocialProof = () => {
 
         {/* Use Cases */}
         <div>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
               Para qualquer <span className="text-gradient">estágio</span>
             </h2>

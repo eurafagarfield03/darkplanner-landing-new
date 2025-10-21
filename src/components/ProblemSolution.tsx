@@ -38,11 +38,11 @@ const solutions = [
 
 export const ProblemSolution = () => {
   return (
-    <section id="benefits" className="py-24 px-4 md:px-6 overflow-x-hidden">
+    <section id="benefits" className="py-16 md:py-24 px-4 md:px-6 overflow-x-hidden">
       <div className="container max-w-7xl">
         {/* Problems */}
         <div className="mb-24">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
               O que você está <span className="text-destructive">perdendo agora</span>
             </h2>
@@ -78,7 +78,7 @@ export const ProblemSolution = () => {
 
         {/* Solutions */}
         <div>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
               A <span className="text-gradient">solução completa</span>
             </h2>

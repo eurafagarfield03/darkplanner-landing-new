@@ -4,7 +4,7 @@ import heroDashboard from "@/assets/hero-dashboard-real.png";
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-32 pb-20 px-4 md:px-6 relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center pt-20 md:pt-32 pb-12 md:pb-20 px-4 md:px-6 relative overflow-hidden">
       {/* Animated Background Orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="hero-orb hero-orb-1"></div>
