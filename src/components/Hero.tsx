@@ -26,8 +26,8 @@ export const Hero = () => {
           </div>
           
           {/* Headline */}
-          <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight max-w-5xl mx-auto mb-6 md:mb-8 px-2 text-gradient">
-            Organize, Planeje e Escale: Sistema Completo Para Gerenciar Seus Canais Dark e Sua Equipe
+          <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight max-w-5xl mx-auto mb-6 md:mb-8 px-2">
+            <span className="text-gradient">Organize, Planeje e Escale:</span> Sistema Completo Para Gerenciar Seus Canais Dark e Sua Equipe
           </h1>
 
           {/* Subheadline */}
