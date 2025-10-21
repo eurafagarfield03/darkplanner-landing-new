@@ -5,8 +5,8 @@ export const Footer = () => {
     <footer className="py-12 px-6 border-t border-border">
       <div className="container max-w-6xl">
         <div className="flex flex-col items-center text-center space-y-6">
-          <div className="flex items-center gap-2">
-            <img src={logo} alt="Dark Planner Logo" className="w-8 h-8 rounded-lg" />
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="Dark Planner Logo" className="w-10 h-10 md:w-12 md:h-12 rounded-xl" />
             <span className="font-bold text-lg">Dark Planner</span>
           </div>
           <p className="text-sm text-muted-foreground max-w-md">
