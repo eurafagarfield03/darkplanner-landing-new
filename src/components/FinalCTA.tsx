@@ -54,6 +54,7 @@ export const FinalCTA = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white px-4 md:px-8 lg:px-12 py-5 md:py-6 lg:py-8 text-xs md:text-sm lg:text-base xl:text-lg font-black rounded-full glow-effect w-full sm:w-auto"
+                onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <span className="hidden sm:inline">Começar Agora com 7 Dias de Garantia</span>
                 <span className="inline sm:hidden">Começar Agora</span>

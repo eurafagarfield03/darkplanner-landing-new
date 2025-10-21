@@ -30,10 +30,17 @@ export const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-2 md:gap-3">
-          <Button variant="ghost" className="hidden sm:inline-flex font-bold text-sm md:text-base">
+          <Button 
+            variant="ghost" 
+            className="hidden sm:inline-flex font-bold text-sm md:text-base"
+            onClick={() => window.location.href = 'https://app.darkplanner.com.br/'}
+          >
             Login
           </Button>
-          <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity font-bold text-sm md:text-base px-4 md:px-6">
+          <Button 
+            className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity font-bold text-sm md:text-base px-4 md:px-6"
+            onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             Comece agora
           </Button>
         </div>

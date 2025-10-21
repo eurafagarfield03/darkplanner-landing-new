@@ -26,6 +26,7 @@ export const CTA = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white px-8 md:px-16 py-6 md:py-8 text-base md:text-lg lg:text-xl font-black rounded-full glow-effect"
+                onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Começar Agora
                 <ArrowRight className="w-5 h-5 md:w-6 md:h-6 ml-2" />
