@@ -7,7 +7,10 @@ export const Navbar = () => {
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-6xl px-2">
       <div className="glass-card rounded-full px-4 md:px-6 py-3 flex items-center justify-between">
         <a href="/" className="flex items-center gap-3">
-          <img src={logo} alt="Dark Planner Logo" className="w-10 h-10 md:w-12 md:h-12 rounded-xl" />
+          <div className="relative">
+            <div className="absolute inset-0 bg-primary/30 blur-xl rounded-xl"></div>
+            <img src={logo} alt="Dark Planner Logo" className="relative w-10 h-10 md:w-12 md:h-12 rounded-xl" />
+          </div>
           <span className="font-bold text-base md:text-lg">Dark Planner</span>
         </a>
 
