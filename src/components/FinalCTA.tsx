@@ -1,4 +1,4 @@
-import { Shield, ArrowRight, CheckCircle2, Sparkles, ArrowUp } from "lucide-react";
+import { Shield, ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const FinalCTA = () => {
@@ -79,19 +79,6 @@ export const FinalCTA = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Back to top button */}
-        <div className="flex justify-center">
-          <Button
-            variant="outline"
-            size="lg"
-            className="rounded-full px-8 py-6 font-bold"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          >
-            <ArrowUp className="w-5 h-5 mr-2" />
-            Voltar ao Início
-          </Button>
         </div>
       </div>
     </section>
