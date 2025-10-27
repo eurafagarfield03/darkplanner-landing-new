@@ -5,9 +5,9 @@ const plans = [
   {
     name: "STARTER",
     subtitle: "Para quem está começando",
-    price: "24,99",
-    originalPrice: "39,99",
-    discount: "Economize R$ 15/mês",
+    price: "49,90",
+    originalPrice: null,
+    discount: "Plano mensal",
     period: "/mês",
     features: [
       { text: "Canais ilimitados - gerencie quantos quiser", highlight: false },
@@ -27,9 +27,9 @@ const plans = [
   {
     name: "CREATOR",
     subtitle: "Ideal para crescimento",
-    price: "125,94",
+    price: "251,48",
     originalPrice: null,
-    discount: "Equivale a R$ 20,99/mês • Economize 16% vs mensal",
+    discount: "Equivale a R$ 41,91/mês • Economize 16% vs mensal",
     period: "/semestre",
     features: [
       { text: "Canais ilimitados - gerencie quantos quiser", highlight: false },
@@ -49,9 +49,9 @@ const plans = [
   {
     name: "MASTER",
     subtitle: "Melhor custo-benefício",
-    price: "215,88",
+    price: "431,07",
     originalPrice: null,
-    discount: "Equivale a R$ 17,99/mês • Economize R$ 84/ano (28%)",
+    discount: "Equivale a R$ 35,92/mês • Economize 28% vs mensal",
     period: "/ano",
     features: [
       { text: "Canais ilimitados - gerencie quantos quiser", highlight: false },
