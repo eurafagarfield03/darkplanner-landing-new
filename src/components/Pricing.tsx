@@ -21,7 +21,7 @@ const plans = [
       { text: "Suporte em português", highlight: false },
     ],
     cta: "Começar com Starter",
-    paymentUrl: "https://pay.kirvano.com/07f5d707-4013-4fa0-af22-102fa24f3203",
+    paymentUrl: "https://pay.kirvano.com/f9e086f7-6385-432d-8735-c6e4df12b8eb",
     popular: false,
   },
   {
@@ -43,7 +43,7 @@ const plans = [
       { text: "Suporte em português", highlight: false },
     ],
     cta: "Escolher Creator",
-    paymentUrl: "https://pay.kirvano.com/3db0c73c-ddf2-4bc6-b09a-857f53d47c0f",
+    paymentUrl: "https://pay.kirvano.com/b88f6afb-3fb9-45cd-a47d-6318edff1ec7",
     popular: true,
   },
   {
@@ -66,7 +66,7 @@ const plans = [
       { text: "Atualizações mensais garantidas", highlight: false },
     ],
     cta: "Garantir Master Agora",
-    paymentUrl: "https://pay.kirvano.com/f5d67c4b-5917-414d-85ce-4428ca475ba7",
+    paymentUrl: "https://pay.kirvano.com/3f0f75c5-97fa-40f7-8832-d73fac2384ac",
     popular: false,
   },
 ];
