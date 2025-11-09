@@ -32,9 +32,9 @@ const Index = () => {
       <SectionConnector />
       <ToolsGrid />
       <SectionConnector />
-      <TestimonialsMarquee />
-      <SectionConnector />
       <SocialProof />
+      <SectionConnector />
+      <TestimonialsMarquee />
       <SectionConnector />
       <Comparison />
       <SectionConnector />
