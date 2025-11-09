@@ -6,6 +6,7 @@ import { ProblemSolution } from "@/components/ProblemSolution";
 import { RobotShowcase } from "@/components/RobotShowcase";
 import { HowItWorks } from "@/components/HowItWorks";
 import { NichosVirais } from "@/components/NichosVirais";
+import { NichosViraisHero } from "@/components/NichosViraisHero";
 import { ToolsGrid } from "@/components/ToolsGrid";
 import { SocialProof } from "@/components/SocialProof";
 import { Comparison } from "@/components/Comparison";
@@ -28,6 +29,8 @@ const Index = () => {
       <HowItWorks />
       <SectionConnector />
       <NichosVirais />
+      <SectionConnector />
+      <NichosViraisHero />
       <SectionConnector />
       <ToolsGrid />
       <SectionConnector />
