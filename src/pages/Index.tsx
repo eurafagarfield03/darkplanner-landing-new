@@ -5,7 +5,6 @@ import { SectionConnector } from "@/components/SectionConnector";
 import { ProblemSolution } from "@/components/ProblemSolution";
 import { RobotShowcase } from "@/components/RobotShowcase";
 import { HowItWorks } from "@/components/HowItWorks";
-import { NichosVirais } from "@/components/NichosVirais";
 import { NichosViraisHero } from "@/components/NichosViraisHero";
 import { ToolsGrid } from "@/components/ToolsGrid";
 import { SocialProof } from "@/components/SocialProof";
@@ -27,8 +26,6 @@ const Index = () => {
       <ProblemSolution />
       <SectionConnector />
       <HowItWorks />
-      <SectionConnector />
-      <NichosVirais />
       <SectionConnector />
       <NichosViraisHero />
       <SectionConnector />
