@@ -143,28 +143,10 @@ export default {
             transform: "translateX(0)"
           }
         },
-        spotlight: {
-          "0%": {
-            opacity: "0",
-            transform: "translate(-72%, -62%) scale(0.5)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translate(-50%,-40%) scale(1)",
-          },
-        },
-        marquee: {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(calc(-100% - var(--gap)))' }
-        },
-      },
-      maxWidth: {
-        container: "1280px",
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        marquee: 'marquee var(--duration) linear infinite',
         "fade-in": "fade-in 0.6s ease-out",
         "fade-in-down": "fade-in-down 0.6s ease-out",
         "scale-in": "scale-in 0.5s ease-out",
