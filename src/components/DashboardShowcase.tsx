@@ -3,7 +3,7 @@ import dashboardImage from "@/assets/dashboard-main.png";
 
 export const DashboardShowcase = () => {
   return (
-    <div className="flex flex-col overflow-hidden -mt-32 md:-mt-40">
+    <div className="flex flex-col overflow-hidden -mt-32 md:-mt-40 bg-[#1a1f2e]">
       <ContainerScroll
         titleComponent={<></>}
       >
