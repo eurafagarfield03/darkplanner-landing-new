@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { TrendingUp } from "lucide-react";
-import heroDashboard from "@/assets/hero-dashboard-real.png";
 
 export const Hero = () => {
   return (
@@ -46,19 +45,6 @@ export const Hero = () => {
               <span className="inline sm:hidden">Organizar Canais</span>
               <TrendingUp className="w-4 h-4 md:w-5 md:h-5 ml-2" />
             </Button>
-          </div>
-        </div>
-
-        {/* Hero Image */}
-        <div className="mt-16 md:mt-24 px-2">
-          <div className="relative max-w-6xl mx-auto perspective-1000">
-            <div className="hero-image-wrapper rounded-3xl overflow-hidden">
-              <img 
-                src={heroDashboard} 
-                alt="Dark Planner - Sistema completo para gerenciar canais dark e equipes" 
-                className="relative rounded-3xl border-2 border-primary/20 w-full transform transition-all duration-500 hover:scale-[1.03]"
-              />
-            </div>
           </div>
         </div>
       </div>
