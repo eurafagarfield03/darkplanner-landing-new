@@ -75,7 +75,7 @@ export const Pricing = () => {
   return (
     <section className="py-16 md:py-24 px-4 md:px-6 overflow-x-hidden" id="pricing">
       <div className="container max-w-7xl mx-auto">
-        <div className="text-center mb-12 md:mb-16 px-2">
+        <div className="text-center mb-12 md:mb-16 px-2 animate-fade-in">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
             Escolha o plano ideal para <span className="text-gradient">seu crescimento</span>
           </h2>
@@ -94,9 +94,10 @@ export const Pricing = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`glass-card rounded-3xl p-4 md:p-6 lg:p-8 border-2 transition-all duration-300 hover:-translate-y-2 relative max-w-full ${
+              className={`glass-card rounded-3xl p-4 md:p-6 lg:p-8 border-2 transition-all duration-300 hover:-translate-y-2 relative max-w-full animate-fade-in ${
                 plan.popular ? "border-primary shadow-2xl md:scale-105" : "border-border"
               }`}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               {plan.popular && (
                 <div className="absolute -top-3 md:-top-4 left-1/2 -translate-x-1/2 px-3 md:px-6 py-1 md:py-2 bg-gradient-to-r from-primary to-secondary text-white font-black text-xs md:text-sm rounded-full whitespace-nowrap">

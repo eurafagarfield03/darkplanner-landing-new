@@ -37,7 +37,7 @@ export const FAQ = () => {
   return (
     <section className="py-16 md:py-24 px-4 md:px-6 overflow-x-hidden" id="faq">
       <div className="container max-w-4xl">
-        <div className="text-center mb-12 md:mb-16 px-2">
+        <div className="text-center mb-12 md:mb-16 px-2 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-3 md:px-5 py-2 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 mb-6">
             <HelpCircle className="w-4 h-4 md:w-5 md:h-5 text-primary" />
             <span className="font-bold text-primary text-xs md:text-sm">FAQ</span>

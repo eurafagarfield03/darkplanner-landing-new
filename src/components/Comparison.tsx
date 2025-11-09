@@ -20,7 +20,7 @@ export const Comparison = () => {
   return (
     <section className="py-16 md:py-24 px-4 md:px-6 overflow-x-hidden">
       <div className="container max-w-6xl">
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-12 md:mb-16 animate-fade-in">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
             A diferença entre produzir <span className="text-gradient">1 vídeo por semana</span> e <span className="text-gradient">5 por dia</span>
           </h2>
@@ -31,7 +31,7 @@ export const Comparison = () => {
 
         <div className="grid md:grid-cols-2 gap-4 md:gap-6 px-2 md:px-0">
           {/* Sem Dark Planner */}
-          <div className="glass-card rounded-3xl p-6 md:p-8 border-2 border-destructive/30">
+          <div className="glass-card rounded-3xl p-6 md:p-8 border-2 border-destructive/30 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-destructive/20 flex items-center justify-center">
                 <X className="w-6 h-6 text-destructive" />
@@ -50,7 +50,7 @@ export const Comparison = () => {
           </div>
 
           {/* Com Dark Planner */}
-          <div className="glass-card rounded-3xl p-6 md:p-8 border-2 border-success/30 bg-success/5">
+          <div className="glass-card rounded-3xl p-6 md:p-8 border-2 border-success/30 bg-success/5 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-success/20 flex items-center justify-center">
                 <Check className="w-6 h-6 text-success" />

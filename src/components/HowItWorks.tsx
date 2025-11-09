@@ -97,7 +97,7 @@ export const HowItWorks = () => {
     <section className="py-16 md:py-24 px-4 md:px-6 relative overflow-x-hidden">
       
       <div className="container max-w-7xl relative z-10">
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-12 md:mb-16 animate-fade-in">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
             Como Funciona <span className="text-gradient">na Prática</span>
           </h2>

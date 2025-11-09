@@ -58,7 +58,7 @@ export const SocialProof = () => {
       <div className="container max-w-7xl space-y-24">
         {/* Stats */}
         <div>
-          <div className="text-center mb-12 md:mb-16">
+          <div className="text-center mb-12 md:mb-16 animate-fade-in">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
               Números que <span className="text-gradient">provam</span>
             </h2>
@@ -71,7 +71,8 @@ export const SocialProof = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="glass-card rounded-2xl p-6 md:p-8 text-center hover:border-primary/50 transition-all hover:-translate-y-2"
+                className="glass-card rounded-2xl p-6 md:p-8 text-center hover:border-primary/50 transition-all hover:-translate-y-2 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <stat.icon className="w-8 h-8 md:w-10 md:h-10 text-primary mx-auto mb-4" />
                 <div className="text-2xl md:text-3xl lg:text-4xl font-black text-gradient mb-2">{stat.value}</div>
@@ -83,7 +84,7 @@ export const SocialProof = () => {
 
         {/* Testimonials */}
         <div>
-          <div className="text-center mb-12 md:mb-16">
+          <div className="text-center mb-12 md:mb-16 animate-fade-in">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
               O que dizem quem <span className="text-gradient">já usa</span>
             </h2>
@@ -93,7 +94,8 @@ export const SocialProof = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="glass-card rounded-2xl p-6 md:p-8 hover:border-primary/50 transition-all hover:-translate-y-2"
+                className="glass-card rounded-2xl p-6 md:p-8 hover:border-primary/50 transition-all hover:-translate-y-2 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <Quote className="w-10 h-10 text-primary mb-4 opacity-50" />
                 
@@ -123,7 +125,7 @@ export const SocialProof = () => {
 
         {/* Use Cases */}
         <div>
-          <div className="text-center mb-12 md:mb-16">
+          <div className="text-center mb-12 md:mb-16 animate-fade-in">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
               Para qualquer <span className="text-gradient">estágio</span>
             </h2>
@@ -136,7 +138,8 @@ export const SocialProof = () => {
             {useCases.map((useCase, index) => (
               <div
                 key={index}
-                className="glass-card rounded-2xl p-6 md:p-8 hover:border-primary/50 transition-all hover:-translate-y-2"
+                className="glass-card rounded-2xl p-6 md:p-8 hover:border-primary/50 transition-all hover:-translate-y-2 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="text-xl md:text-2xl font-black mb-2">{useCase.profile}</div>
                 <div className="text-primary font-bold mb-4">{useCase.channels}</div>

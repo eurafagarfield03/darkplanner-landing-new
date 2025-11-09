@@ -10,7 +10,7 @@ export function RobotShowcase() {
       <div className="container max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Robô 3D */}
-          <div className="w-full h-[500px] md:h-[600px] relative overflow-hidden rounded-3xl">
+          <div className="w-full h-[500px] md:h-[600px] relative overflow-hidden rounded-3xl animate-fade-in">
             <SplineScene 
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full"
@@ -18,7 +18,7 @@ export function RobotShowcase() {
           </div>
 
           {/* Conteúdo */}
-          <div className="glass-card rounded-3xl p-6 md:p-8 lg:p-10 border-2 border-primary/30">
+          <div className="glass-card rounded-3xl p-6 md:p-8 lg:p-10 border-2 border-primary/30 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4 md:mb-6">
               Uma ferramenta feita <span className="text-gradient">POR creators, PARA creators</span>
             </h2>

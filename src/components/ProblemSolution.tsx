@@ -42,7 +42,7 @@ export const ProblemSolution = () => {
       <div className="container max-w-7xl">
         {/* Problems */}
         <div className="mb-24">
-          <div className="text-center mb-12 md:mb-16">
+          <div className="text-center mb-12 md:mb-16 animate-fade-in">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
               O que você está <span className="text-destructive">perdendo agora</span>
             </h2>
@@ -55,7 +55,8 @@ export const ProblemSolution = () => {
             {problems.map((point, index) => (
               <div 
                 key={index}
-                className="glass-card rounded-2xl p-6 md:p-8 border-2 border-destructive/30 hover:border-destructive/60 transition-all hover:-translate-y-2"
+                className="glass-card rounded-2xl p-6 md:p-8 border-2 border-destructive/30 hover:border-destructive/60 transition-all hover:-translate-y-2 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-destructive/20 to-destructive/10 flex items-center justify-center mb-6">
                   <point.icon className="w-8 h-8 text-destructive" />
@@ -78,7 +79,7 @@ export const ProblemSolution = () => {
 
         {/* Solutions */}
         <div>
-          <div className="text-center mb-12 md:mb-16">
+          <div className="text-center mb-12 md:mb-16 animate-fade-in">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
               A <span className="text-gradient">solução completa</span>
             </h2>
@@ -91,7 +92,8 @@ export const ProblemSolution = () => {
           {solutions.map((solution, index) => (
             <div 
               key={index}
-              className="glass-card rounded-2xl p-6 md:p-8 border-2 border-primary/30 hover:border-primary/60 transition-all hover:-translate-y-2"
+              className="glass-card rounded-2xl p-6 md:p-8 border-2 border-primary/30 hover:border-primary/60 transition-all hover:-translate-y-2 animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-primary" />

@@ -6,7 +6,7 @@ export const FinalCTA = () => {
     <section className="py-16 md:py-24 px-4 md:px-6 overflow-x-hidden">
       <div className="container max-w-5xl space-y-12 md:space-y-16">
         {/* Guarantee */}
-        <div className="glass-card rounded-3xl p-6 md:p-12 lg:p-16 border-2 border-primary/30 text-center">
+        <div className="glass-card rounded-3xl p-6 md:p-12 lg:p-16 border-2 border-primary/30 text-center animate-fade-in">
           <div className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 border-2 border-primary/50 mb-4 md:mb-6">
             <Shield className="w-8 h-8 md:w-10 md:h-10 text-primary" />
           </div>
@@ -33,7 +33,7 @@ export const FinalCTA = () => {
         </div>
 
         {/* Final CTA */}
-        <div className="glass-card rounded-3xl p-6 md:p-12 lg:p-16 text-center border-2 border-primary/30 relative overflow-hidden">
+        <div className="glass-card rounded-3xl p-6 md:p-12 lg:p-16 text-center border-2 border-primary/30 relative overflow-hidden animate-fade-in" style={{ animationDelay: "0.2s" }}>
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10"></div>
           
           <div className="relative z-10 space-y-6 md:space-y-8">
