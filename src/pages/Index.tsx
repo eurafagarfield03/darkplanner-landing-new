@@ -19,13 +19,13 @@ const Index = () => {
       <Navbar />
       <Hero />
       <SectionConnector />
-      <Community />
-      <SectionConnector />
-      <ProblemSolution />
-      <SectionConnector />
       <div className="container mx-auto px-4 py-12">
         <RobotShowcase />
       </div>
+      <SectionConnector />
+      <Community />
+      <SectionConnector />
+      <ProblemSolution />
       <SectionConnector />
       <HowItWorks />
       <SectionConnector />
