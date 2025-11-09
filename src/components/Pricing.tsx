@@ -93,7 +93,7 @@ export const Pricing = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-4 md:gap-8 mb-12 max-w-full">
+        <div className="grid md:grid-cols-3 gap-4 md:gap-8 mb-12 max-w-full items-stretch">
           {plans.map((plan, index) => (
             <div
               key={index}
