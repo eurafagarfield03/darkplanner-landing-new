@@ -323,11 +323,11 @@ const AnimatedShaderHero: React.FC<HeroProps> = ({
   const canvasRef = useShaderBackground();
 
   return (
-    <div className={`relative w-full min-h-screen overflow-hidden bg-background ${className}`}>
+    <div className={`relative w-full min-h-screen overflow-hidden bg-[#1a1f2e] ${className}`}>
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full object-contain touch-none"
-        style={{ background: 'hsl(var(--background))' }}
+        style={{ background: '#1a1f2e' }}
       />
       
       {/* Hero Content Overlay */}
