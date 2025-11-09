@@ -12,43 +12,11 @@ const testimonials = [
   },
   {
     author: {
-      name: "Marina Costa",
-      handle: "@marinacontent",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face"
+      name: "leo",
+      handle: "@leo",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
     },
-    text: "Finalmente uma ferramenta feita pensando em quem realmente produz conteúdo faceless. O gerador de SRT com presets é genial, economizo 30 minutos por vídeo."
-  },
-  {
-    author: {
-      name: "Rafael Santos",
-      handle: "@rafaeldark",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
-    },
-    text: "A comunidade do Dark Planner é o diferencial. Troco ideias com outros creators, aprendo estratégias novas todo dia. Meu canal cresceu 300% em 3 meses!"
-  },
-  {
-    author: {
-      name: "Júlia Mendes",
-      handle: "@juliavirals",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
-    },
-    text: "O filtro de vídeos virais é uma mina de ouro. Encontro trends antes da galera e adapto pro meu nicho. Já tive 3 vídeos com +1M de views usando essa estratégia."
-  },
-  {
-    author: {
-      name: "Pedro Oliveira",
-      handle: "@pedrotech",
-      avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"
-    },
-    text: "Organizei todas as referências dos meus nichos em um lugar só. Agora quando vou criar conteúdo, tenho tudo na mão. Produtividade aumentou absurdamente!"
-  },
-  {
-    author: {
-      name: "Camila Rocha",
-      handle: "@camilacanais",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-    },
-    text: "Suporte em português que realmente entende do mercado brasileiro. Sempre que preciso, tenho resposta rápida e de gente que sabe o que tá fazendo."
+    text: "Cara duvido mt que vc não vai ter lucro com isso, ferramenta mt boa mano e mt chave ❤️ Ontem comentei com o biel sobre uma \"limitação\" que eu tava tendo, dps que assinei a darkplanner aí não tive dúvidas. Abriu minha mente pra várias coisas que dá pra ser feita. Bom dms"
   }
 ];
 
