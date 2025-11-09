@@ -97,7 +97,7 @@ export const Pricing = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`glass-card rounded-3xl p-4 md:p-6 lg:p-8 border-2 transition-all duration-300 hover:-translate-y-2 relative max-w-full animate-fade-in ${
+              className={`glass-card rounded-3xl p-4 md:p-6 lg:p-8 border-2 transition-all duration-300 hover:-translate-y-2 relative max-w-full animate-fade-in flex flex-col ${
                 plan.popular ? "border-primary shadow-2xl md:scale-105" : "border-border"
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -127,7 +127,7 @@ export const Pricing = () => {
                 <p className="text-xs md:text-sm text-muted-foreground">{plan.discount}</p>
               </div>
 
-              <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
+              <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8 flex-grow">
                 {plan.features.map((feature, fIndex) => {
                   const Icon = feature.icon;
                   return (
