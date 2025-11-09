@@ -7,7 +7,6 @@ import { CreatorsFocus } from "@/components/CreatorsFocus";
 import { HowItWorks } from "@/components/HowItWorks";
 import { NichosViraisHero } from "@/components/NichosViraisHero";
 import { ToolsGrid } from "@/components/ToolsGrid";
-import { TestimonialsMarquee } from "@/components/TestimonialsMarquee";
 import { SocialProof } from "@/components/SocialProof";
 import { Comparison } from "@/components/Comparison";
 import { FAQ } from "@/components/FAQ";
@@ -33,8 +32,6 @@ const Index = () => {
       <ToolsGrid />
       <SectionConnector />
       <SocialProof />
-      <SectionConnector />
-      <TestimonialsMarquee />
       <SectionConnector />
       <Comparison />
       <SectionConnector />
