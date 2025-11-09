@@ -2,7 +2,7 @@ import logo from "@/assets/logo.png";
 
 export const Footer = () => {
   return (
-    <footer className="py-12 px-6 border-t border-border bg-[#1a1f2e]">
+    <footer className="py-12 px-6 border-t border-border">
       <div className="container max-w-6xl">
         <div className="flex flex-col items-center text-center space-y-6">
           <div className="flex items-center gap-3">

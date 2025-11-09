@@ -94,7 +94,7 @@ export const HowItWorks = () => {
   }, []);
 
   return (
-    <section className="py-16 md:py-24 px-4 md:px-6 relative overflow-x-hidden bg-[#1a1f2e]">
+    <section className="py-16 md:py-24 px-4 md:px-6 relative overflow-x-hidden">
       
       <div className="container max-w-7xl relative z-10">
         <div className="text-center mb-12 md:mb-16">

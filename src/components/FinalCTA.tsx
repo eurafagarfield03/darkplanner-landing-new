@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export const FinalCTA = () => {
   return (
-    <section className="py-16 md:py-24 px-4 md:px-6 overflow-x-hidden bg-[#1a1f2e]">
+    <section className="py-16 md:py-24 px-4 md:px-6 overflow-x-hidden">
       <div className="container max-w-5xl space-y-12 md:space-y-16">
         {/* Guarantee */}
         <div className="glass-card rounded-3xl p-6 md:p-12 lg:p-16 border-2 border-primary/30 text-center">
