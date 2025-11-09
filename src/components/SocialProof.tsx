@@ -4,11 +4,11 @@ import { TestimonialCard } from "@/components/ui/testimonial-card";
 const testimonials = [
   {
     author: {
-      name: "Lucas Silva",
-      handle: "@lucascreator",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+      name: "Gabao",
+      handle: "@Gabao",
+      avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=150&h=150&fit=crop&crop=face"
     },
-    text: "O Dark Planner mudou completamente minha rotina de produção. Consigo gerenciar 5 canais sem perder o controle. A organização de prompts salvou horas do meu tempo!"
+    text: "Minerar com a ferramenta da darkplanner ta dando resultado mesmo kkkkkkk 🔥💚🚀"
   },
   {
     author: {
