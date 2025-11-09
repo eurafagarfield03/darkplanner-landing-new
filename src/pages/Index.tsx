@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { DashboardShowcase } from "@/components/DashboardShowcase";
 import { Community } from "@/components/Community";
 import { SectionConnector } from "@/components/SectionConnector";
 import { ProblemSolution } from "@/components/ProblemSolution";
@@ -18,6 +19,7 @@ const Index = () => {
     <div className="min-h-screen overflow-x-hidden">
       <Navbar />
       <Hero />
+      <DashboardShowcase />
       <SectionConnector />
       <div className="container mx-auto px-4 py-12">
         <RobotShowcase />
