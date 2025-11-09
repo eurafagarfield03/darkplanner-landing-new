@@ -299,3 +299,14 @@ All colors MUST be HSL.
 .animate-spotlight {
   animation: spotlight 2s ease .75s 1 forwards;
 }
+
+/* Loading spinner */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
