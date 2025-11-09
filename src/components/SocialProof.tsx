@@ -1,12 +1,15 @@
 import { Users, Video, TrendingUp, Clock } from "lucide-react";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
+import avatarGabao from "@/assets/avatar-gabao.png";
+import avatarLeo from "@/assets/avatar-leo.png";
+import avatarVitor from "@/assets/avatar-vitor.png";
 
 const testimonials = [
   {
     author: {
       name: "Gabao",
       handle: "Gabao",
-      avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=150&h=150&fit=crop&crop=face"
+      avatar: avatarGabao
     },
     text: "Minerar com a ferramenta da darkplanner ta dando resultado mesmo kkkkkkk 🔥💚🚀"
   },
@@ -14,7 +17,7 @@ const testimonials = [
     author: {
       name: "leo",
       handle: "leo",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+      avatar: avatarLeo
     },
     text: "Cara duvido mt que vc não vai ter lucro com isso, ferramenta mt boa mano e mt chave ❤️ Ontem comentei com o biel sobre uma \"limitação\" que eu tava tendo, dps que assinei a darkplanner aí não tive dúvidas. Abriu minha mente pra várias coisas que dá pra ser feita. Bom dms"
   },
@@ -22,7 +25,7 @@ const testimonials = [
     author: {
       name: "Vitor Messagi",
       handle: "Vitor Messagi",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+      avatar: avatarVitor
     },
     text: "Ferramenta de viral do Planner é sensacional tamaluco. Tô igual uma máquina aqui, um vídeo atrás do outro"
   }
