@@ -425,18 +425,18 @@ float clouds(vec2 p) {
 void main(void) {
 	vec2 uv=(FC-.5*R)/MN,st=uv*vec2(2,1);
 	vec3 col=vec3(0);
-	float bg=clouds(vec2(st.x+T*.5,-st.y));
-	uv*=1.-.3*(sin(T*.2)*.5+.5);
+	float bg=clouds(vec2(st.x+T*.3,-st.y));
+	uv*=1.-.3*(sin(T*.15)*.5+.5);
 	for (float i=1.; i<12.; i++) {
-		uv+=.1*cos(i*vec2(.1+.01*i, .8)+i*i+T*.5+.1*uv.x);
+		uv+=.1*cos(i*vec2(.1+.01*i, .8)+i*i+T*.3+.1*uv.x);
 		vec2 p=uv;
 		float d=length(p);
-		// Cores azuis/ciano
-		col+=.00125/d*(cos(sin(i)*vec3(1.2,2.0,3.5))+1.);
+		// Azul intenso e vibrante
+		col+=.0018/d*(cos(sin(i)*vec3(0.8,2.5,4.2))+1.);
 		float b=noise(i+p+bg*1.731);
-		col+=.002*b/length(max(p,vec2(b*p.x*.02,p.y)));
-		// Mix com tons de azul
-		col=mix(col,vec3(bg*.08,bg*.15,bg*.35),d);
+		col+=.003*b/length(max(p,vec2(b*p.x*.02,p.y)));
+		// Mix com azul escuro vibrante
+		col=mix(col,vec3(bg*.05,bg*.18,bg*.45),d);
 	}
 	O=vec4(col,1);
 }`;
