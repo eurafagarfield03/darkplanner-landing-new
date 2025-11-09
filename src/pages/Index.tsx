@@ -3,7 +3,6 @@ import { Hero } from "@/components/Hero";
 import { Community } from "@/components/Community";
 import { SectionConnector } from "@/components/SectionConnector";
 import { ProblemSolution } from "@/components/ProblemSolution";
-import { RobotShowcase } from "@/components/RobotShowcase";
 import { HowItWorks } from "@/components/HowItWorks";
 import { ToolsGrid } from "@/components/ToolsGrid";
 import { SocialProof } from "@/components/SocialProof";
@@ -22,10 +21,6 @@ const Index = () => {
       <Community />
       <SectionConnector />
       <ProblemSolution />
-      <SectionConnector />
-      <div className="container mx-auto px-4 py-12">
-        <RobotShowcase />
-      </div>
       <SectionConnector />
       <HowItWorks />
       <SectionConnector />
