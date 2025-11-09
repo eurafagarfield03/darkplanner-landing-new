@@ -3,7 +3,7 @@ import { Hero } from "@/components/Hero";
 import { DashboardShowcase } from "@/components/DashboardShowcase";
 import { SectionConnector } from "@/components/SectionConnector";
 import { ProblemSolution } from "@/components/ProblemSolution";
-import { RobotShowcase } from "@/components/RobotShowcase";
+import { CreatorsFocus } from "@/components/CreatorsFocus";
 import { HowItWorks } from "@/components/HowItWorks";
 import { NichosViraisHero } from "@/components/NichosViraisHero";
 import { ToolsGrid } from "@/components/ToolsGrid";
@@ -21,7 +21,7 @@ const Index = () => {
       <Hero />
       <DashboardShowcase />
       <SectionConnector />
-      <RobotShowcase />
+      <CreatorsFocus />
       <SectionConnector />
       <ProblemSolution />
       <SectionConnector />
