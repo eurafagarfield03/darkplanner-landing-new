@@ -11,7 +11,7 @@ export const NichosViraisHero = () => {
             Descubra os <span className="text-gradient">Nichos Mais Promissores</span> do YouTube
           </h2>
           <p className="mx-auto my-6 max-w-2xl text-base md:text-lg text-muted-foreground">
-            Acesse dados reais de canais organizados por nicho, com métricas de views, score viral e quantidade de canais. Encontre oportunidades antes da concorrência.
+            Encontre oportunidades antes da concorrência.
           </p>
 
           <Button
