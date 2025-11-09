@@ -97,16 +97,18 @@ export const Pricing = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`glass-card rounded-3xl p-4 md:p-6 lg:p-8 border-2 transition-all duration-300 hover:-translate-y-2 relative max-w-full animate-fade-in flex flex-col ${
+              className={`glass-card rounded-3xl p-4 md:p-6 lg:p-8 border-2 transition-all duration-300 hover:-translate-y-2 relative max-w-full animate-fade-in flex flex-col h-full ${
                 plan.popular ? "border-primary shadow-2xl md:scale-105" : "border-border"
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {plan.popular && (
-                <div className="absolute -top-3 md:-top-4 left-1/2 -translate-x-1/2 px-3 md:px-6 py-1 md:py-2 bg-gradient-to-r from-primary to-secondary text-white font-black text-xs md:text-sm rounded-full whitespace-nowrap">
-                  MAIS POPULAR
-                </div>
-              )}
+              <div className="h-8 md:h-10 -mt-4 md:-mt-6 mb-2 md:mb-4">
+                {plan.popular && (
+                  <div className="absolute -top-3 md:-top-4 left-1/2 -translate-x-1/2 px-3 md:px-6 py-1 md:py-2 bg-gradient-to-r from-primary to-secondary text-white font-black text-xs md:text-sm rounded-full whitespace-nowrap">
+                    MAIS POPULAR
+                  </div>
+                )}
+              </div>
 
               <div className="mb-4 md:mb-6">
                 <h3 className="text-lg md:text-xl lg:text-2xl font-black mb-1">{plan.name}</h3>
@@ -127,8 +129,9 @@ export const Pricing = () => {
                 <p className="text-xs md:text-sm text-muted-foreground">{plan.discount}</p>
               </div>
 
-              <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8 flex-grow">
-                {plan.features.map((feature, fIndex) => {
+              <div className="flex-grow">
+                <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
+                  {plan.features.map((feature, fIndex) => {
                   const Icon = feature.icon;
                   return (
                     <li key={fIndex} className="flex items-start gap-2 md:gap-3">
@@ -142,10 +145,12 @@ export const Pricing = () => {
                       </span>
                     </li>
                   );
-                })}
-              </ul>
+                  })}
+                </ul>
+              </div>
 
-              <Button
+              <div className="mt-auto">
+                <Button
                 size="lg"
                 className={`w-full font-black text-sm md:text-base lg:text-lg py-5 md:py-6 k-checkout ${
                   plan.popular
@@ -160,7 +165,7 @@ export const Pricing = () => {
                 </a>
               </Button>
 
-              <div className="flex flex-wrap items-center justify-center gap-1 md:gap-2 mt-3 md:mt-4 text-[10px] md:text-xs text-muted-foreground">
+                <div className="flex flex-wrap items-center justify-center gap-1 md:gap-2 mt-3 md:mt-4 text-[10px] md:text-xs text-muted-foreground">
                 <div className="flex items-center gap-1">
                   <CheckCircle2 className="w-3 h-3 text-primary" />
                   <span>Acesso imediato</span>
@@ -175,6 +180,7 @@ export const Pricing = () => {
                   <CheckCircle2 className="w-3 h-3 text-primary" />
                   <span>Cancele quando quiser</span>
                 </div>
+              </div>
               </div>
             </div>
           ))}
