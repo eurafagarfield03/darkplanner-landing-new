@@ -334,7 +334,7 @@ const AnimatedShaderHero: React.FC<HeroProps> = ({
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center pt-16 md:pt-20 pb-12 md:pb-20 px-4 md:px-6">
         {/* Trust Badge */}
         {trustBadge && (
-          <div className="mb-8 animate-fade-in-down">
+          <div className="mb-4 animate-fade-in-down">
             <div className="glass-card px-3 md:px-6 py-2 md:py-3 rounded-full border border-primary/20">
               <p className="text-xs md:text-sm lg:text-base font-semibold text-gradient">
                 {trustBadge.text}
