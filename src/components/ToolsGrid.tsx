@@ -53,7 +53,7 @@ const tools = [
 
 export const ToolsGrid = () => {
   return (
-    <section id="tools" className="py-16 md:py-24 px-4 md:px-6 overflow-x-hidden">
+    <section id="tools" className="py-8 md:py-12 px-4 md:px-6 overflow-x-hidden">
       <div className="container max-w-7xl">
         <div className="text-center mb-12 md:mb-16 animate-fade-in">
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">

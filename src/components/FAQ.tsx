@@ -35,7 +35,7 @@ const faqs = [
 
 export const FAQ = () => {
   return (
-    <section className="py-16 md:py-24 px-4 md:px-6 overflow-x-hidden" id="faq">
+    <section className="py-8 md:py-12 px-4 md:px-6 overflow-x-hidden" id="faq">
       <div className="container max-w-4xl">
         <div className="text-center mb-12 md:mb-16 px-2 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-3 md:px-5 py-2 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 mb-6">
