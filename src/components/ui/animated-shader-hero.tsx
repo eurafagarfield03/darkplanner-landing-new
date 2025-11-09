@@ -431,10 +431,10 @@ void main(void) {
 		uv+=.1*cos(i*vec2(.1+.01*i, .8)+i*i+T*.3+.1*uv.x);
 		vec2 p=uv;
 		float d=length(p);
-		// Tons de cinza escuro com leve toque azul
-		col+=.0012/d*(cos(sin(i)*vec3(1.0,1.05,1.15))+1.);
+		// Tons de cinza escuro com raios mais suaves
+		col+=.0006/d*(cos(sin(i)*vec3(1.0,1.05,1.15))+1.);
 		float b=noise(i+p+bg*1.731);
-		col+=.002*b/length(max(p,vec2(b*p.x*.02,p.y)));
+		col+=.0012*b/length(max(p,vec2(b*p.x*.02,p.y)));
 		// Mix com cinza escuro
 		col=mix(col,vec3(bg*.08,bg*.09,bg*.12),d);
 	}
