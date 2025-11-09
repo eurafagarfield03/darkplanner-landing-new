@@ -431,12 +431,12 @@ void main(void) {
 		uv+=.1*cos(i*vec2(.1+.01*i, .8)+i*i+T*.5+.1*uv.x);
 		vec2 p=uv;
 		float d=length(p);
-		// Cores adaptadas: roxo/azul/ciano (Dark Planner)
-		col+=.00125/d*(cos(sin(i)*vec3(2.5,1.8,3.2))+1.);
+		// Cores azuis/ciano
+		col+=.00125/d*(cos(sin(i)*vec3(1.2,2.0,3.5))+1.);
 		float b=noise(i+p+bg*1.731);
 		col+=.002*b/length(max(p,vec2(b*p.x*.02,p.y)));
-		// Mix com tons de roxo/azul escuro
-		col=mix(col,vec3(bg*.15,bg*.08,bg*.25),d);
+		// Mix com tons de azul
+		col=mix(col,vec3(bg*.08,bg*.15,bg*.35),d);
 	}
 	O=vec4(col,1);
 }`;
