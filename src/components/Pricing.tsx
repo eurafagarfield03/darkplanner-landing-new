@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, Clock, Zap, Gift, Shield, CheckCircle2, Lock, MessageCircle } from "lucide-react";
+import { getCheckoutURL } from "@/lib/affiliate-tracking";
 
 const plans = [
   {
@@ -152,14 +153,14 @@ export const Pricing = () => {
               <div className="mt-auto">
                 <Button
                 size="lg"
-                className={`w-full font-black text-sm md:text-base lg:text-lg py-5 md:py-6 k-checkout ${
+                className={`w-full font-black text-sm md:text-base lg:text-lg py-5 md:py-6 ${
                   plan.popular
                     ? "bg-gradient-to-r from-primary to-secondary hover:opacity-90"
                     : ""
                 }`}
                 asChild
               >
-                <a href={plan.paymentUrl} target="_blank" rel="noopener noreferrer" className="k-checkout">
+                <a href={getCheckoutURL(plan.paymentUrl)} target="_blank" rel="noopener noreferrer">
                   {plan.name === "MASTER" && <Zap className="w-4 h-4 md:w-5 md:h-5 mr-2" />}
                   {plan.cta}
                 </a>

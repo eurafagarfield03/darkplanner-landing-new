@@ -1,5 +1,6 @@
 import { Shield, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getCheckoutURL } from "@/lib/affiliate-tracking";
 
 export const Guarantee = () => {
   return (
@@ -47,9 +48,12 @@ export const Guarantee = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white px-8 md:px-16 py-6 md:py-8 text-base md:text-lg lg:text-xl font-black rounded-full glow-effect"
+                asChild
               >
-                Sim, quero escalar meus canais agora
-                <ArrowRight className="w-5 h-5 md:w-6 md:h-6 ml-2" />
+                <a href={getCheckoutURL("https://pay.kirvano.com/b88f6afb-3fb9-45cd-a47d-6318edff1ec7")} target="_blank" rel="noopener noreferrer">
+                  Sim, quero escalar meus canais agora
+                  <ArrowRight className="w-5 h-5 md:w-6 md:h-6 ml-2" />
+                </a>
               </Button>
 
               <div className="flex flex-wrap items-center justify-center gap-4 mt-6 text-sm text-muted-foreground font-medium">
