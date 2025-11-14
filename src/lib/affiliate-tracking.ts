@@ -15,8 +15,12 @@ const AFFILIATE_PARAMS = ['aff', 'ref', 'kref', 'refid', 'afid', 'affiliate', 'a
 // Parâmetros UTM para preservar
 const UTM_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'utm_id', 'utm_referrer'];
 
+// Parâmetros especiais para preservar
+const SPECIAL_PARAMS = ['coupon', 'discount', 'promo', 'code'];
+
 interface AffiliateData {
   aff?: string;
+  coupon?: string;
   utm_source?: string;
   utm_medium?: string;
   utm_campaign?: string;
@@ -46,6 +50,14 @@ function captureURLParams(): AffiliateData {
 
   // Captura UTMs
   for (const param of UTM_PARAMS) {
+    const value = params.get(param);
+    if (value) {
+      data[param as keyof AffiliateData] = value;
+    }
+  }
+
+  // Captura parâmetros especiais (coupon, discount, etc.)
+  for (const param of SPECIAL_PARAMS) {
     const value = params.get(param);
     if (value) {
       data[param as keyof AffiliateData] = value;
@@ -150,6 +162,14 @@ function appendParamsToURL(url: string, params: AffiliateData): string {
     // Adiciona aff
     if (params.aff && !urlObj.searchParams.has('aff')) {
       urlObj.searchParams.set('aff', params.aff);
+    }
+
+    // Adiciona parâmetros especiais (coupon, discount, etc.)
+    for (const param of SPECIAL_PARAMS) {
+      const value = params[param as keyof AffiliateData];
+      if (value && typeof value === 'string' && !urlObj.searchParams.has(param)) {
+        urlObj.searchParams.set(param, value);
+      }
     }
 
     // Adiciona UTMs
