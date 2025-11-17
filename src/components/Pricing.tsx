@@ -6,7 +6,7 @@ const plans = [
   {
     name: "STARTER",
     subtitle: "Para quem está começando",
-    price: "49,90",
+    price: "99,80",
     originalPrice: null,
     discount: "Plano mensal",
     period: "/mês",
@@ -29,9 +29,9 @@ const plans = [
   {
     name: "CREATOR",
     subtitle: "Ideal para crescimento",
-    price: "251,48",
+    price: "299,40",
     originalPrice: null,
-    discount: "Equivale a R$ 41,91/mês • Economize 16% vs mensal",
+    discount: "Equivale a 3 meses • Receba 6 meses pagando apenas 3",
     period: "/semestre",
     features: [
       { text: "Canais ilimitados - gerencie quantos quiser", highlight: false },
@@ -52,9 +52,9 @@ const plans = [
   {
     name: "MASTER",
     subtitle: "Melhor custo-benefício",
-    price: "431,07",
+    price: "598,80",
     originalPrice: null,
-    discount: "Equivale a R$ 35,92/mês • Economize 28% vs mensal",
+    discount: "Equivale a 6 meses • Receba 12 meses pagando apenas 6",
     period: "/ano",
     features: [
       { text: "Canais ilimitados - gerencie quantos quiser", highlight: false },
@@ -83,15 +83,9 @@ export const Pricing = () => {
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
             Escolha o plano ideal para <span className="text-gradient">seu crescimento</span>
           </h2>
-          <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-4">
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
             Todos os planos incluem acesso às ferramentas principais. Escolha a frequência que faz mais sentido para você.
           </p>
-          <div className="inline-flex items-center gap-2 px-3 md:px-4 py-2 rounded-full bg-destructive/10 border border-destructive/30">
-            <Clock className="w-4 h-4 text-destructive" />
-            <span className="text-destructive font-bold text-xs md:text-sm">
-              Oferta de Lançamento: 37% OFF no plano mensal • Termina em breve
-            </span>
-          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-4 md:gap-8 mb-12 max-w-full items-stretch">
