@@ -6,6 +6,7 @@ import { ProblemSolution } from "@/components/ProblemSolution";
 import { CreatorsFocus } from "@/components/CreatorsFocus";
 import { HowItWorks } from "@/components/HowItWorks";
 import { NichosViraisHero } from "@/components/NichosViraisHero";
+import { ChannelInsightsHero } from "@/components/ChannelInsightsHero";
 import { ToolsGrid } from "@/components/ToolsGrid";
 import { SocialProof } from "@/components/SocialProof";
 import { Comparison } from "@/components/Comparison";
@@ -28,6 +29,8 @@ const Index = () => {
       <HowItWorks />
       <SectionConnector />
       <NichosViraisHero />
+      <SectionConnector />
+      <ChannelInsightsHero />
       <SectionConnector />
       <ToolsGrid />
       <SectionConnector />
