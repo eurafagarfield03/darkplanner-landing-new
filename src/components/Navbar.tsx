@@ -1,8 +1,25 @@
 import { Button } from "@/components/ui/button";
-import { Sparkles } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { useState } from "react";
 
 export const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const menuItems = [
+    { href: "#benefits", label: "Benefícios" },
+    { href: "#tools", label: "Recursos" },
+    { href: "#pricing", label: "Preço" },
+    { href: "#faq", label: "FAQ" },
+  ];
+
+  const handleMenuClick = (href: string) => {
+    setIsOpen(false);
+    const element = document.querySelector(href);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-6xl px-2">
       <div className="glass-card rounded-full px-4 md:px-6 py-3 flex items-center justify-between">
@@ -14,35 +31,92 @@ export const Navbar = () => {
           <span className="font-bold text-base md:text-lg">Dark Planner</span>
         </a>
 
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#benefits" className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
-            Benefícios
-          </a>
-          <a href="#tools" className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
-            Recursos
-          </a>
-          <a href="#pricing" className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
-            Preço
-          </a>
-          <a href="#faq" className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors">
-            FAQ
-          </a>
+          {menuItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
 
-        <div className="flex items-center gap-2 md:gap-3">
+        {/* Desktop Buttons */}
+        <div className="hidden md:flex items-center gap-3">
           <Button 
             variant="ghost" 
-            className="hidden sm:inline-flex font-bold text-sm md:text-base"
+            className="font-bold text-sm md:text-base"
             onClick={() => window.location.href = 'https://app.darkplanner.com.br/'}
           >
             Login
           </Button>
           <Button 
             className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity font-bold text-sm md:text-base px-4 md:px-6"
-            onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => handleMenuClick('#pricing')}
           >
             Comece agora
           </Button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className="flex md:hidden items-center gap-2">
+          <Button 
+            size="sm"
+            className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity font-bold text-xs px-3"
+            onClick={() => handleMenuClick('#pricing')}
+          >
+            Começar
+          </Button>
+          
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="h-9 w-9">
+                <Menu className="h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[280px] sm:w-[350px]">
+              <div className="flex flex-col gap-6 mt-8">
+                <div className="flex items-center gap-3 pb-4 border-b border-border">
+                  <img src={logo} alt="Dark Planner Logo" className="w-10 h-10 rounded-xl" />
+                  <span className="font-bold text-lg">Dark Planner</span>
+                </div>
+
+                <nav className="flex flex-col gap-4">
+                  {menuItems.map((item) => (
+                    <button
+                      key={item.href}
+                      onClick={() => handleMenuClick(item.href)}
+                      className="text-left text-base font-semibold text-muted-foreground hover:text-foreground transition-colors py-2"
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </nav>
+
+                <div className="flex flex-col gap-3 pt-4 border-t border-border">
+                  <Button 
+                    variant="outline" 
+                    className="w-full font-bold"
+                    onClick={() => {
+                      setIsOpen(false);
+                      window.location.href = 'https://app.darkplanner.com.br/';
+                    }}
+                  >
+                    Login
+                  </Button>
+                  <Button 
+                    className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity font-bold"
+                    onClick={() => handleMenuClick('#pricing')}
+                  >
+                    Comece agora
+                  </Button>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </nav>
