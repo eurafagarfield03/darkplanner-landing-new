@@ -42,7 +42,7 @@ const plans = [
       { text: "Gerador de SRT para CapCut", highlight: false },
       { text: "Buscador de Virais IMEDIATO - acesso instantâneo", highlight: true, icon: Zap },
       { text: "Nichos Virais IMEDIATO - acesso instantâneo", highlight: true, icon: Zap },
-      { text: "Insights de Canal IMEDIATO - acesso instantâneo", highlight: true, icon: Zap },
+      { text: "Insights de Canal liberado após 7 dias", highlight: false, icon: Clock },
       { text: "Comunidade Dark Planner no WhatsApp", highlight: false },
       { text: "Atualizações mensais com novas ferramentas", highlight: false },
       { text: "Suporte em português", highlight: false },
@@ -54,9 +54,9 @@ const plans = [
   {
     name: "MASTER",
     subtitle: "Melhor custo-benefício",
-    price: "598,80",
+    price: "499,00",
     originalPrice: null,
-    discount: "Equivale a 6 meses • Receba 12 meses pagando apenas 6",
+    discount: "Equivale a 5 meses • Receba 12 meses pagando apenas 5",
     period: "/ano",
     features: [
       { text: "Canais ilimitados - gerencie quantos quiser", highlight: false },
