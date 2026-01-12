@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import dashboardImage from "@/assets/dashboard-main.png";
+import dashboardImage from "@/assets/dashboard-home.png";
 
 export const DashboardShowcase = () => {
   return (
