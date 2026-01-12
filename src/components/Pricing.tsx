@@ -90,9 +90,9 @@ const plans = [
       { text: "Acesso antecipado a novos recursos e ferramentas", highlight: true, icon: Gift },
     ],
     audioFeatures: {
-      audiosPerDay: 30,
+      audiosPerDay: 50,
       simultaneous: true,
-      maxChars: "120 mil",
+      maxChars: "150 mil",
     },
     cta: "Garantir Anual",
     paymentUrl: "https://pay.kirvano.com/3f0f75c5-97fa-40f7-8832-d73fac2384ac",
