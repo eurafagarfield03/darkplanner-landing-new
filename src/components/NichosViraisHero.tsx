@@ -52,7 +52,7 @@ export const NichosViraisHero = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 px-4 overflow-hidden">
+    <section id="nichos-virais" className="py-16 md:py-24 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Content */}

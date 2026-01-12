@@ -10,6 +10,8 @@ export const Navbar = () => {
   const menuItems = [
     { href: "#benefits", label: "Benefícios" },
     { href: "#tools", label: "Recursos" },
+    { href: "#audio-generator", label: "Gerador de Áudio" },
+    { href: "#nichos-virais", label: "Nichos Virais" },
     { href: "#pricing", label: "Preço" },
     { href: "#faq", label: "FAQ" },
   ];

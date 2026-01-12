@@ -5,7 +5,7 @@ import geradorAudioImage from "@/assets/gerador-audio.png";
 
 export const AudioGeneratorHero = () => {
   return (
-    <section className="py-16 md:py-24 px-4 overflow-hidden relative">
+    <section id="audio-generator" className="py-16 md:py-24 px-4 overflow-hidden relative">
       {/* Background Glow */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-secondary/5 pointer-events-none" />
       
