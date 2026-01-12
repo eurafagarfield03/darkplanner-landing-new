@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Check, Clock, Zap, Gift, Shield, CheckCircle2, Lock } from "lucide-react";
+import { Check, Clock, Zap, Gift, Shield, CheckCircle2, Lock, Volume2 } from "lucide-react";
 import { getCheckoutURL } from "@/lib/affiliate-tracking";
 
 const plans = [
@@ -20,6 +20,11 @@ const plans = [
       { text: "Insights de Canal (após 7 dias)", icon: Clock },
       { text: "Comunidade WhatsApp", highlight: false },
     ],
+    audioFeatures: {
+      audiosPerDay: 10,
+      simultaneous: true,
+      maxChars: "120 mil",
+    },
     cta: "Começar com Starter",
     paymentUrl: "https://pay.kirvano.com/f9e086f7-6385-432d-8735-c6e4df12b8eb",
     popular: false,
@@ -40,6 +45,11 @@ const plans = [
       { text: "Insights de Canal (após 7 dias)", icon: Clock },
       { text: "Comunidade WhatsApp", highlight: false },
     ],
+    audioFeatures: {
+      audiosPerDay: 20,
+      simultaneous: true,
+      maxChars: "120 mil",
+    },
     cta: "Escolher Creator",
     paymentUrl: "https://pay.kirvano.com/b88f6afb-3fb9-45cd-a47d-6318edff1ec7",
     popular: true,
@@ -61,6 +71,11 @@ const plans = [
       { text: "Suporte prioritário", highlight: true },
       { text: "Acesso antecipado", highlight: true, icon: Gift },
     ],
+    audioFeatures: {
+      audiosPerDay: 30,
+      simultaneous: true,
+      maxChars: "120 mil",
+    },
     cta: "Garantir Master",
     paymentUrl: "https://pay.kirvano.com/3f0f75c5-97fa-40f7-8832-d73fac2384ac",
     popular: false,
@@ -118,7 +133,7 @@ export const Pricing = () => {
                 <p className="text-sm text-muted-foreground mt-1">{plan.discount}</p>
               </div>
 
-              <ul className="space-y-3 mb-8 flex-grow">
+              <ul className="space-y-3 mb-4 flex-grow">
                 {plan.features.map((feature, fIndex) => {
                   const Icon = feature.icon;
                   return (
@@ -135,6 +150,28 @@ export const Pricing = () => {
                   );
                 })}
               </ul>
+
+              {/* Audio Features Section */}
+              <div className="glass-card rounded-xl p-4 mb-6 border border-primary/20 bg-gradient-to-r from-primary/5 to-secondary/5">
+                <div className="flex items-center gap-2 mb-3">
+                  <Volume2 className="w-4 h-4 text-primary" />
+                  <span className="text-sm font-bold text-primary">Gerador de Áudio IA</span>
+                </div>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center gap-2 text-muted-foreground">
+                    <Check className="w-3 h-3 text-success flex-shrink-0" />
+                    <span><strong className="text-foreground">{plan.audioFeatures.audiosPerDay} áudios</strong> por dia</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-muted-foreground">
+                    <Check className="w-3 h-3 text-success flex-shrink-0" />
+                    <span>Gerações simultâneas</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-muted-foreground">
+                    <Check className="w-3 h-3 text-success flex-shrink-0" />
+                    <span>Até {plan.audioFeatures.maxChars} caracteres por áudio</span>
+                  </li>
+                </ul>
+              </div>
 
               <Button
                 size="lg"
