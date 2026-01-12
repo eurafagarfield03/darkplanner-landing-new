@@ -8,7 +8,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { href: "#benefits", label: "Benefícios" },
+    { href: "#how-it-works", label: "Recursos" },
     { href: "#nichos-virais", label: "Nichos Virais" },
     { href: "#audio-generator", label: "Gerador de Áudio" },
     { href: "#pricing", label: "Preço" },
