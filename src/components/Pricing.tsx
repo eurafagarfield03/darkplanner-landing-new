@@ -87,7 +87,7 @@ const plans = [
       { text: "Nichos Virais IMEDIATO", highlight: true, icon: Zap },
       { text: "Insights de Canal IMEDIATO", highlight: true, icon: Zap },
       { text: "Suporte prioritário", highlight: true },
-      { text: "Acesso antecipado", highlight: true, icon: Gift },
+      { text: "Acesso antecipado a novos recursos e ferramentas", highlight: true, icon: Gift },
     ],
     audioFeatures: {
       audiosPerDay: 30,
