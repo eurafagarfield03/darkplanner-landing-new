@@ -1,5 +1,6 @@
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Check, Clock, Zap, Gift, Shield, CheckCircle2, Lock, MessageCircle } from "lucide-react";
+import { Check, Clock, Zap, Gift, Shield, CheckCircle2, Lock } from "lucide-react";
 import { getCheckoutURL } from "@/lib/affiliate-tracking";
 
 const plans = [
@@ -7,21 +8,17 @@ const plans = [
     name: "STARTER",
     subtitle: "Para quem está começando",
     price: "99,80",
-    originalPrice: null,
-    discount: "Plano mensal",
     period: "/mês",
+    discount: "Plano mensal",
     features: [
-      { text: "Canais ilimitados - gerencie quantos quiser", highlight: false },
-      { text: "Biblioteca de prompts organizada com busca", highlight: false },
-      { text: "Gestão de roteiros conectados aos vídeos", highlight: false },
-      { text: "Referências de thumbnails", highlight: false },
-      { text: "Gerador de SRT para CapCut", highlight: false },
-      { text: "Buscador de Virais liberado após 7 dias", highlight: false, icon: Clock },
-      { text: "Nichos Virais liberado após 7 dias", highlight: false, icon: Clock },
-      { text: "Insights de Canal liberado após 7 dias", highlight: false, icon: Clock },
-      { text: "Comunidade Dark Planner no WhatsApp", highlight: false },
-      { text: "Atualizações mensais com novas ferramentas", highlight: false },
-      { text: "Suporte em português", highlight: false },
+      { text: "Canais ilimitados", highlight: false },
+      { text: "Biblioteca de prompts", highlight: false },
+      { text: "Gestão de roteiros", highlight: false },
+      { text: "Gerador de SRT", highlight: false },
+      { text: "Buscador de Virais (após 7 dias)", icon: Clock },
+      { text: "Nichos Virais (após 7 dias)", icon: Clock },
+      { text: "Insights de Canal (após 7 dias)", icon: Clock },
+      { text: "Comunidade WhatsApp", highlight: false },
     ],
     cta: "Começar com Starter",
     paymentUrl: "https://pay.kirvano.com/f9e086f7-6385-432d-8735-c6e4df12b8eb",
@@ -31,21 +28,17 @@ const plans = [
     name: "CREATOR",
     subtitle: "Ideal para crescimento",
     price: "299,40",
-    originalPrice: null,
-    discount: "Equivale a 3 meses • Receba 6 meses pagando apenas 3",
     period: "/semestre",
+    discount: "Equivale a 3 meses",
     features: [
-      { text: "Canais ilimitados - gerencie quantos quiser", highlight: false },
-      { text: "Biblioteca de prompts organizada com busca", highlight: false },
-      { text: "Gestão de roteiros conectados aos vídeos", highlight: false },
-      { text: "Referências de thumbnails", highlight: false },
-      { text: "Gerador de SRT para CapCut", highlight: false },
-      { text: "Buscador de Virais IMEDIATO - acesso instantâneo", highlight: true, icon: Zap },
-      { text: "Nichos Virais IMEDIATO - acesso instantâneo", highlight: true, icon: Zap },
-      { text: "Insights de Canal liberado após 7 dias", highlight: false, icon: Clock },
-      { text: "Comunidade Dark Planner no WhatsApp", highlight: false },
-      { text: "Atualizações mensais com novas ferramentas", highlight: false },
-      { text: "Suporte em português", highlight: false },
+      { text: "Canais ilimitados", highlight: false },
+      { text: "Biblioteca de prompts", highlight: false },
+      { text: "Gestão de roteiros", highlight: false },
+      { text: "Gerador de SRT", highlight: false },
+      { text: "Buscador de Virais IMEDIATO", highlight: true, icon: Zap },
+      { text: "Nichos Virais IMEDIATO", highlight: true, icon: Zap },
+      { text: "Insights de Canal (após 7 dias)", icon: Clock },
+      { text: "Comunidade WhatsApp", highlight: false },
     ],
     cta: "Escolher Creator",
     paymentUrl: "https://pay.kirvano.com/b88f6afb-3fb9-45cd-a47d-6318edff1ec7",
@@ -55,24 +48,20 @@ const plans = [
     name: "MASTER",
     subtitle: "Melhor custo-benefício",
     price: "499,00",
-    originalPrice: null,
-    discount: "Equivale a 5 meses • Receba 12 meses pagando apenas 5",
     period: "/ano",
+    discount: "Equivale a 5 meses",
     features: [
-      { text: "Canais ilimitados - gerencie quantos quiser", highlight: false },
-      { text: "Biblioteca de prompts organizada com busca", highlight: false },
-      { text: "Gestão de roteiros conectados aos vídeos", highlight: false },
-      { text: "Referências de thumbnails", highlight: false },
-      { text: "Gerador de SRT para CapCut", highlight: false },
-      { text: "Buscador de Virais IMEDIATO - acesso instantâneo", highlight: true, icon: Zap },
-      { text: "Nichos Virais IMEDIATO - acesso instantâneo", highlight: true, icon: Zap },
-      { text: "Insights de Canal IMEDIATO - acesso instantâneo", highlight: true, icon: Zap },
-      { text: "Comunidade Dark Planner no WhatsApp", highlight: false },
-      { text: "Suporte prioritário - respostas em até 2h", highlight: true },
-      { text: "Acesso antecipado a novas ferramentas", highlight: true, icon: Gift },
-      { text: "Atualizações mensais garantidas", highlight: false },
+      { text: "Canais ilimitados", highlight: false },
+      { text: "Biblioteca de prompts", highlight: false },
+      { text: "Gestão de roteiros", highlight: false },
+      { text: "Gerador de SRT", highlight: false },
+      { text: "Buscador de Virais IMEDIATO", highlight: true, icon: Zap },
+      { text: "Nichos Virais IMEDIATO", highlight: true, icon: Zap },
+      { text: "Insights de Canal IMEDIATO", highlight: true, icon: Zap },
+      { text: "Suporte prioritário", highlight: true },
+      { text: "Acesso antecipado", highlight: true, icon: Gift },
     ],
-    cta: "Garantir Master Agora",
+    cta: "Garantir Master",
     paymentUrl: "https://pay.kirvano.com/3f0f75c5-97fa-40f7-8832-d73fac2384ac",
     popular: false,
   },
@@ -80,133 +69,95 @@ const plans = [
 
 export const Pricing = () => {
   return (
-    <section className="py-8 md:py-12 px-4 md:px-6 overflow-x-hidden" id="pricing">
-      <div className="container max-w-7xl mx-auto">
-        <div className="text-center mb-12 md:mb-16 px-2 animate-fade-in">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
-            Escolha o plano ideal para <span className="text-gradient">seu crescimento</span>
+    <section className="py-16 md:py-24 px-4" id="pricing">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
+            Escolha seu <span className="text-gradient">plano</span>
           </h2>
-          <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
-            Todos os planos incluem acesso às ferramentas principais. Escolha a frequência que faz mais sentido para você.
+          <p className="text-lg text-muted-foreground">
+            Todos os planos incluem acesso às ferramentas principais
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-4 md:gap-8 mb-12 max-w-full items-stretch">
+        <div className="grid md:grid-cols-3 gap-6 items-stretch">
           {plans.map((plan, index) => (
-            <div
+            <motion.div
               key={index}
-              className={`glass-card rounded-3xl p-4 md:p-6 lg:p-8 border-2 transition-all duration-300 hover:-translate-y-2 relative max-w-full animate-fade-in flex flex-col h-full ${
-                plan.popular ? "border-primary shadow-2xl md:scale-105" : "border-border"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 * index }}
+              viewport={{ once: true }}
+              className={`glass-card rounded-2xl p-6 md:p-8 border-2 transition-all hover-lift flex flex-col relative ${
+                plan.popular ? "border-primary md:scale-105" : "border-border"
               }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="h-8 md:h-10 -mt-4 md:-mt-6 mb-2 md:mb-4">
-                {plan.popular && (
-                  <div className="absolute -top-3 md:-top-4 left-1/2 -translate-x-1/2 px-3 md:px-6 py-1 md:py-2 bg-gradient-to-r from-primary to-secondary text-white font-black text-xs md:text-sm rounded-full whitespace-nowrap">
-                    MAIS POPULAR
-                  </div>
-                )}
-              </div>
-
-              <div className="mb-4 md:mb-6">
-                <h3 className="text-lg md:text-xl lg:text-2xl font-black mb-1">{plan.name}</h3>
-                <p className="text-muted-foreground text-xs md:text-sm">{plan.subtitle}</p>
-              </div>
-
-              <div className="mb-4 md:mb-6">
-                <div className="flex flex-wrap items-baseline gap-1 mb-2">
-                  <span className="text-xs text-muted-foreground">R$</span>
-                  <span className="text-3xl md:text-4xl lg:text-5xl font-black">{plan.price}</span>
-                  <span className="text-xs md:text-sm text-muted-foreground whitespace-nowrap">{plan.period}</span>
+              {plan.popular && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-primary to-secondary text-primary-foreground font-bold text-xs rounded-full">
+                  MAIS POPULAR
                 </div>
-                {plan.originalPrice && (
-                  <p className="text-xs md:text-sm text-muted-foreground line-through mb-1">
-                    R$ {plan.originalPrice} {plan.discount}
-                  </p>
-                )}
-                <p className="text-xs md:text-sm text-muted-foreground">{plan.discount}</p>
+              )}
+
+              <div className="mb-6 pt-2">
+                <h3 className="text-xl font-black">{plan.name}</h3>
+                <p className="text-sm text-muted-foreground">{plan.subtitle}</p>
               </div>
 
-              <div className="flex-grow">
-                <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
-                  {plan.features.map((feature, fIndex) => {
+              <div className="mb-6">
+                <div className="flex items-baseline gap-1">
+                  <span className="text-xs text-muted-foreground">R$</span>
+                  <span className="text-4xl font-black">{plan.price}</span>
+                  <span className="text-sm text-muted-foreground">{plan.period}</span>
+                </div>
+                <p className="text-sm text-muted-foreground mt-1">{plan.discount}</p>
+              </div>
+
+              <ul className="space-y-3 mb-8 flex-grow">
+                {plan.features.map((feature, fIndex) => {
                   const Icon = feature.icon;
                   return (
-                    <li key={fIndex} className="flex items-start gap-2 md:gap-3">
+                    <li key={fIndex} className="flex items-start gap-3">
                       {Icon ? (
-                        <Icon className={`w-4 h-4 md:w-5 md:h-5 mt-0.5 flex-shrink-0 ${feature.highlight ? 'text-primary' : 'text-success'}`} />
+                        <Icon className={`w-4 h-4 mt-0.5 flex-shrink-0 ${feature.highlight ? 'text-primary' : 'text-muted-foreground'}`} />
                       ) : (
-                        <Check className={`w-4 h-4 md:w-5 md:h-5 mt-0.5 flex-shrink-0 ${feature.highlight ? 'text-primary' : 'text-success'}`} />
+                        <Check className="w-4 h-4 mt-0.5 flex-shrink-0 text-success" />
                       )}
-                      <span className={`text-xs md:text-sm ${feature.highlight ? 'font-bold text-foreground' : 'text-muted-foreground'}`}>
+                      <span className={`text-sm ${feature.highlight ? 'font-bold' : 'text-muted-foreground'}`}>
                         {feature.text}
                       </span>
                     </li>
                   );
-                  })}
-                </ul>
-              </div>
+                })}
+              </ul>
 
-              <div className="mt-auto">
-                <Button
+              <Button
                 size="lg"
-                className={`w-full font-black text-sm md:text-base lg:text-lg py-5 md:py-6 ${
-                  plan.popular
-                    ? "bg-gradient-to-r from-primary to-secondary hover:opacity-90"
-                    : ""
-                }`}
+                className={`w-full font-bold ${plan.popular ? "bg-gradient-to-r from-primary to-secondary hover:opacity-90" : ""}`}
                 asChild
               >
                 <a href={getCheckoutURL(plan.paymentUrl)} target="_blank" rel="noopener noreferrer">
-                  {plan.name === "MASTER" && <Zap className="w-4 h-4 md:w-5 md:h-5 mr-2" />}
                   {plan.cta}
                 </a>
               </Button>
 
-                <div className="flex flex-wrap items-center justify-center gap-1 md:gap-2 mt-3 md:mt-4 text-[10px] md:text-xs text-muted-foreground">
+              <div className="flex items-center justify-center gap-4 mt-4 text-xs text-muted-foreground">
                 <div className="flex items-center gap-1">
-                  <CheckCircle2 className="w-3 h-3 text-primary" />
-                  <span>Acesso imediato</span>
+                  <Shield className="w-3 h-3" />
+                  <span>7 dias garantia</span>
                 </div>
-                <span>•</span>
                 <div className="flex items-center gap-1">
-                  <Shield className="w-3 h-3 text-primary" />
-                  <span>Garantia de 7 dias</span>
-                </div>
-                <span>•</span>
-                <div className="flex items-center gap-1">
-                  <CheckCircle2 className="w-3 h-3 text-primary" />
-                  <span>Cancele quando quiser</span>
+                  <Lock className="w-3 h-3" />
+                  <span>Seguro</span>
                 </div>
               </div>
-              </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-
-        <div className="text-center glass-card rounded-2xl p-4 md:p-6 max-w-3xl mx-auto border-2 border-primary/30">
-          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 text-xs md:text-sm font-bold">
-            <div className="flex items-center gap-2">
-              <Shield className="w-4 h-4 md:w-5 md:h-5 text-primary" />
-              <span>Garantia incondicional de 7 dias em todos os planos</span>
-            </div>
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mt-3 md:mt-4 text-[10px] md:text-xs text-muted-foreground">
-            <div className="flex items-center gap-1 md:gap-2">
-              <Lock className="w-3 h-3 md:w-4 md:h-4 text-primary" />
-              <span>Pagamento 100% seguro</span>
-            </div>
-            <span>•</span>
-            <div className="flex items-center gap-1 md:gap-2">
-              <Zap className="w-3 h-3 md:w-4 md:h-4 text-primary" />
-              <span>Acesso imediato após pagamento</span>
-            </div>
-            <span>•</span>
-            <div className="flex items-center gap-1 md:gap-2">
-              <MessageCircle className="w-3 h-3 md:w-4 md:h-4 text-primary" />
-              <span>Suporte em português</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>

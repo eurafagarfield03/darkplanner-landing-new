@@ -2,57 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ============================================
+   DARK PLANNER - MINIMALISTA PREMIUM
+   Design System - Cores, Tipografia, Efeitos
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @layer base {
   :root {
-    --background: 220 25% 6%;
-    --foreground: 210 20% 98%;
+    /* Core Colors - Paleta Minimalista Escura */
+    --background: 225 15% 6%;
+    --foreground: 0 0% 98%;
 
-    --card: 220 20% 8%;
-    --card-foreground: 210 20% 98%;
+    --card: 225 15% 8%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 220 20% 8%;
-    --popover-foreground: 210 20% 98%;
+    --popover: 225 15% 8%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 188 94% 43%;
-    --primary-foreground: 220 25% 6%;
+    /* Primary - Cyan Sofisticado */
+    --primary: 185 70% 50%;
+    --primary-foreground: 225 15% 6%;
 
-    --secondary: 217 91% 60%;
-    --secondary-foreground: 220 25% 6%;
+    /* Secondary - Azul Elétrico */
+    --secondary: 215 85% 55%;
+    --secondary-foreground: 225 15% 6%;
 
-    --muted: 220 15% 25%;
-    --muted-foreground: 210 10% 65%;
+    /* Muted - Cinzas Elegantes */
+    --muted: 225 10% 18%;
+    --muted-foreground: 225 8% 55%;
 
-    --accent: 188 94% 43%;
-    --accent-foreground: 220 25% 6%;
+    /* Accent */
+    --accent: 185 70% 50%;
+    --accent-foreground: 225 15% 6%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 20% 98%;
+    /* Semantic Colors */
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 98%;
 
-    --success: 142 76% 36%;
-    --success-foreground: 210 20% 98%;
+    --success: 155 70% 45%;
+    --success-foreground: 0 0% 98%;
 
-    --border: 220 15% 15%;
-    --input: 220 15% 15%;
-    --ring: 188 94% 43%;
+    /* Borders & Inputs */
+    --border: 225 10% 14%;
+    --input: 225 10% 14%;
+    --ring: 185 70% 50%;
 
     --radius: 1rem;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(188 94% 43%), hsl(217 91% 60%));
-    --gradient-hero: linear-gradient(180deg, hsl(220 25% 6%), hsl(220 30% 8%), hsl(220 25% 6%));
-    --gradient-card: linear-gradient(135deg, hsl(220 20% 8% / 0.8), hsl(220 25% 10% / 0.6));
+    /* Gradients - Minimalistas */
+    --gradient-primary: linear-gradient(135deg, hsl(185 70% 50%), hsl(215 85% 55%));
+    --gradient-subtle: linear-gradient(180deg, hsl(225 15% 8%), hsl(225 15% 6%));
+    --gradient-glow: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(185 70% 50% / 0.15), transparent);
     
-    /* Shadows */
-    --shadow-glow: 0 10px 40px hsl(188 94% 43% / 0.3);
-    --shadow-card: 0 8px 30px hsl(220 25% 4% / 0.4);
+    /* Shadows - Sutis e Elegantes */
+    --shadow-glow: 0 0 60px hsl(185 70% 50% / 0.15);
+    --shadow-card: 0 4px 24px hsl(225 15% 4% / 0.5);
+    --shadow-elevated: 0 8px 40px hsl(225 15% 4% / 0.6);
     
-    /* Effects */
-    --glass-bg: hsl(220 20% 12% / 0.6);
-    --glass-border: hsl(210 20% 98% / 0.1);
+    /* Glass Effects - Premium */
+    --glass-bg: hsl(225 15% 10% / 0.7);
+    --glass-border: hsl(0 0% 100% / 0.06);
+    --glass-highlight: hsl(0 0% 100% / 0.03);
   }
 }
 
@@ -62,22 +74,15 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply text-foreground overflow-x-hidden;
-    background: linear-gradient(180deg, 
-      #1a1f2e 0%, 
-      #171c29 15%,
-      #1a1f2e 30%,
-      #171c29 45%,
-      #1a1f2e 60%,
-      #171c29 75%,
-      #1a1f2e 90%,
-      #171c29 100%
-    );
-    background-attachment: fixed;
+    @apply text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: hsl(225 15% 6%);
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+    @apply font-bold tracking-tight;
+    letter-spacing: -0.02em;
   }
   
   /* Smooth scroll behavior */
@@ -85,7 +90,24 @@ All colors MUST be HSL.
     scroll-behavior: smooth;
   }
   
-  /* Remove scrollbar on scroll containers */
+  /* Custom Scrollbar - Minimalista */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(225 15% 8%);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(225 10% 20%);
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(185 70% 50% / 0.5);
+  }
+  
   .hide-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -97,203 +119,254 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  /* Text Gradient - Premium */
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+    @apply bg-clip-text text-transparent;
+    background: linear-gradient(135deg, hsl(185 70% 55%), hsl(215 85% 60%));
   }
 
+  /* Glass Card - Minimalista Premium */
   .glass-card {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  .glass-card-elevated {
+    background: linear-gradient(135deg, hsl(225 15% 10% / 0.8), hsl(225 15% 8% / 0.9));
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: var(--shadow-card);
   }
 
+  /* Glow Effect - Sutil */
   .glow-effect {
-    box-shadow: var(--shadow-glow);
+    box-shadow: 0 0 40px hsl(185 70% 50% / 0.2), 0 4px 20px hsl(185 70% 50% / 0.1);
   }
   
-  /* Hover 3D effect */
-  .hover-3d {
-    transition: all 0.3s ease;
+  .glow-effect:hover {
+    box-shadow: 0 0 60px hsl(185 70% 50% / 0.3), 0 8px 30px hsl(185 70% 50% / 0.15);
   }
   
-  .hover-3d:hover {
-    transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) scale(1.02);
+  /* Section Divider Line */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(185 70% 50% / 0.2), transparent);
   }
-  
-  /* Gradient border animation */
-  @keyframes gradient-border {
-    0%, 100% {
-      border-color: hsl(188 94% 43%);
+
+  /* Fade In Animations - Suaves */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
     }
-    50% {
-      border-color: hsl(217 91% 60%);
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
   
-  .animate-gradient-border {
-    animation: gradient-border 3s ease-in-out infinite;
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
-  /* Hero image float animation */
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fade-in-scale {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .animate-fade-in-down {
+    animation: fade-in-down 0.6s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .animate-fade-in-scale {
+    animation: fade-in-scale 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+  
+  .animation-delay-800 {
+    animation-delay: 0.8s;
+  }
+
+  /* Float Animation - Dashboard */
   @keyframes float {
     0%, 100% {
-      transform: translateY(0px) scale(1);
+      transform: translateY(0);
     }
     50% {
-      transform: translateY(-20px) scale(1.02);
+      transform: translateY(-12px);
     }
   }
   
-  @keyframes glow-pulse {
-    0%, 100% {
-      box-shadow: 0 0 40px hsl(188 94% 43% / 0.4),
-                  0 0 80px hsl(217 91% 60% / 0.3),
-                  0 20px 60px hsl(188 94% 43% / 0.2);
-    }
-    50% {
-      box-shadow: 0 0 60px hsl(188 94% 43% / 0.6),
-                  0 0 120px hsl(217 91% 60% / 0.5),
-                  0 30px 80px hsl(188 94% 43% / 0.4);
-    }
-  }
-  
-  @keyframes shine {
-    0% {
-      left: -100%;
-    }
-    100% {
-      left: 200%;
-    }
-  }
-  
-  @keyframes float-orb {
-    0%, 100% {
-      transform: translate(0, 0) scale(1);
-      opacity: 0.4;
-    }
-    25% {
-      transform: translate(50px, -30px) scale(1.1);
-      opacity: 0.6;
-    }
-    50% {
-      transform: translate(-30px, -60px) scale(0.9);
-      opacity: 0.5;
-    }
-    75% {
-      transform: translate(70px, -40px) scale(1.05);
-      opacity: 0.4;
-    }
-  }
-  
-  @keyframes float-orb-reverse {
-    0%, 100% {
-      transform: translate(0, 0) scale(1);
-      opacity: 0.3;
-    }
-    25% {
-      transform: translate(-40px, 50px) scale(0.9);
-      opacity: 0.5;
-    }
-    50% {
-      transform: translate(60px, 30px) scale(1.2);
-      opacity: 0.6;
-    }
-    75% {
-      transform: translate(-50px, 60px) scale(0.95);
-      opacity: 0.4;
-    }
-  }
-  
-  .hero-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(60px);
-    pointer-events: none;
-    z-index: 0;
-  }
-  
-  .hero-orb-1 {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, hsl(188 94% 43% / 0.4), transparent 70%);
-    top: 10%;
-    left: 10%;
-    animation: float-orb 20s ease-in-out infinite;
-  }
-  
-  .hero-orb-2 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, hsl(217 91% 60% / 0.3), transparent 70%);
-    bottom: 20%;
-    right: 15%;
-    animation: float-orb-reverse 25s ease-in-out infinite;
-  }
-  
-  .hero-orb-3 {
-    width: 350px;
-    height: 350px;
-    background: radial-gradient(circle, hsl(188 94% 43% / 0.5), transparent 70%);
-    top: 40%;
-    right: 10%;
-    animation: float-orb 18s ease-in-out infinite 5s;
-  }
-  
-  .hero-orb-4 {
-    width: 450px;
-    height: 450px;
-    background: radial-gradient(circle, hsl(217 91% 60% / 0.35), transparent 70%);
-    bottom: 30%;
-    left: 20%;
-    animation: float-orb-reverse 22s ease-in-out infinite 3s;
-  }
-  
-  .hero-orb-5 {
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, hsl(188 94% 43% / 0.45), transparent 70%);
-    top: 60%;
-    left: 40%;
-    animation: float-orb 16s ease-in-out infinite 7s;
-  }
-  
-  .hero-image-wrapper {
-    position: relative;
+  .animate-float {
     animation: float 6s ease-in-out infinite;
   }
   
-  .hero-image-wrapper::before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    background: linear-gradient(135deg, hsl(188 94% 43% / 0.3), hsl(217 91% 60% / 0.3));
-    border-radius: 1.5rem;
-    animation: glow-pulse 3s ease-in-out infinite;
-    filter: blur(20px);
-    z-index: -1;
+  /* Pulse Glow - Sutil */
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 40px hsl(185 70% 50% / 0.15);
+    }
+    50% {
+      box-shadow: 0 0 60px hsl(185 70% 50% / 0.25);
+    }
   }
   
-  .hero-image-wrapper::after {
+  .animate-pulse-glow {
+    animation: pulse-glow 4s ease-in-out infinite;
+  }
+  
+  /* Shine Effect - Premium */
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+  }
+  
+  .shine-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shine-effect::after {
     content: '';
     position: absolute;
     top: 0;
     left: -100%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(90deg, 
-      transparent, 
-      hsl(188 94% 43% / 0.3), 
-      transparent
-    );
+    background: linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.1), transparent);
     animation: shine 8s ease-in-out infinite;
-    z-index: 1;
     pointer-events: none;
+  }
+
+  /* Accordion Animations */
+  @keyframes accordion-down {
+    from { height: 0; opacity: 0; }
+    to { height: var(--radix-accordion-content-height); opacity: 1; }
+  }
+  
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); opacity: 1; }
+    to { height: 0; opacity: 0; }
+  }
+  
+  .animate-accordion-down {
+    animation: accordion-down 0.2s ease-out;
+  }
+  
+  .animate-accordion-up {
+    animation: accordion-up 0.2s ease-out;
+  }
+
+  /* Hover Effects - Elegantes */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  .hover-glow {
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 30px hsl(185 70% 50% / 0.15);
+    border-color: hsl(185 70% 50% / 0.3);
+  }
+
+  /* Gradient Border Animation */
+  @keyframes gradient-border {
+    0%, 100% { border-color: hsl(185 70% 50% / 0.3); }
+    50% { border-color: hsl(215 85% 55% / 0.3); }
+  }
+  
+  .animate-gradient-border {
+    animation: gradient-border 4s ease-in-out infinite;
+  }
+  
+  /* Background Orbs - Ambient Light */
+  .ambient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+    opacity: 0.4;
+  }
+  
+  .ambient-orb-1 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, hsl(185 70% 50% / 0.15), transparent 70%);
+    top: -10%;
+    left: -5%;
+  }
+  
+  .ambient-orb-2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, hsl(215 85% 55% / 0.1), transparent 70%);
+    bottom: 10%;
+    right: -5%;
   }
 }
 
+/* Spotlight Animation */
 @keyframes spotlight {
   0% {
     opacity: 0;
@@ -301,19 +374,17 @@ All colors MUST be HSL.
   }
   100% {
     opacity: 1;
-    transform: translate(-50%,-40%) scale(1);
+    transform: translate(-50%, -40%) scale(1);
   }
 }
 
 .animate-spotlight {
-  animation: spotlight 2s ease .75s 1 forwards;
+  animation: spotlight 2s ease 0.75s 1 forwards;
 }
 
-/* Loading spinner */
+/* Loading Spinner */
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
 
 .animate-spin {
