@@ -9,7 +9,7 @@ import {
 const faqs = [
   {
     question: "Como funciona o Gerador de Áudio IA?",
-    answer: "Super simples! São apenas 3 passos: 1) Escolha uma das mais de 190 vozes premium ultra-realistas no idioma que combina com seu canal. 2) Cole seu roteiro e gere o áudio com um clique. 3) Baixe o arquivo de áudio MP3 junto com o arquivo SRT de legendas sincronizado perfeitamente, pronto para importar no Premiere, CapCut ou qualquer editor."
+    answer: "Super simples! São apenas 3 passos: 1) Escolha uma das mais de 190 vozes premium ultra-realistas e multilíngues (a mesma voz fala em qualquer idioma!). 2) Cole seu roteiro e gere o áudio com um clique. 3) Baixe o arquivo de áudio MP3 junto com o arquivo SRT de legendas sincronizado perfeitamente, pronto para importar no Premiere, CapCut ou qualquer editor."
   },
   {
     question: "As vozes são realmente de qualidade profissional?",
