@@ -27,9 +27,9 @@ const plans = [
       { text: "Comunidade WhatsApp", highlight: false },
     ],
     audioFeatures: {
-      audiosPerDay: 10,
+      audiosPerDay: 20,
       simultaneous: true,
-      maxChars: "120 mil",
+      maxChars: "80 mil",
     },
     cta: "Começar Agora",
     paymentUrl: "https://pay.kirvano.com/f9e086f7-6385-432d-8735-c6e4df12b8eb",
@@ -58,9 +58,9 @@ const plans = [
       { text: "Comunidade WhatsApp", highlight: false },
     ],
     audioFeatures: {
-      audiosPerDay: 20,
+      audiosPerDay: 30,
       simultaneous: true,
-      maxChars: "120 mil",
+      maxChars: "100 mil",
     },
     cta: "Garantir Semestral",
     paymentUrl: "https://pay.kirvano.com/b88f6afb-3fb9-45cd-a47d-6318edff1ec7",
@@ -90,7 +90,7 @@ const plans = [
       { text: "Acesso antecipado a novos recursos e ferramentas", highlight: true, icon: Gift },
     ],
     audioFeatures: {
-      audiosPerDay: 30,
+      audiosPerDay: 40,
       simultaneous: true,
       maxChars: "120 mil",
     },
