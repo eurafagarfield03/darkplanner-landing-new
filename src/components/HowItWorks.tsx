@@ -107,7 +107,7 @@ export const HowItWorks = () => {
         const nextIndex = (currentIndex + 1) % features.length;
         return features[nextIndex].id;
       });
-    }, 6000);
+    }, 30000);
 
     return () => clearInterval(interval);
   }, []);
