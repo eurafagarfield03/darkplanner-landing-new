@@ -5,7 +5,8 @@
 
 // Configurações
 const ATTRIBUTION_MODE: 'first' | 'last' = 'first'; // 'first' = primeiro clique vence, 'last' = último clique vence
-const COOKIE_DAYS = 90; // Duração do cookie em dias
+const COOKIE_DAYS = 7; // Duração do cookie em dias (7 dias de cache)
+const CACHE_EXPIRY_MS = 7 * 24 * 60 * 60 * 1000; // 7 dias em milissegundos
 const STORAGE_KEY = 'dp_affiliate_data';
 const CHECKOUT_HOSTS = ['pay.kirvano.com']; // Domínios de checkout
 
@@ -126,14 +127,42 @@ function saveAffiliateData(data: AffiliateData) {
 }
 
 /**
- * Recupera dados salvos
+ * Verifica se os dados estão expirados (mais de 7 dias)
+ */
+function isDataExpired(data: AffiliateData): boolean {
+  if (!data.timestamp) return true;
+  const now = Date.now();
+  const age = now - data.timestamp;
+  return age > CACHE_EXPIRY_MS;
+}
+
+/**
+ * Limpa dados expirados do storage
+ */
+function clearExpiredData() {
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+    document.cookie = `${STORAGE_KEY}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`;
+  } catch (e) {
+    console.warn('Erro ao limpar dados expirados:', e);
+  }
+}
+
+/**
+ * Recupera dados salvos (com verificação de expiração de 7 dias)
  */
 function getAffiliateData(): AffiliateData {
   // Tenta localStorage primeiro
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) {
-      return JSON.parse(stored);
+      const data = JSON.parse(stored);
+      // Verifica se os dados estão expirados (7 dias)
+      if (isDataExpired(data)) {
+        clearExpiredData();
+        return {};
+      }
+      return data;
     }
   } catch (e) {
     console.warn('Erro ao ler localStorage:', e);
@@ -143,7 +172,13 @@ function getAffiliateData(): AffiliateData {
   try {
     const cookieData = getCookie(STORAGE_KEY);
     if (cookieData) {
-      return JSON.parse(cookieData);
+      const data = JSON.parse(cookieData);
+      // Verifica se os dados estão expirados (7 dias)
+      if (isDataExpired(data)) {
+        clearExpiredData();
+        return {};
+      }
+      return data;
     }
   } catch (e) {
     console.warn('Erro ao ler cookie:', e);
