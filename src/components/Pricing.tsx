@@ -6,6 +6,7 @@ import { getCheckoutURL } from "@/lib/affiliate-tracking";
 const plans = [
   {
     name: "STARTER",
+    periodLabel: "mensal",
     subtitle: "Ideal para testar o sistema",
     price: "119,90",
     period: "/mês",
@@ -38,6 +39,7 @@ const plans = [
   },
   {
     name: "CREATOR",
+    periodLabel: "semestral",
     subtitle: "Melhor equilíbrio entre preço e compromisso",
     price: "499,90",
     period: "/6 meses",
@@ -68,6 +70,7 @@ const plans = [
   },
   {
     name: "MASTER",
+    periodLabel: "anual",
     subtitle: "Máxima economia • Zero preocupação por 1 ano",
     price: "719,40",
     period: "/12 meses",
@@ -148,7 +151,9 @@ export const Pricing = () => {
                 )}
 
                 <div className="mb-4 pt-2">
-                  <h3 className="text-xl font-black">{plan.name}</h3>
+                  <h3 className="text-xl font-black">
+                    {plan.name} <span className="text-sm font-normal text-muted-foreground">({plan.periodLabel})</span>
+                  </h3>
                   <p className="text-sm text-muted-foreground">{plan.subtitle}</p>
                 </div>
 
