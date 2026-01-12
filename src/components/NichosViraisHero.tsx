@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import nichosImage from "@/assets/nichos-virais-hero.png";
+import nichosImage from "@/assets/nichos-virais-new.png";
 
 export const NichosViraisHero = () => {
   return (
@@ -24,21 +24,21 @@ export const NichosViraisHero = () => {
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Encontre oportunidades antes da concorrência. Sistema inteligente que categoriza canais por potencial de crescimento.
+              Sistema inteligente que categoriza canais por potencial de crescimento. Encontre oportunidades antes da concorrência.
             </p>
             
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-muted-foreground">
                 <div className="w-2 h-2 rounded-full bg-primary" />
-                Canais categorizados: Explodindo, Em Alta, Crescendo
+                <span><strong className="text-foreground">Explodindo:</strong> Canais com menos de 15 dias e +100K views</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <div className="w-2 h-2 rounded-full bg-primary" />
-                Filtros por views, idioma e data de criação
+                <span><strong className="text-foreground">Em Alta:</strong> 15-60 dias postando com +500K views</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <div className="w-2 h-2 rounded-full bg-primary" />
-                Lista de nichos organizados por potencial
+                <span><strong className="text-foreground">Crescendo:</strong> Canais em ascensão consistente</span>
               </li>
             </ul>
 
@@ -62,7 +62,7 @@ export const NichosViraisHero = () => {
             <div className="glass-card-elevated rounded-2xl overflow-hidden border border-primary/10 animate-pulse-glow">
               <img
                 src={nichosImage}
-                alt="Interface de Nichos Virais do Dark Planner"
+                alt="Interface de Nichos Virais do Dark Planner mostrando canais categorizados por crescimento"
                 className="w-full h-auto"
               />
             </div>
