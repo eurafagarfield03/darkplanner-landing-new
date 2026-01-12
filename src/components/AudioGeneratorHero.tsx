@@ -20,7 +20,7 @@ export const AudioGeneratorHero = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 mb-6">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-semibold text-primary">Tecnologia ElevenLabs</span>
+            <span className="text-sm font-semibold text-primary">Vozes Ultra-Realistas</span>
           </div>
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
@@ -28,7 +28,7 @@ export const AudioGeneratorHero = () => {
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Transforme texto em áudio com vozes ultra-realistas. 189 vozes profissionais para seus vídeos Dark.
+            Transforme texto em áudio com vozes ultra-realistas. Mais de 190 vozes premium para seus vídeos Dark.
           </p>
         </motion.div>
 
@@ -62,14 +62,14 @@ export const AudioGeneratorHero = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="glass-card rounded-xl p-5 border border-border hover-glow transition-all">
                 <Volume2 className="w-8 h-8 text-primary mb-3" />
-                <h3 className="font-bold mb-1">189 Vozes</h3>
+                <h3 className="font-bold mb-1">+190 Vozes Premium</h3>
                 <p className="text-sm text-muted-foreground">Biblioteca completa de vozes profissionais</p>
               </div>
               
               <div className="glass-card rounded-xl p-5 border border-border hover-glow transition-all">
                 <Mic className="w-8 h-8 text-primary mb-3" />
                 <h3 className="font-bold mb-1">Ultra-Realista</h3>
-                <p className="text-sm text-muted-foreground">Tecnologia ElevenLabs de última geração</p>
+                <p className="text-sm text-muted-foreground">Tecnologia de IA de última geração</p>
               </div>
               
               <div className="glass-card rounded-xl p-5 border border-border hover-glow transition-all">
