@@ -36,7 +36,7 @@ const features = [
     label: "Áudio",
     icon: Volume2,
     title: "Gerador de Áudio IA",
-    description: "Transforme texto em áudio com tecnologia ElevenLabs. 189 vozes profissionais e controle de velocidade.",
+    description: "Transforme texto em áudio com mais de 190 Vozes Premium ultra-realistas e controle de velocidade.",
     image: geradorAudio,
   },
   {
