@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Users, TrendingUp, Scissors, FileText, BookmarkCheck, MessageSquare, Youtube, LayoutDashboard } from "lucide-react";
+import { Users, TrendingUp, Scissors, FileText, BookmarkCheck, MessageSquare, Youtube, LayoutDashboard, Volume2, Type } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import dashboardHome from "@/assets/dashboard-home.png";
@@ -11,6 +11,8 @@ import geradorSrt from "@/assets/gerador-srt.png";
 import referenciasCanais from "@/assets/referencias-canais.png";
 import promptsCanal from "@/assets/prompts-canal.png";
 import gestaoCanais from "@/assets/gestao-canais.png";
+import geradorAudio from "@/assets/gerador-audio-full.png";
+import editorTexto from "@/assets/editor-texto.png";
 
 const features = [
   {
@@ -28,6 +30,22 @@ const features = [
     title: "Gestão de Canais",
     description: "Gerencie múltiplos canais com organização profissional. Cada canal com suas pastas separadas.",
     image: gestaoCanais,
+  },
+  {
+    id: "audio",
+    label: "Áudio",
+    icon: Volume2,
+    title: "Gerador de Áudio IA",
+    description: "Transforme texto em áudio com tecnologia ElevenLabs. 189 vozes profissionais e controle de velocidade.",
+    image: geradorAudio,
+  },
+  {
+    id: "editor",
+    label: "Editor",
+    icon: Type,
+    title: "Editor de Texto",
+    description: "Contador de caracteres, palavras e tempo de narração. Exporte para SRT ou TXT com um clique.",
+    image: editorTexto,
   },
   {
     id: "prompts",
@@ -110,12 +128,12 @@ export const HowItWorks = () => {
             Como Funciona <span className="text-gradient">na Prática</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            8 ferramentas que eliminam o caos e multiplicam sua produção
+            10 ferramentas que eliminam o caos e multiplicam sua produção
           </p>
         </motion.div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid grid-cols-4 md:grid-cols-8 gap-1 md:gap-2 h-auto bg-card/50 p-2 mb-8 w-full rounded-xl border border-border">
+          <TabsList className="grid grid-cols-5 md:grid-cols-10 gap-1 md:gap-2 h-auto bg-card/50 p-2 mb-8 w-full rounded-xl border border-border">
             {features.map((feature) => (
               <TabsTrigger
                 key={feature.id}
