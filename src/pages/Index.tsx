@@ -1,9 +1,9 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { DashboardShowcase } from "@/components/DashboardShowcase";
-import { SectionConnector } from "@/components/SectionConnector";
-import { ProblemSolution } from "@/components/ProblemSolution";
+import { SectionDivider } from "@/components/SectionDivider";
 import { CreatorsFocus } from "@/components/CreatorsFocus";
+import { ProblemSolution } from "@/components/ProblemSolution";
 import { HowItWorks } from "@/components/HowItWorks";
 import { NichosViraisHero } from "@/components/NichosViraisHero";
 import { ChannelInsightsHero } from "@/components/ChannelInsightsHero";
@@ -17,31 +17,31 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen">
       <Navbar />
       <Hero />
       <DashboardShowcase />
-      <SectionConnector />
+      <SectionDivider />
       <CreatorsFocus />
-      <SectionConnector />
+      <SectionDivider />
       <ProblemSolution />
-      <SectionConnector />
+      <SectionDivider />
       <HowItWorks />
-      <SectionConnector />
+      <SectionDivider />
       <NichosViraisHero />
-      <SectionConnector />
+      <SectionDivider />
       <ChannelInsightsHero />
-      <SectionConnector />
+      <SectionDivider />
       <ToolsGrid />
-      <SectionConnector />
+      <SectionDivider />
       <SocialProof />
-      <SectionConnector />
+      <SectionDivider />
       <Comparison />
-      <SectionConnector />
+      <SectionDivider />
       <FAQ />
-      <SectionConnector />
+      <SectionDivider />
       <Pricing />
-      <SectionConnector />
+      <SectionDivider />
       <FinalCTA />
       <Footer />
     </div>

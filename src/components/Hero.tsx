@@ -1,23 +1,110 @@
-import AnimatedShaderHero from "@/components/ui/animated-shader-hero";
-import { TrendingUp } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <AnimatedShaderHero
-      trustBadge={{
-        text: "Criado por equipe que gerencia +15 canais Dark com +50M views"
-      }}
-      headline={{
-        line1: "Organize, Planeje e Escale:",
-        line2: "Sistema Completo Para Gerenciar Seus Canais Dark e Sua Equipe"
-      }}
-      subtitle="Centralize prompts, roteiros, thumbnails e multiplique sua produção. De 1 vídeo por dia para 15+ vídeos."
-      buttons={{
-        primary: {
-          text: "Quero Organizar Meus Canais Agora",
-          onClick: () => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })
-        }
-      }}
-    />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16 px-4">
+      {/* Ambient Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background">
+        <div className="ambient-orb ambient-orb-1" />
+        <div className="ambient-orb ambient-orb-2" />
+      </div>
+      
+      {/* Subtle Grid Pattern */}
+      <div 
+        className="absolute inset-0 opacity-[0.02]"
+        style={{
+          backgroundImage: `linear-gradient(hsl(185 70% 50%) 1px, transparent 1px), linear-gradient(90deg, hsl(185 70% 50%) 1px, transparent 1px)`,
+          backgroundSize: '60px 60px'
+        }}
+      />
+      
+      <div className="relative z-10 max-w-5xl mx-auto text-center">
+        {/* Trust Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-8"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-primary/20">
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-muted-foreground">
+              Criado por equipe que gerencia +15 canais Dark com +50M views
+            </span>
+          </div>
+        </motion.div>
+
+        {/* Main Headline */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.1] mb-8"
+        >
+          <span className="text-gradient">Organize, Planeje e Escale</span>
+          <br />
+          <span className="text-foreground">Seus Canais Dark</span>
+        </motion.h1>
+
+        {/* Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
+        >
+          Centralize prompts, roteiros, thumbnails e multiplique sua produção.
+          <br className="hidden md:block" />
+          <span className="text-foreground font-medium">De 1 vídeo por dia para 15+ vídeos.</span>
+        </motion.p>
+
+        {/* CTA Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          <button 
+            onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+            className="group relative px-8 py-4 bg-gradient-to-r from-primary to-secondary rounded-full font-bold text-primary-foreground text-lg transition-all duration-300 hover:scale-105 glow-effect"
+          >
+            <span className="flex items-center gap-2">
+              Quero Organizar Meus Canais
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </button>
+          
+          <button 
+            onClick={() => window.location.href = 'https://app.darkplanner.com.br/'}
+            className="px-8 py-4 rounded-full font-semibold text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Já tenho conta
+          </button>
+        </motion.div>
+
+        {/* Trust Indicators */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-16 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground"
+        >
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-success" />
+            <span>500+ Creators ativos</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-success" />
+            <span>10K+ Vídeos organizados</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-success" />
+            <span>Garantia de 7 dias</span>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
 };

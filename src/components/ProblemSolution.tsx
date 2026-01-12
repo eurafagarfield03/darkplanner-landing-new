@@ -1,20 +1,21 @@
-import { AlertCircle, Clock, BarChart3, CheckCircle2, TrendingUp, Zap } from "lucide-react";
+import { motion } from "framer-motion";
+import { Clock, BarChart3, AlertCircle, Zap, TrendingUp, CheckCircle2, ArrowDown } from "lucide-react";
 
 const problems = [
   {
     icon: Clock,
     title: "Tempo jogado fora",
-    description: "2-3 horas por dia procurando arquivos, prompts e referências espalhados em vários lugares."
+    description: "2-3 horas por dia procurando arquivos, prompts e referências espalhados."
   },
   {
     icon: BarChart3,
     title: "Zero consistência",
-    description: "Você fez um vídeo viral, mas não consegue replicar porque não tem sistema para organizar o que funciona."
+    description: "Fez um vídeo viral, mas não consegue replicar porque não tem sistema."
   },
   {
     icon: AlertCircle,
     title: "Produção travada",
-    description: "Você tem capacidade, mas só consegue fazer 2-3 vídeos/semana enquanto concorrentes organizados passam na frente."
+    description: "Só consegue 2-3 vídeos/semana enquanto concorrentes passam na frente."
   }
 ];
 
@@ -22,87 +23,107 @@ const solutions = [
   {
     icon: Zap,
     title: "Tudo centralizado",
-    description: "Prompts, roteiros, thumbnails e referências organizados por canal em um só lugar."
+    description: "Prompts, roteiros, thumbnails e referências em um só lugar."
   },
   {
     icon: TrendingUp,
     title: "Replique sucessos",
-    description: "Salve seus vídeos virais e adapte o que já funcionou para multiplicar resultados."
+    description: "Salve vídeos virais e adapte o que já funcionou."
   },
   {
     icon: CheckCircle2,
     title: "Escale produção",
-    description: "De 2-3 vídeos por semana para 15+ vídeos sem contratar mais gente."
+    description: "De 2-3 vídeos por semana para 15+ vídeos."
   }
 ];
 
 export const ProblemSolution = () => {
   return (
-    <section id="benefits" className="py-8 md:py-12 px-4 md:px-6 overflow-x-hidden">
-      <div className="container max-w-7xl">
+    <section id="benefits" className="py-16 md:py-24 px-4">
+      <div className="max-w-6xl mx-auto">
         {/* Problems */}
-        <div className="mb-24">
-          <div className="text-center mb-12 md:mb-16 animate-fade-in">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
-              O que você está <span className="text-destructive">perdendo agora</span>
-            </h2>
-            <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Cada dia sem sistema é dinheiro e tempo jogados fora
-            </p>
-          </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
+            O que você está <span className="text-destructive">perdendo</span>
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Cada dia sem sistema é dinheiro e tempo jogados fora
+          </p>
+        </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-4 md:gap-6 px-2 md:px-0">
-            {problems.map((point, index) => (
-              <div 
-                key={index}
-                className="glass-card rounded-2xl p-6 md:p-8 border-2 border-destructive/30 hover:border-destructive/60 transition-all hover:-translate-y-2 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-destructive/20 to-destructive/10 flex items-center justify-center mb-6">
-                  <point.icon className="w-8 h-8 text-destructive" />
-                </div>
-                <h3 className="text-lg md:text-xl font-bold mb-3">{point.title}</h3>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{point.description}</p>
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
+          {problems.map((point, index) => (
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 * index }}
+              viewport={{ once: true }}
+              className="glass-card rounded-2xl p-8 border border-destructive/20 hover-lift transition-all"
+            >
+              <div className="w-14 h-14 rounded-xl bg-destructive/10 flex items-center justify-center mb-6">
+                <point.icon className="w-7 h-7 text-destructive" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-xl font-bold mb-3">{point.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{point.description}</p>
+            </motion.div>
+          ))}
         </div>
 
-        {/* Arrow Down Separator */}
-        <div className="flex justify-center my-12">
-          <div className="flex flex-col items-center gap-3">
-            <div className="text-4xl font-black text-primary">↓</div>
-            <p className="text-xl font-bold text-primary">Com o Dark Planner</p>
-            <div className="text-4xl font-black text-primary">↓</div>
+        {/* Arrow Separator */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="flex justify-center mb-16"
+        >
+          <div className="flex flex-col items-center gap-2 text-primary">
+            <ArrowDown className="w-8 h-8 animate-bounce" />
+            <span className="text-lg font-bold">Com Dark Planner</span>
+            <ArrowDown className="w-8 h-8 animate-bounce" />
           </div>
-        </div>
+        </motion.div>
 
         {/* Solutions */}
-        <div>
-          <div className="text-center mb-12 md:mb-16 animate-fade-in">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
-              A <span className="text-gradient">solução completa</span>
-            </h2>
-            <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Sistema profissional para organizar e escalar seus canais dark
-            </p>
-          </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
+            A <span className="text-gradient">solução completa</span>
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Sistema profissional para organizar e escalar seus canais
+          </p>
+        </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-4 md:gap-6 px-2 md:px-0">
+        <div className="grid md:grid-cols-3 gap-6">
           {solutions.map((solution, index) => (
-            <div 
+            <motion.div 
               key={index}
-              className="glass-card rounded-2xl p-6 md:p-8 border-2 border-primary/30 hover:border-primary/60 transition-all hover:-translate-y-2 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 * index }}
+              viewport={{ once: true }}
+              className="glass-card rounded-2xl p-8 border border-primary/20 hover-lift hover-glow transition-all group"
             >
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-6">
-                  <solution.icon className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-lg md:text-xl font-bold mb-3">{solution.title}</h3>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{solution.description}</p>
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                <solution.icon className="w-7 h-7 text-primary" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">{solution.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{solution.description}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

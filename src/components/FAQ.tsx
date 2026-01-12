@@ -1,10 +1,10 @@
+import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { HelpCircle } from "lucide-react";
 
 const faqs = [
   {
@@ -13,60 +13,68 @@ const faqs = [
   },
   {
     question: "Funciona para qualquer nicho Dark?",
-    answer: "Sim! O Dark Planner foi criado para organizar qualquer tipo de canal faceless: curiosidades, listas, mistérios, tecnologia, finanças, automação, história, ciência, etc. A estrutura se adapta a qualquer nicho."
+    answer: "Sim! O Dark Planner foi criado para organizar qualquer tipo de canal faceless: curiosidades, listas, mistérios, tecnologia, finanças, história, ciência, etc."
   },
   {
     question: "É difícil de usar?",
-    answer: "Não! A interface foi pensada para ser intuitiva. Em 5 minutos você já estará cadastrando seus primeiros prompts e organizando seus canais. Não precisa de conhecimento técnico."
+    answer: "Não! A interface foi pensada para ser intuitiva. Em 5 minutos você já estará cadastrando seus primeiros prompts e organizando seus canais."
   },
   {
     question: "Posso cancelar quando quiser?",
-    answer: "Sim! A assinatura é recorrente mas você pode cancelar a qualquer momento sem multas ou taxas de cancelamento. Seu acesso continua até o fim do período pago."
+    answer: "Sim! A assinatura é recorrente mas você pode cancelar a qualquer momento sem multas ou taxas. Seu acesso continua até o fim do período pago."
   },
   {
     question: "Tem garantia?",
-    answer: "Sim! Você tem 7 dias para testar todos os recursos após a compra. Se não gostar por qualquer motivo, é só pedir reembolso e devolvemos 100% do valor. Sem perguntas, sem burocracia."
+    answer: "Sim! Você tem 7 dias para testar todos os recursos. Se não gostar por qualquer motivo, devolvemos 100% do valor. Sem perguntas."
   },
   {
     question: "Preciso instalar algum programa?",
-    answer: "Não! O Dark Planner funciona 100% online. Basta acessar pelo navegador (Chrome, Firefox, Safari, Edge) de qualquer dispositivo. Você pode usar no computador, tablet ou celular."
+    answer: "Não! O Dark Planner funciona 100% online. Basta acessar pelo navegador de qualquer dispositivo."
   }
 ];
 
 export const FAQ = () => {
   return (
-    <section className="py-8 md:py-12 px-4 md:px-6 overflow-x-hidden" id="faq">
-      <div className="container max-w-4xl">
-        <div className="text-center mb-12 md:mb-16 px-2 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-3 md:px-5 py-2 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 mb-6">
-            <HelpCircle className="w-4 h-4 md:w-5 md:h-5 text-primary" />
-            <span className="font-bold text-primary text-xs md:text-sm">FAQ</span>
-          </div>
-          
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-black mb-4">
+    <section className="py-16 md:py-24 px-4" id="faq">
+      <div className="max-w-3xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
             Perguntas <span className="text-gradient">Frequentes</span>
           </h2>
-          <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
+          <p className="text-lg text-muted-foreground">
             Tire suas dúvidas antes de começar
           </p>
-        </div>
+        </motion.div>
 
-        <Accordion type="single" collapsible className="w-full space-y-4 px-2 md:px-0">
-          {faqs.map((faq, index) => (
-            <AccordionItem
-              key={index}
-              value={`item-${index}`}
-              className="glass-card rounded-2xl px-4 md:px-6 border-2 border-border hover:border-primary/50 transition-all"
-            >
-              <AccordionTrigger className="text-left font-bold text-sm md:text-base lg:text-lg hover:text-primary transition-colors py-4 md:py-6">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-xs md:text-sm lg:text-base text-muted-foreground leading-relaxed pb-4 md:pb-6">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <Accordion type="single" collapsible className="space-y-3">
+            {faqs.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="glass-card rounded-xl px-6 border border-border hover-glow transition-all data-[state=open]:border-primary/30"
+              >
+                <AccordionTrigger className="text-left font-bold hover:text-primary transition-colors py-5 hover:no-underline">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </motion.div>
       </div>
     </section>
   );
