@@ -5,7 +5,7 @@ import { getCheckoutURL } from "@/lib/affiliate-tracking";
 
 const plans = [
   {
-    name: "MENSAL",
+    name: "STARTER",
     subtitle: "Ideal para testar o sistema",
     price: "119,90",
     period: "/mês",
@@ -37,7 +37,7 @@ const plans = [
     badgeIcon: null,
   },
   {
-    name: "SEMESTRAL",
+    name: "CREATOR",
     subtitle: "Melhor equilíbrio entre preço e compromisso",
     price: "499,90",
     period: "/6 meses",
@@ -67,7 +67,7 @@ const plans = [
     badgeIcon: Star,
   },
   {
-    name: "ANUAL",
+    name: "MASTER",
     subtitle: "Máxima economia • Zero preocupação por 1 ano",
     price: "719,40",
     period: "/12 meses",
