@@ -20,7 +20,7 @@ const tools = [
   {
     icon: Volume2,
     name: "Gerador de Áudio",
-    description: "189 vozes ElevenLabs ultra-realistas para seus vídeos.",
+    description: "Mais de 190 Vozes Premium ultra-realistas para seus vídeos.",
     highlight: true,
   },
   {
