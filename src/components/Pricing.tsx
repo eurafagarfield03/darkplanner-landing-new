@@ -70,39 +70,6 @@ const audioOnlyPlans = [
 // Planos Sistema Completo Mensal
 const monthlyPlans = [
   {
-    name: "STARTER",
-    periodLabel: "mensal",
-    subtitle: "Sistema completo com carência de 7 dias",
-    price: "119,90",
-    period: "/mês",
-    monthlyEquivalent: null,
-    savingsTag: null,
-    savingsDetail: null,
-    features: [
-      { text: "Gerador de Áudio IA", highlight: true, icon: Check },
-      { text: "Canais ilimitados", highlight: false },
-      { text: "Biblioteca de prompts", highlight: false },
-      { text: "Gestão de roteiros", highlight: false },
-      { text: "Gerador de SRT", highlight: false },
-      { text: "Comunidade WhatsApp", highlight: false },
-    ],
-    delayedFeatures: [
-      "Vídeos Virais (após 7 dias)",
-      "Nichos Virais (após 7 dias)",
-      "Lista de Nichos (após 7 dias)",
-      "Insights de Canal (após 7 dias)",
-    ],
-    audioFeatures: {
-      audiosPerDay: 20,
-      maxChars: "80 mil",
-    },
-    cta: "Começar Agora",
-    paymentUrl: "https://pay.kirvano.com/f9e086f7-6385-432d-8735-c6e4df12b8eb",
-    popular: false,
-    badge: null,
-    badgeIcon: null,
-  },
-  {
     name: "PRO",
     periodLabel: "mensal",
     subtitle: "Sistema completo liberado imediatamente",
@@ -176,8 +143,7 @@ interface PlanCardProps {
 
 const PlanCard = ({ plan, index, compact = false }: PlanCardProps) => {
   const BadgeIcon = plan.badgeIcon;
-  const hasBlockedFeatures = 'blockedFeatures' in plan && plan.blockedFeatures;
-  const hasDelayedFeatures = 'delayedFeatures' in plan && plan.delayedFeatures;
+const hasBlockedFeatures = 'blockedFeatures' in plan && plan.blockedFeatures;
 
   return (
     <motion.div
@@ -277,13 +243,6 @@ const PlanCard = ({ plan, index, compact = false }: PlanCardProps) => {
           );
         })}
 
-        {/* Delayed Features */}
-        {hasDelayedFeatures && (plan as typeof monthlyPlans[0]).delayedFeatures?.map((feature, fIndex) => (
-          <li key={`delayed-${fIndex}`} className="flex items-start gap-2">
-            <Clock className="w-3 h-3 mt-0.5 flex-shrink-0 text-amber-500" />
-            <span className="text-muted-foreground">{feature}</span>
-          </li>
-        ))}
 
         {/* Blocked Features */}
         {hasBlockedFeatures && (plan as typeof audioOnlyPlans[0]).blockedFeatures?.map((feature, fIndex) => (
