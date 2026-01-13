@@ -3,17 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Check, Clock, Zap, Gift, Shield, Lock, Volume2, Flame, Crown, Star, Headphones, Rocket } from "lucide-react";
 import { getCheckoutURL } from "@/lib/affiliate-tracking";
 
-// Planos Apenas Áudio
-const audioOnlyPlans = [
+// Todos os planos em ordem de preço
+const allPlans = [
   {
     name: "BASIC",
     periodLabel: "mensal",
     subtitle: "Para quem só precisa de TTS",
     price: "49,90",
     period: "/mês",
-    monthlyEquivalent: null,
-    savingsTag: null,
-    savingsDetail: null,
     features: [
       { text: "Gerador de Áudio IA", highlight: true, icon: Check },
       { text: "Sem fidelidade", highlight: false },
@@ -34,16 +31,14 @@ const audioOnlyPlans = [
     popular: false,
     badge: null,
     badgeIcon: null,
+    tier: "audio",
   },
   {
     name: "LITE",
     periodLabel: "mensal",
-    subtitle: "Mais áudios para produtores de conteúdo",
+    subtitle: "Mais áudios para produtores",
     price: "79,90",
     period: "/mês",
-    monthlyEquivalent: null,
-    savingsTag: null,
-    savingsDetail: null,
     features: [
       { text: "Gerador de Áudio IA", highlight: true, icon: Check },
       { text: "Sem fidelidade", highlight: false },
@@ -62,22 +57,16 @@ const audioOnlyPlans = [
     cta: "Começar Agora",
     paymentUrl: "https://pay.kirvano.com/ca7b9f83-6b1b-444a-aefa-b34454db213c",
     popular: false,
-    badge: "MAIS ÁUDIOS",
-    badgeIcon: Headphones,
+    badge: null,
+    badgeIcon: null,
+    tier: "audio",
   },
-];
-
-// Planos Sistema Completo Mensal
-const monthlyPlans = [
   {
     name: "PRO",
     periodLabel: "mensal",
-    subtitle: "Sistema completo liberado imediatamente",
+    subtitle: "Sistema completo + acesso imediato",
     price: "109,90",
     period: "/mês",
-    monthlyEquivalent: null,
-    savingsTag: null,
-    savingsDetail: null,
     features: [
       { text: "Gerador de Áudio IA", highlight: true, icon: Check },
       { text: "Canais ilimitados", highlight: false },
@@ -90,25 +79,24 @@ const monthlyPlans = [
       { text: "Insights de Canal IMEDIATO", highlight: true, icon: Zap },
       { text: "Comunidade WhatsApp", highlight: false },
     ],
+    blockedFeatures: null,
     audioFeatures: {
       audiosPerDay: 50,
       maxChars: "150 mil",
     },
-    cta: "Garantir PRO",
+    cta: "🔥 Garantir PRO",
     paymentUrl: "https://pay.kirvano.com/a5698a44-0780-4af0-8176-4c1ba41ae597",
     popular: true,
-    badge: "RECOMENDADO",
+    badge: "⭐ MAIS VENDIDO",
     badgeIcon: Star,
+    tier: "complete",
   },
   {
     name: "PLUS",
     periodLabel: "mensal",
-    subtitle: "Máximo poder mensal para profissionais",
+    subtitle: "Máximo poder para profissionais",
     price: "149,90",
     period: "/mês",
-    monthlyEquivalent: null,
-    savingsTag: null,
-    savingsDetail: null,
     features: [
       { text: "Gerador de Áudio IA", highlight: true, icon: Check },
       { text: "Canais ilimitados", highlight: false },
@@ -119,9 +107,10 @@ const monthlyPlans = [
       { text: "Nichos Virais IMEDIATO", highlight: true, icon: Zap },
       { text: "Lista de Nichos IMEDIATO", highlight: true, icon: Zap },
       { text: "Insights de Canal IMEDIATO", highlight: true, icon: Zap },
-      { text: "Suporte prioritário", highlight: true },
+      { text: "Suporte prioritário", highlight: true, icon: Crown },
       { text: "Comunidade WhatsApp", highlight: false },
     ],
+    blockedFeatures: null,
     audioFeatures: {
       audiosPerDay: 60,
       maxChars: "200 mil",
@@ -131,19 +120,20 @@ const monthlyPlans = [
     popular: false,
     badge: "MAIS PODER",
     badgeIcon: Rocket,
+    tier: "complete",
   },
 ];
 
 
 interface PlanCardProps {
-  plan: typeof audioOnlyPlans[0] | typeof monthlyPlans[0];
+  plan: typeof allPlans[0];
   index: number;
-  compact?: boolean;
+  isPopular?: boolean;
 }
 
-const PlanCard = ({ plan, index, compact = false }: PlanCardProps) => {
+const PlanCard = ({ plan, index, isPopular = false }: PlanCardProps) => {
   const BadgeIcon = plan.badgeIcon;
-const hasBlockedFeatures = 'blockedFeatures' in plan && plan.blockedFeatures;
+  const hasBlockedFeatures = plan.blockedFeatures && plan.blockedFeatures.length > 0;
 
   return (
     <motion.div
@@ -151,20 +141,16 @@ const hasBlockedFeatures = 'blockedFeatures' in plan && plan.blockedFeatures;
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.1 * index }}
       viewport={{ once: true }}
-      className={`glass-card rounded-2xl p-5 md:p-6 border-2 transition-all hover-lift flex flex-col relative ${
+      className={`glass-card rounded-2xl border-2 transition-all hover-lift flex flex-col relative ${
         plan.popular 
-          ? "border-primary md:scale-105 shadow-lg shadow-primary/20" 
-          : plan.badge === "MELHOR CUSTO-BENEFÍCIO"
-          ? "border-amber-500/50"
-          : "border-border"
-      } ${compact ? 'h-full' : ''}`}
+          ? "border-primary scale-100 md:scale-110 shadow-2xl shadow-primary/30 p-6 md:p-8 z-10 bg-gradient-to-b from-primary/5 to-transparent" 
+          : "border-border p-4 md:p-5"
+      }`}
     >
       {plan.badge && (
-        <div className={`absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 font-bold text-xs rounded-full flex items-center gap-1.5 whitespace-nowrap ${
+        <div className={`absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1.5 font-bold text-xs rounded-full flex items-center gap-1.5 whitespace-nowrap ${
           plan.popular 
-            ? "bg-gradient-to-r from-primary to-secondary text-primary-foreground"
-            : plan.badge === "MELHOR CUSTO-BENEFÍCIO"
-            ? "bg-gradient-to-r from-amber-500 to-orange-500 text-white"
+            ? "bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-lg"
             : "bg-muted text-foreground"
         }`}>
           {BadgeIcon && <BadgeIcon className="w-3 h-3" />}
@@ -172,49 +158,28 @@ const hasBlockedFeatures = 'blockedFeatures' in plan && plan.blockedFeatures;
         </div>
       )}
 
-      <div className="mb-3 pt-2">
-        <h3 className="text-lg font-black">
-          {plan.name} <span className="text-xs font-normal text-muted-foreground">({plan.periodLabel})</span>
+      <div className={`mb-3 ${plan.popular ? 'pt-4' : 'pt-2'}`}>
+        <h3 className={`font-black ${plan.popular ? 'text-xl md:text-2xl' : 'text-lg'}`}>
+          {plan.name}
         </h3>
         <p className="text-xs text-muted-foreground">{plan.subtitle}</p>
       </div>
 
-      {/* Savings Tag */}
-      {plan.savingsTag && (
-        <div className="mb-3">
-          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-success/20 text-success text-xs font-bold">
-            <Flame className="w-3 h-3" />
-            {plan.savingsTag}
-          </span>
-          <p className="text-xs text-muted-foreground mt-1">
-            {plan.savingsDetail}
-          </p>
-        </div>
-      )}
-
-      <div className="mb-3">
+      <div className="mb-4">
         <div className="flex items-baseline gap-1">
           <span className="text-xs text-muted-foreground">R$</span>
-          <span className="text-3xl font-black">{plan.price}</span>
+          <span className={`font-black ${plan.popular ? 'text-4xl md:text-5xl text-primary' : 'text-2xl md:text-3xl'}`}>{plan.price}</span>
           <span className="text-xs text-muted-foreground">{plan.period}</span>
         </div>
-        
-        {plan.monthlyEquivalent && (
-          <div className="mt-2 p-2 rounded-lg bg-primary/10 border border-primary/20">
-            <p className="text-xs font-bold text-primary">
-              ➡️ Apenas R$ {plan.monthlyEquivalent} por mês
-            </p>
-          </div>
-        )}
       </div>
 
       {/* Audio Features Section */}
-      <div className="glass-card rounded-xl p-3 mb-3 border border-primary/20 bg-gradient-to-r from-primary/5 to-secondary/5">
+      <div className={`glass-card rounded-xl p-3 mb-3 border border-primary/20 bg-gradient-to-r from-primary/5 to-secondary/5 ${plan.popular ? 'p-4' : ''}`}>
         <div className="flex items-center gap-2 mb-2">
-          <Volume2 className="w-4 h-4 text-primary" />
-          <span className="text-xs font-bold text-primary">Gerador de Áudio IA</span>
+          <Volume2 className={`text-primary ${plan.popular ? 'w-5 h-5' : 'w-4 h-4'}`} />
+          <span className={`font-bold text-primary ${plan.popular ? 'text-sm' : 'text-xs'}`}>Gerador de Áudio IA</span>
         </div>
-        <ul className="space-y-1 text-xs">
+        <ul className={`space-y-1 ${plan.popular ? 'text-sm' : 'text-xs'}`}>
           <li className="flex items-center gap-2 text-muted-foreground">
             <Check className="w-3 h-3 text-success flex-shrink-0" />
             <span><strong className="text-foreground">{plan.audioFeatures.audiosPerDay} áudios</strong>/dia</span>
@@ -226,7 +191,7 @@ const hasBlockedFeatures = 'blockedFeatures' in plan && plan.blockedFeatures;
         </ul>
       </div>
 
-      <ul className="space-y-1.5 mb-3 flex-grow text-xs">
+      <ul className={`space-y-1.5 mb-4 flex-grow ${plan.popular ? 'text-sm' : 'text-xs'}`}>
         {plan.features.map((feature, fIndex) => {
           const Icon = feature.icon;
           return (
@@ -243,9 +208,8 @@ const hasBlockedFeatures = 'blockedFeatures' in plan && plan.blockedFeatures;
           );
         })}
 
-
         {/* Blocked Features */}
-        {hasBlockedFeatures && (plan as typeof audioOnlyPlans[0]).blockedFeatures?.map((feature, fIndex) => (
+        {hasBlockedFeatures && plan.blockedFeatures?.map((feature, fIndex) => (
           <li key={`blocked-${fIndex}`} className="flex items-start gap-2 opacity-50">
             <span className="w-3 h-3 mt-0.5 flex-shrink-0 text-destructive">✕</span>
             <span className="text-muted-foreground line-through">{feature}</span>
@@ -254,12 +218,10 @@ const hasBlockedFeatures = 'blockedFeatures' in plan && plan.blockedFeatures;
       </ul>
 
       <Button
-        size="sm"
-        className={`w-full font-bold text-sm py-5 ${
+        size={plan.popular ? "lg" : "sm"}
+        className={`w-full font-bold ${plan.popular ? 'text-base py-6' : 'text-sm py-5'} ${
           plan.popular 
-            ? "bg-gradient-to-r from-primary to-secondary hover:opacity-90" 
-            : plan.badge === "MELHOR CUSTO-BENEFÍCIO"
-            ? "bg-gradient-to-r from-amber-500 to-orange-500 hover:opacity-90 text-white"
+            ? "bg-gradient-to-r from-primary to-secondary hover:opacity-90 shadow-lg" 
             : ""
         }`}
         asChild
@@ -269,7 +231,7 @@ const hasBlockedFeatures = 'blockedFeatures' in plan && plan.blockedFeatures;
         </a>
       </Button>
 
-      <div className="flex items-center justify-center gap-3 mt-3 text-xs text-muted-foreground">
+      <div className={`flex items-center justify-center gap-3 mt-3 text-muted-foreground ${plan.popular ? 'text-sm' : 'text-xs'}`}>
         <div className="flex items-center gap-1">
           <Shield className="w-3 h-3" />
           <span>7 dias garantia</span>
@@ -302,45 +264,12 @@ export const Pricing = () => {
           </p>
         </motion.div>
 
-        {/* Planos Apenas Áudio */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="mb-12"
-        >
-          <div className="flex items-center gap-2 mb-4">
-            <Headphones className="w-5 h-5 text-muted-foreground" />
-            <h3 className="text-lg font-bold text-muted-foreground">Apenas Áudio</h3>
-            <span className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded-full">Ideal para TTS</span>
-          </div>
-          <div className="grid md:grid-cols-2 gap-4 max-w-2xl">
-            {audioOnlyPlans.map((plan, index) => (
-              <PlanCard key={plan.name} plan={plan} index={index} compact />
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Planos Sistema Completo Mensal */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          viewport={{ once: true }}
-          className="mb-12"
-        >
-          <div className="flex items-center gap-2 mb-4">
-            <Rocket className="w-5 h-5 text-primary" />
-            <h3 className="text-lg font-bold">Sistema Completo Mensal</h3>
-            <span className="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded-full">Todas as ferramentas</span>
-          </div>
-          <div className="grid md:grid-cols-3 gap-4">
-            {monthlyPlans.map((plan, index) => (
-              <PlanCard key={plan.name} plan={plan} index={index} />
-            ))}
-          </div>
-        </motion.div>
+        {/* Todos os planos lado a lado */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 items-center">
+          {allPlans.map((plan, index) => (
+            <PlanCard key={plan.name} plan={plan} index={index} />
+          ))}
+        </div>
 
       </div>
     </section>
