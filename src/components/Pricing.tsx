@@ -167,75 +167,9 @@ const monthlyPlans = [
   },
 ];
 
-// Planos com Compromisso (Semestral/Anual)
-const commitmentPlans = [
-  {
-    name: "CREATOR",
-    periodLabel: "semestral",
-    subtitle: "6 meses de acesso completo • Economize muito",
-    price: "499,90",
-    period: "/6 meses",
-    monthlyEquivalent: "83,32",
-    savingsTag: "Economize 30%",
-    savingsDetail: "De R$ 719,40 por apenas R$ 499,90",
-    features: [
-      { text: "Gerador de Áudio IA", highlight: true, icon: Check },
-      { text: "Canais ilimitados", highlight: false },
-      { text: "Biblioteca de prompts", highlight: false },
-      { text: "Gestão de roteiros", highlight: false },
-      { text: "Gerador de SRT", highlight: false },
-      { text: "Vídeos Virais IMEDIATO", highlight: true, icon: Zap },
-      { text: "Nichos Virais IMEDIATO", highlight: true, icon: Zap },
-      { text: "Lista de Nichos IMEDIATO", highlight: true, icon: Zap },
-      { text: "Insights de Canal IMEDIATO", highlight: true, icon: Zap },
-      { text: "Comunidade WhatsApp", highlight: false },
-    ],
-    audioFeatures: {
-      audiosPerDay: 30,
-      maxChars: "100 mil",
-    },
-    cta: "Garantir Semestral",
-    paymentUrl: "https://pay.kirvano.com/b88f6afb-3fb9-45cd-a47d-6318edff1ec7",
-    popular: true,
-    badge: "MAIS VENDIDO",
-    badgeIcon: Star,
-  },
-  {
-    name: "MASTER",
-    periodLabel: "anual",
-    subtitle: "1 ano completo • Menor preço por mês",
-    price: "719,40",
-    period: "/12 meses",
-    monthlyEquivalent: "59,95",
-    savingsTag: "Economize 50%",
-    savingsDetail: "De R$ 1.438,80 por apenas R$ 719,40",
-    features: [
-      { text: "Gerador de Áudio IA", highlight: true, icon: Check },
-      { text: "Canais ilimitados", highlight: false },
-      { text: "Biblioteca de prompts", highlight: false },
-      { text: "Gestão de roteiros", highlight: false },
-      { text: "Gerador de SRT", highlight: false },
-      { text: "Vídeos Virais IMEDIATO", highlight: true, icon: Zap },
-      { text: "Nichos Virais IMEDIATO", highlight: true, icon: Zap },
-      { text: "Lista de Nichos IMEDIATO", highlight: true, icon: Zap },
-      { text: "Insights de Canal IMEDIATO", highlight: true, icon: Zap },
-      { text: "Suporte prioritário", highlight: true },
-      { text: "Acesso antecipado a novos recursos", highlight: true, icon: Gift },
-    ],
-    audioFeatures: {
-      audiosPerDay: 40,
-      maxChars: "120 mil",
-    },
-    cta: "Garantir Anual",
-    paymentUrl: "https://pay.kirvano.com/3f0f75c5-97fa-40f7-8832-d73fac2384ac",
-    popular: false,
-    badge: "MELHOR CUSTO-BENEFÍCIO",
-    badgeIcon: Crown,
-  },
-];
 
 interface PlanCardProps {
-  plan: typeof audioOnlyPlans[0] | typeof monthlyPlans[0] | typeof commitmentPlans[0];
+  plan: typeof audioOnlyPlans[0] | typeof monthlyPlans[0];
   index: number;
   compact?: boolean;
 }
@@ -449,24 +383,6 @@ export const Pricing = () => {
           </div>
         </motion.div>
 
-        {/* Planos com Compromisso */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          <div className="flex items-center gap-2 mb-4">
-            <Crown className="w-5 h-5 text-amber-500" />
-            <h3 className="text-lg font-bold">Planos com Compromisso</h3>
-            <span className="text-xs text-amber-500 bg-amber-500/10 px-2 py-0.5 rounded-full">Maior economia</span>
-          </div>
-          <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-            {commitmentPlans.map((plan, index) => (
-              <PlanCard key={plan.name} plan={plan} index={index} />
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
