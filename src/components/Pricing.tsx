@@ -186,10 +186,6 @@ const PlanCard = ({ plan, index, isPopular = false }: PlanCardProps) => {
           </li>
           <li className="flex items-center gap-2 text-muted-foreground">
             <Check className="w-3 h-3 text-success flex-shrink-0" />
-            <span><strong className="text-foreground">{plan.audioFeatures.audiosPerDay * 30} áudios</strong>/mês</span>
-          </li>
-          <li className="flex items-center gap-2 text-muted-foreground">
-            <Check className="w-3 h-3 text-success flex-shrink-0" />
             <span>Até <strong className="text-foreground">{plan.audioFeatures.maxChars}</strong> caracteres por áudio</span>
           </li>
         </ul>

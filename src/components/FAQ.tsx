@@ -12,6 +12,14 @@ const faqs = [
     answer: "Super simples! São apenas 3 passos: 1) Escolha uma das mais de 190 vozes premium ultra-realistas e multilíngues (a mesma voz fala em qualquer idioma!). 2) Cole seu roteiro e gere o áudio com um clique. 3) Baixe o arquivo de áudio MP3 junto com o arquivo SRT de legendas sincronizado perfeitamente, pronto para importar no Premiere, CapCut ou qualquer editor."
   },
   {
+    question: "A geração de áudio é ilimitada?",
+    answer: "O limite de áudios é diário, não mensal. Dependendo do seu plano, você pode gerar de 15 a 60 áudios por dia. Isso significa que no mês você pode gerar centenas de áudios! O contador reseta todo dia à meia-noite."
+  },
+  {
+    question: "Tem limite de caracteres por mês?",
+    answer: "Não! O limite de caracteres é por geração de áudio, não por mês. Ou seja, você pode gerar 50 áudios no dia, cada um com até 150 mil caracteres (dependendo do plano), sem problema nenhum. Use à vontade!"
+  },
+  {
     question: "As vozes são realmente de qualidade profissional?",
     answer: "Sim! Utilizamos tecnologia de ponta em síntese de voz com mais de 190 vozes premium ultra-realistas. São vozes indistinguíveis de narradores humanos, perfeitas para canais Dark que precisam de qualidade de estúdio sem gastar fortunas com locução."
   },
