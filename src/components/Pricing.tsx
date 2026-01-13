@@ -271,6 +271,37 @@ export const Pricing = () => {
           ))}
         </div>
 
+        {/* Plano Personalizado */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="mt-10 glass-card rounded-2xl border border-border p-6 md:p-8 text-center max-w-3xl mx-auto"
+        >
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <Headphones className="w-6 h-6 text-primary" />
+            <h3 className="text-xl md:text-2xl font-black">Plano Personalizado</h3>
+          </div>
+          <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
+            Precisa de algo diferente? Entre em contato conosco para criar um plano sob medida para suas necessidades.
+          </p>
+          <Button
+            size="lg"
+            variant="outline"
+            className="font-bold text-base px-8 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            asChild
+          >
+            <a 
+              href="https://api.whatsapp.com/send/?phone=5577988744698&text=Ol%C3%A1%21+Quero+comprar+um+plano+personalizado.&type=phone_number&app_absent=0" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              💬 Falar no WhatsApp
+            </a>
+          </Button>
+        </motion.div>
+
       </div>
     </section>
   );
