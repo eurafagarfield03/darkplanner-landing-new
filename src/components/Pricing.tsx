@@ -179,14 +179,18 @@ const PlanCard = ({ plan, index, isPopular = false }: PlanCardProps) => {
           <Volume2 className={`text-primary ${plan.popular ? 'w-5 h-5' : 'w-4 h-4'}`} />
           <span className={`font-bold text-primary ${plan.popular ? 'text-sm' : 'text-xs'}`}>Gerador de Áudio IA</span>
         </div>
-        <ul className={`space-y-1 ${plan.popular ? 'text-sm' : 'text-xs'}`}>
+        <ul className={`space-y-1.5 ${plan.popular ? 'text-sm' : 'text-xs'}`}>
           <li className="flex items-center gap-2 text-muted-foreground">
             <Check className="w-3 h-3 text-success flex-shrink-0" />
             <span><strong className="text-foreground">{plan.audioFeatures.audiosPerDay} áudios</strong>/dia</span>
           </li>
           <li className="flex items-center gap-2 text-muted-foreground">
             <Check className="w-3 h-3 text-success flex-shrink-0" />
-            <span>Até {plan.audioFeatures.maxChars} caracteres</span>
+            <span><strong className="text-foreground">{plan.audioFeatures.audiosPerDay * 30} áudios</strong>/mês</span>
+          </li>
+          <li className="flex items-center gap-2 text-muted-foreground">
+            <Check className="w-3 h-3 text-success flex-shrink-0" />
+            <span>Até <strong className="text-foreground">{plan.audioFeatures.maxChars}</strong> caracteres por áudio</span>
           </li>
         </ul>
       </div>
