@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Users, TrendingUp, Scissors, FileText, BookmarkCheck, MessageSquare, Youtube, LayoutDashboard, Volume2, Type } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import dashboardHome from "@/assets/dashboard-home.png";
+import dashboardHome from "@/assets/dashboard-home-new.png";
 import comunidade from "@/assets/comunidade.png";
 import videosVirais from "@/assets/videos-virais.png";
 import divisorTexto from "@/assets/divisor-texto.png";
