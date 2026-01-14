@@ -11,7 +11,7 @@ import geradorSrt from "@/assets/gerador-srt.png";
 import referenciasCanais from "@/assets/referencias-canais.png";
 import promptsCanal from "@/assets/prompts-canal.png";
 import gestaoCanais from "@/assets/gestao-canais.png";
-import geradorAudio from "@/assets/gerador-audio-full.png";
+import geradorAudio from "@/assets/gerador-audio-new.png";
 import editorTexto from "@/assets/editor-texto.png";
 
 const features = [
