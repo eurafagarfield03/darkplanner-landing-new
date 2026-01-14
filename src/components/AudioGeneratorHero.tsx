@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Volume2, Mic, Sparkles, Zap } from "lucide-react";
-import geradorAudioImage from "@/assets/gerador-audio.png";
+import geradorAudioImage from "@/assets/gerador-audio-new.png";
 
 export const AudioGeneratorHero = () => {
   return (
