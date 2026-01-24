@@ -89,17 +89,27 @@ export const AudioGeneratorHero = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-muted-foreground">
                 <div className="w-2 h-2 rounded-full bg-success" />
-                <span>Controle de velocidade de 0.5x a 2x</span>
+                <span>🎚️ Velocidade ajustável (0.5x - 1.5x)</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <div className="w-2 h-2 rounded-full bg-success" />
-                <span>Até 120.000 caracteres por áudio</span>
+                <span>🔊 Volume personalizável (0.5x - 2.0x)</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <div className="w-2 h-2 rounded-full bg-success" />
-                <span>Download direto em MP3 de alta qualidade</span>
+                <span>📝 Legenda: Palavras por linha (1-15)</span>
+              </li>
+              <li className="flex items-center gap-3 text-muted-foreground">
+                <div className="w-2 h-2 rounded-full bg-success" />
+                <span>🔤 Legenda: Normal, MAIÚSCULA ou minúscula</span>
               </li>
             </ul>
+            
+            <div className="glass-card rounded-xl p-4 border border-primary/20 bg-primary/5">
+              <p className="text-sm font-medium text-primary text-center">
+                ✨ Gere áudio + legenda já ajustados em um clique!
+              </p>
+            </div>
 
             <Button
               size="lg"
