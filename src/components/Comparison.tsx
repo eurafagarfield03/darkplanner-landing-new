@@ -1,23 +1,13 @@
 import { motion } from "framer-motion";
 import { X, Check } from "lucide-react";
-
-const withoutItems = [
-  "Prompts perdidos em conversas antigas",
-  "Roteiros sem conexão com os vídeos",
-  "Thumbnails esquecidas na hora do upload",
-  "Canais de referência salvos aleatoriamente",
-  "Perde 2-3 horas por dia procurando arquivos",
-];
-
-const withItems = [
-  "Prompts organizados com busca rápida",
-  "Roteiros conectados diretamente ao vídeo",
-  "Referências sempre à mão para upload",
-  "Biblioteca organizada por nicho",
-  "Economiza 8+ horas e produz 3-5x mais",
-];
+import { useTranslation } from "react-i18next";
 
 export const Comparison = () => {
+  const { t } = useTranslation();
+
+  const withoutItems = t("comparison.without.items", { returnObjects: true }) as string[];
+  const withItems = t("comparison.with.items", { returnObjects: true }) as string[];
+
   return (
     <section className="py-16 md:py-24 px-4">
       <div className="max-w-5xl mx-auto">
@@ -29,10 +19,10 @@ export const Comparison = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
-            A diferença entre <span className="text-gradient">1 vídeo</span> e <span className="text-gradient">5 por dia</span>
+            {t("comparison.title")} <span className="text-gradient">{t("comparison.titleHighlight1")}</span> {t("comparison.titleAnd")} <span className="text-gradient">{t("comparison.titleHighlight2")}</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Não é falta de ideias. É falta de organização.
+            {t("comparison.subtitle")}
           </p>
         </motion.div>
 
@@ -49,7 +39,7 @@ export const Comparison = () => {
               <div className="w-10 h-10 rounded-xl bg-destructive/10 flex items-center justify-center">
                 <X className="w-5 h-5 text-destructive" />
               </div>
-              <h3 className="text-xl font-bold">Sem Dark Planner</h3>
+              <h3 className="text-xl font-bold">{t("comparison.without.title")}</h3>
             </div>
 
             <ul className="space-y-4">
@@ -74,7 +64,7 @@ export const Comparison = () => {
               <div className="w-10 h-10 rounded-xl bg-success/10 flex items-center justify-center">
                 <Check className="w-5 h-5 text-success" />
               </div>
-              <h3 className="text-xl font-bold">Com Dark Planner</h3>
+              <h3 className="text-xl font-bold">{t("comparison.with.title")}</h3>
             </div>
 
             <ul className="space-y-4">

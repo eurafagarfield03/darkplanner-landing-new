@@ -354,5 +354,170 @@
   },
   "languageSelector": {
     "language": "Idioma"
+  },
+  "creatorsFocus": {
+    "badge": "Comunidad",
+    "title": "Hecha",
+    "titleHighlight": "por creadores, para creadores",
+    "subtitle": "A diferencia de software genérico, Dark Planner está construido basado en las necesidades reales de quienes producen contenido faceless.",
+    "stats": {
+      "creators": "Creadores",
+      "channels": "Canales gestionados",
+      "views": "Vistas totales"
+    },
+    "benefits": {
+      "group": {
+        "title": "Grupo Exclusivo",
+        "description": "WhatsApp con creadores que escalan canales Dark. Networking real."
+      },
+      "updates": {
+        "title": "Actualizaciones Mensuales",
+        "description": "Nuevas herramientas basadas 100% en feedback de la comunidad."
+      },
+      "support": {
+        "title": "Soporte Rápido",
+        "description": "Equipo listo para ayudar. Respuestas en hasta 2h."
+      }
+    }
+  },
+  "problemSolution": {
+    "problemTitle": "Lo que estás",
+    "problemHighlight": "perdiendo",
+    "problemSubtitle": "Cada día sin sistema es dinero y tiempo desperdiciados",
+    "solutionTitle": "La",
+    "solutionHighlight": "solución completa",
+    "solutionSubtitle": "Sistema profesional para organizar y escalar tus canales",
+    "transition": "Con Dark Planner",
+    "problems": {
+      "time": {
+        "title": "Tiempo desperdiciado",
+        "description": "2-3 horas por día buscando archivos, prompts y referencias dispersas."
+      },
+      "consistency": {
+        "title": "Cero consistencia",
+        "description": "Hiciste un video viral, pero no puedes replicarlo porque no tienes sistema."
+      },
+      "production": {
+        "title": "Producción estancada",
+        "description": "Solo logras 2-3 videos/semana mientras competidores te adelantan."
+      }
+    },
+    "solutions": {
+      "centralized": {
+        "title": "Todo centralizado",
+        "description": "Prompts, guiones, thumbnails y referencias en un solo lugar."
+      },
+      "replicate": {
+        "title": "Replica éxitos",
+        "description": "Guarda videos virales y adapta lo que ya funcionó."
+      },
+      "scale": {
+        "title": "Escala producción",
+        "description": "De 2-3 videos por semana a 15+ videos."
+      }
+    }
+  },
+  "toolsGrid": {
+    "title": "10 herramientas",
+    "titleHighlight": "en un solo lugar",
+    "subtitle": "Todo lo que necesitas para escalar tus canales Dark",
+    "tools": {
+      "channelManagement": {
+        "name": "Gestión de Canales",
+        "description": "Gestiona cuantos canales quieras con carpetas y guiones separados."
+      },
+      "promptLibrary": {
+        "name": "Biblioteca de Prompts",
+        "description": "Guarda y reutiliza prompts que funcionan en segundos."
+      },
+      "scriptManagement": {
+        "name": "Gestión de Guiones",
+        "description": "Conecta guiones a videos automáticamente."
+      },
+      "audioGenerator": {
+        "name": "Generador de Audio",
+        "description": "Más de 190 Voces Premium ultra-realistas para tus videos."
+      },
+      "srtGenerator": {
+        "name": "Generador de SRT",
+        "description": "Subtítulos para CapCut con timestamp perfecto."
+      },
+      "viralFinder": {
+        "name": "Buscador de Virales",
+        "description": "Encuentra videos explotando ahora con filtros avanzados."
+      },
+      "viralNiches": {
+        "name": "Nichos Virales",
+        "description": "Descubre nichos prometedores antes que la competencia."
+      },
+      "channelInsights": {
+        "name": "Insights de Canal",
+        "description": "Análisis profesional de cualquier canal de YouTube."
+      },
+      "references": {
+        "name": "Referencias",
+        "description": "Guarda canales e ideas organizados por nicho."
+      },
+      "community": {
+        "name": "Comunidad",
+        "description": "Networking con creadores en el grupo exclusivo."
+      }
+    }
+  },
+  "socialProof": {
+    "statsTitle": "Números que",
+    "statsTitleHighlight": "lo prueban",
+    "stats": {
+      "creators": "Creadores activos",
+      "videos": "Videos organizados",
+      "increase": "Aumento promedio",
+      "hours": "Ahorradas/semana"
+    },
+    "testimonialsTitle": "Lo que dicen quienes",
+    "testimonialsTitleHighlight": "ya lo usan",
+    "testimonials": {
+      "carlos": {
+        "name": "Carlos M.",
+        "role": "3 Canales Dark • 150K suscriptores",
+        "content": "Tenía prompts sueltos en 3 docs diferentes. Ahora está todo aquí. La producción subió 300%."
+      },
+      "ana": {
+        "name": "Ana Ribeiro",
+        "role": "Canal de curiosidades • 80K",
+        "content": "Guardé todos los videos que tuvieron más de 500K vistas. Crecí 70K en 2 meses."
+      },
+      "marcos": {
+        "name": "Marcos Silva",
+        "role": "5 canales • 400K total",
+        "content": "Gestiono 5 canales solo con el Planner. Escalo sin contratar a nadie."
+      }
+    }
+  },
+  "comparison": {
+    "title": "La diferencia entre",
+    "titleHighlight1": "1 video",
+    "titleAnd": "y",
+    "titleHighlight2": "5 por día",
+    "subtitle": "No es falta de ideas. Es falta de organización.",
+    "without": {
+      "title": "Sin Dark Planner",
+      "items": [
+        "Prompts perdidos en conversaciones antiguas",
+        "Guiones sin conexión con los videos",
+        "Thumbnails olvidadas al subir",
+        "Canales de referencia guardados aleatoriamente",
+        "Pierdes 2-3 horas por día buscando archivos"
+      ]
+    },
+    "with": {
+      "title": "Con Dark Planner",
+      "items": [
+        "Prompts organizados con búsqueda rápida",
+        "Guiones conectados directamente al video",
+        "Referencias siempre a mano para subir",
+        "Biblioteca organizada por nicho",
+        "Ahorras 8+ horas y produces 3-5x más"
+      ]
+    }
   }
 }

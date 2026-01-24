@@ -1,43 +1,46 @@
 import { motion } from "framer-motion";
 import { Clock, BarChart3, AlertCircle, Zap, TrendingUp, CheckCircle2, ArrowDown } from "lucide-react";
-
-const problems = [
-  {
-    icon: Clock,
-    title: "Tempo jogado fora",
-    description: "2-3 horas por dia procurando arquivos, prompts e referências espalhados."
-  },
-  {
-    icon: BarChart3,
-    title: "Zero consistência",
-    description: "Fez um vídeo viral, mas não consegue replicar porque não tem sistema."
-  },
-  {
-    icon: AlertCircle,
-    title: "Produção travada",
-    description: "Só consegue 2-3 vídeos/semana enquanto concorrentes passam na frente."
-  }
-];
-
-const solutions = [
-  {
-    icon: Zap,
-    title: "Tudo centralizado",
-    description: "Prompts, roteiros, thumbnails e referências em um só lugar."
-  },
-  {
-    icon: TrendingUp,
-    title: "Replique sucessos",
-    description: "Salve vídeos virais e adapte o que já funcionou."
-  },
-  {
-    icon: CheckCircle2,
-    title: "Escale produção",
-    description: "De 2-3 vídeos por semana para 15+ vídeos."
-  }
-];
+import { useTranslation } from "react-i18next";
 
 export const ProblemSolution = () => {
+  const { t } = useTranslation();
+
+  const problems = [
+    {
+      icon: Clock,
+      titleKey: "problemSolution.problems.time.title",
+      descriptionKey: "problemSolution.problems.time.description"
+    },
+    {
+      icon: BarChart3,
+      titleKey: "problemSolution.problems.consistency.title",
+      descriptionKey: "problemSolution.problems.consistency.description"
+    },
+    {
+      icon: AlertCircle,
+      titleKey: "problemSolution.problems.production.title",
+      descriptionKey: "problemSolution.problems.production.description"
+    }
+  ];
+
+  const solutions = [
+    {
+      icon: Zap,
+      titleKey: "problemSolution.solutions.centralized.title",
+      descriptionKey: "problemSolution.solutions.centralized.description"
+    },
+    {
+      icon: TrendingUp,
+      titleKey: "problemSolution.solutions.replicate.title",
+      descriptionKey: "problemSolution.solutions.replicate.description"
+    },
+    {
+      icon: CheckCircle2,
+      titleKey: "problemSolution.solutions.scale.title",
+      descriptionKey: "problemSolution.solutions.scale.description"
+    }
+  ];
+
   return (
     <section id="benefits" className="py-16 md:py-24 px-4">
       <div className="max-w-6xl mx-auto">
@@ -50,10 +53,10 @@ export const ProblemSolution = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
-            O que você está <span className="text-destructive">perdendo</span>
+            {t("problemSolution.problemTitle")} <span className="text-destructive">{t("problemSolution.problemHighlight")}</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Cada dia sem sistema é dinheiro e tempo jogados fora
+            {t("problemSolution.problemSubtitle")}
           </p>
         </motion.div>
 
@@ -70,8 +73,8 @@ export const ProblemSolution = () => {
               <div className="w-14 h-14 rounded-xl bg-destructive/10 flex items-center justify-center mb-6">
                 <point.icon className="w-7 h-7 text-destructive" />
               </div>
-              <h3 className="text-xl font-bold mb-3">{point.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{point.description}</p>
+              <h3 className="text-xl font-bold mb-3">{t(point.titleKey)}</h3>
+              <p className="text-muted-foreground leading-relaxed">{t(point.descriptionKey)}</p>
             </motion.div>
           ))}
         </div>
@@ -86,7 +89,7 @@ export const ProblemSolution = () => {
         >
           <div className="flex flex-col items-center gap-2 text-primary">
             <ArrowDown className="w-8 h-8 animate-bounce" />
-            <span className="text-lg font-bold">Com Dark Planner</span>
+            <span className="text-lg font-bold">{t("problemSolution.transition")}</span>
             <ArrowDown className="w-8 h-8 animate-bounce" />
           </div>
         </motion.div>
@@ -100,10 +103,10 @@ export const ProblemSolution = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
-            A <span className="text-gradient">solução completa</span>
+            {t("problemSolution.solutionTitle")} <span className="text-gradient">{t("problemSolution.solutionHighlight")}</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Sistema profissional para organizar e escalar seus canais
+            {t("problemSolution.solutionSubtitle")}
           </p>
         </motion.div>
 
@@ -120,8 +123,8 @@ export const ProblemSolution = () => {
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                 <solution.icon className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">{solution.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{solution.description}</p>
+              <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">{t(solution.titleKey)}</h3>
+              <p className="text-muted-foreground leading-relaxed">{t(solution.descriptionKey)}</p>
             </motion.div>
           ))}
         </div>

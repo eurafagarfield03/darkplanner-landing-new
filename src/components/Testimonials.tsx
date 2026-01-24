@@ -1,40 +1,40 @@
 import { Star, Quote } from "lucide-react";
-
-const testimonials = [
-  {
-    name: "Carlos M.",
-    role: "3 Canais Dark • 150K inscritos",
-    content: "Tinha prompts soltos em 3 docs diferentes. Agora tá tudo aqui. Produção subiu 300% e eu sei exatamente onde tá cada coisa.",
-    rating: 5,
-    avatar: "C"
-  },
-  {
-    name: "Ana Ribeiro",
-    role: "Canal de curiosidades • 80K",
-    content: "Salvei todos os vídeos que deram mais de 500K views. Agora só adapto o que já funcionou. Cresci 70K em 2 meses.",
-    rating: 5,
-    avatar: "A"
-  },
-  {
-    name: "Marcos Silva",
-    role: "5 canais • 400K total",
-    content: "Gerencio 5 canais sozinho com o Planner. Cada canal tem sua pasta, seus prompts. Escalo sem contratar ninguém.",
-    rating: 5,
-    avatar: "M"
-  }
-];
+import { useTranslation } from "react-i18next";
 
 export const Testimonials = () => {
+  const { t } = useTranslation();
+
+  const testimonials = [
+    {
+      nameKey: "socialProof.testimonials.carlos.name",
+      roleKey: "socialProof.testimonials.carlos.role",
+      contentKey: "socialProof.testimonials.carlos.content",
+      rating: 5,
+      avatar: "C"
+    },
+    {
+      nameKey: "socialProof.testimonials.ana.name",
+      roleKey: "socialProof.testimonials.ana.role",
+      contentKey: "socialProof.testimonials.ana.content",
+      rating: 5,
+      avatar: "A"
+    },
+    {
+      nameKey: "socialProof.testimonials.marcos.name",
+      roleKey: "socialProof.testimonials.marcos.role",
+      contentKey: "socialProof.testimonials.marcos.content",
+      rating: 5,
+      avatar: "M"
+    }
+  ];
+
   return (
     <section className="py-24 px-6">
       <div className="container max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            Quem usa, <span className="text-gradient">recomenda</span>
+            {t("socialProof.testimonialsTitle")} <span className="text-gradient">{t("socialProof.testimonialsTitleHighlight")}</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Veja o que creators reais estão dizendo
-          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -53,7 +53,7 @@ export const Testimonials = () => {
               </div>
 
               <p className="text-muted-foreground leading-relaxed mb-6">
-                "{testimonial.content}"
+                "{t(testimonial.contentKey)}"
               </p>
 
               <div className="flex items-center gap-3">
@@ -61,8 +61,8 @@ export const Testimonials = () => {
                   {testimonial.avatar}
                 </div>
                 <div>
-                  <div className="font-bold">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                  <div className="font-bold">{t(testimonial.nameKey)}</div>
+                  <div className="text-sm text-muted-foreground">{t(testimonial.roleKey)}</div>
                 </div>
               </div>
             </div>
