@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Volume2, Mic, Sparkles, Zap } from "lucide-react";
 import geradorAudioImage from "@/assets/gerador-audio-full.png";
+import { useTranslation } from "react-i18next";
 
 export const AudioGeneratorHero = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="audio-generator" className="py-16 md:py-24 px-4 overflow-hidden relative">
       {/* Background Glow */}
@@ -20,15 +23,15 @@ export const AudioGeneratorHero = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 mb-6">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-semibold text-primary">Vozes Ultra-Realistas</span>
+            <span className="text-sm font-semibold text-primary">{t("audioGenerator.badge")}</span>
           </div>
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
-            <span className="text-gradient">Gerador de Áudio</span> com IA
+            <span className="text-gradient">{t("audioGenerator.title")}</span> {t("audioGenerator.titleHighlight")}
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Transforme texto em áudio com vozes ultra-realistas. Mais de 190 vozes premium para seus vídeos Dark.
+            {t("audioGenerator.subtitle")}
           </p>
         </motion.div>
 
@@ -44,7 +47,7 @@ export const AudioGeneratorHero = () => {
             <div className="glass-card-elevated rounded-2xl overflow-hidden border border-primary/10 animate-pulse-glow">
               <img
                 src={geradorAudioImage}
-                alt="Interface do Gerador de Áudio do Dark Planner com vozes ElevenLabs"
+                alt={t("audioGenerator.title")}
                 className="w-full h-auto"
               />
             </div>
@@ -62,26 +65,26 @@ export const AudioGeneratorHero = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="glass-card rounded-xl p-5 border border-border hover-glow transition-all">
                 <Volume2 className="w-8 h-8 text-primary mb-3" />
-                <h3 className="font-bold mb-1">+190 Vozes Premium</h3>
-                <p className="text-sm text-muted-foreground">Biblioteca completa de vozes profissionais</p>
+                <h3 className="font-bold mb-1">{t("audioGenerator.features.voices.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("audioGenerator.features.voices.description")}</p>
               </div>
               
               <div className="glass-card rounded-xl p-5 border border-border hover-glow transition-all">
                 <Mic className="w-8 h-8 text-primary mb-3" />
-                <h3 className="font-bold mb-1">Ultra-Realista</h3>
-                <p className="text-sm text-muted-foreground">Tecnologia de IA de última geração</p>
+                <h3 className="font-bold mb-1">{t("audioGenerator.features.realistic.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("audioGenerator.features.realistic.description")}</p>
               </div>
               
               <div className="glass-card rounded-xl p-5 border border-border hover-glow transition-all">
                 <Zap className="w-8 h-8 text-primary mb-3" />
-                <h3 className="font-bold mb-1">Rápido</h3>
-                <p className="text-sm text-muted-foreground">Gere áudios em segundos</p>
+                <h3 className="font-bold mb-1">{t("audioGenerator.features.fast.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("audioGenerator.features.fast.description")}</p>
               </div>
               
               <div className="glass-card rounded-xl p-5 border border-border hover-glow transition-all">
                 <Sparkles className="w-8 h-8 text-primary mb-3" />
-                <h3 className="font-bold mb-1">Fácil</h3>
-                <p className="text-sm text-muted-foreground">Cole o texto e clique em gerar</p>
+                <h3 className="font-bold mb-1">{t("audioGenerator.features.easy.title")}</h3>
+                <p className="text-sm text-muted-foreground">{t("audioGenerator.features.easy.description")}</p>
               </div>
             </div>
 
@@ -89,25 +92,25 @@ export const AudioGeneratorHero = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-muted-foreground">
                 <div className="w-2 h-2 rounded-full bg-success" />
-                <span>🎚️ Velocidade ajustável (0.5x - 1.5x)</span>
+                <span>{t("audioGenerator.list.speed")}</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <div className="w-2 h-2 rounded-full bg-success" />
-                <span>🔊 Volume personalizável (0.5x - 2.0x)</span>
+                <span>{t("audioGenerator.list.volume")}</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <div className="w-2 h-2 rounded-full bg-success" />
-                <span>📝 Legenda: Palavras por linha (1-15)</span>
+                <span>{t("audioGenerator.list.wordsPerLine")}</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <div className="w-2 h-2 rounded-full bg-success" />
-                <span>🔤 Legenda: Normal, MAIÚSCULA ou minúscula</span>
+                <span>{t("audioGenerator.list.casing")}</span>
               </li>
             </ul>
             
             <div className="glass-card rounded-xl p-4 border border-primary/20 bg-primary/5">
               <p className="text-sm font-medium text-primary text-center">
-                ✨ Gere áudio + legenda já ajustados em um clique!
+                {t("audioGenerator.highlight")}
               </p>
             </div>
 
@@ -116,7 +119,7 @@ export const AudioGeneratorHero = () => {
               onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-primary-foreground px-8 py-6 text-base font-bold rounded-xl glow-effect"
             >
-              Experimentar Gerador de Áudio
+              {t("audioGenerator.cta")}
             </Button>
           </motion.div>
         </div>

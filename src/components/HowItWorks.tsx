@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Users, TrendingUp, Scissors, FileText, BookmarkCheck, MessageSquare, Youtube, LayoutDashboard, Volume2, Type } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useTranslation } from "react-i18next";
 
 import dashboardHome from "@/assets/dashboard-home-new.png";
 import comunidade from "@/assets/comunidade.png";
@@ -14,91 +15,92 @@ import gestaoCanais from "@/assets/gestao-canais-new.png";
 import geradorAudio from "@/assets/gerador-audio-full.png";
 import editorTexto from "@/assets/editor-texto.png";
 
-const features = [
-  {
-    id: "dashboard",
-    label: "Dashboard",
-    icon: LayoutDashboard,
-    title: "Dashboard Completo",
-    description: "Visualize todas as métricas e ferramentas em um só lugar. Controle total sobre sua operação.",
-    image: dashboardHome,
-  },
-  {
-    id: "gestao",
-    label: "Gestão",
-    icon: Youtube,
-    title: "Gestão de Canais",
-    description: "Gerencie múltiplos canais com organização profissional. Cada canal com suas pastas separadas.",
-    image: gestaoCanais,
-  },
-  {
-    id: "audio",
-    label: "Áudio",
-    icon: Volume2,
-    title: "Gerador de Áudio IA",
-    description: "Transforme texto em áudio com mais de 190 Vozes Premium ultra-realistas e controle de velocidade. Geramos automaticamente o arquivo .srt sincronizado perfeitamente com a fala para você importar no Premiere/CapCut.",
-    image: geradorAudio,
-  },
-  {
-    id: "editor",
-    label: "Editor",
-    icon: Type,
-    title: "Editor de Texto",
-    description: "Contador de caracteres, palavras e tempo de narração. Exporte para SRT ou TXT com um clique.",
-    image: editorTexto,
-  },
-  {
-    id: "prompts",
-    label: "Prompts",
-    icon: MessageSquare,
-    title: "Biblioteca de Prompts",
-    description: "Salve e organize todos os prompts que funcionam. Busca rápida e tags para encontrar em segundos.",
-    image: promptsCanal,
-  },
-  {
-    id: "referencias",
-    label: "Referências",
-    icon: BookmarkCheck,
-    title: "Referências de Canais",
-    description: "Organize canais de referência por nicho. Nunca mais perca uma inspiração.",
-    image: referenciasCanais,
-  },
-  {
-    id: "srt",
-    label: "SRT",
-    icon: FileText,
-    title: "Gerador de Legendas",
-    description: "Crie legendas profissionais para CapCut automaticamente. Presets otimizados.",
-    image: geradorSrt,
-  },
-  {
-    id: "divisor",
-    label: "Divisor",
-    icon: Scissors,
-    title: "Divisor de Texto",
-    description: "Divida textos longos em partes menores para diferentes plataformas.",
-    image: divisorTexto,
-  },
-  {
-    id: "videos",
-    label: "Virais",
-    icon: TrendingUp,
-    title: "Buscador de Virais",
-    description: "Encontre vídeos que estão explodindo agora. Filtre por views, país e data.",
-    image: videosVirais,
-  },
-  {
-    id: "comunidade",
-    label: "Comunidade",
-    icon: Users,
-    title: "Comunidade Exclusiva",
-    description: "Conecte-se com outros creators no WhatsApp. Troca de experiências e networking real.",
-    image: comunidade,
-  },
-];
-
 export const HowItWorks = () => {
-  const [activeTab, setActiveTab] = useState(features[0].id);
+  const { t } = useTranslation();
+  const [activeTab, setActiveTab] = useState("dashboard");
+
+  const features = [
+    {
+      id: "dashboard",
+      label: t("howItWorks.features.dashboard.label"),
+      icon: LayoutDashboard,
+      title: t("howItWorks.features.dashboard.title"),
+      description: t("howItWorks.features.dashboard.description"),
+      image: dashboardHome,
+    },
+    {
+      id: "gestao",
+      label: t("howItWorks.features.management.label"),
+      icon: Youtube,
+      title: t("howItWorks.features.management.title"),
+      description: t("howItWorks.features.management.description"),
+      image: gestaoCanais,
+    },
+    {
+      id: "audio",
+      label: t("howItWorks.features.audio.label"),
+      icon: Volume2,
+      title: t("howItWorks.features.audio.title"),
+      description: t("howItWorks.features.audio.description"),
+      image: geradorAudio,
+    },
+    {
+      id: "editor",
+      label: t("howItWorks.features.editor.label"),
+      icon: Type,
+      title: t("howItWorks.features.editor.title"),
+      description: t("howItWorks.features.editor.description"),
+      image: editorTexto,
+    },
+    {
+      id: "prompts",
+      label: t("howItWorks.features.prompts.label"),
+      icon: MessageSquare,
+      title: t("howItWorks.features.prompts.title"),
+      description: t("howItWorks.features.prompts.description"),
+      image: promptsCanal,
+    },
+    {
+      id: "referencias",
+      label: t("howItWorks.features.references.label"),
+      icon: BookmarkCheck,
+      title: t("howItWorks.features.references.title"),
+      description: t("howItWorks.features.references.description"),
+      image: referenciasCanais,
+    },
+    {
+      id: "srt",
+      label: t("howItWorks.features.srt.label"),
+      icon: FileText,
+      title: t("howItWorks.features.srt.title"),
+      description: t("howItWorks.features.srt.description"),
+      image: geradorSrt,
+    },
+    {
+      id: "divisor",
+      label: t("howItWorks.features.divider.label"),
+      icon: Scissors,
+      title: t("howItWorks.features.divider.title"),
+      description: t("howItWorks.features.divider.description"),
+      image: divisorTexto,
+    },
+    {
+      id: "videos",
+      label: t("howItWorks.features.viral.label"),
+      icon: TrendingUp,
+      title: t("howItWorks.features.viral.title"),
+      description: t("howItWorks.features.viral.description"),
+      image: videosVirais,
+    },
+    {
+      id: "comunidade",
+      label: t("howItWorks.features.community.label"),
+      icon: Users,
+      title: t("howItWorks.features.community.title"),
+      description: t("howItWorks.features.community.description"),
+      image: comunidade,
+    },
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -110,7 +112,7 @@ export const HowItWorks = () => {
     }, 30000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [features]);
 
   const activeFeature = features.find(f => f.id === activeTab);
 
@@ -125,10 +127,10 @@ export const HowItWorks = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
-            Como Funciona <span className="text-gradient">na Prática</span>
+            {t("howItWorks.title")} <span className="text-gradient">{t("howItWorks.titleHighlight")}</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            10 ferramentas que eliminam o caos e multiplicam sua produção
+            {t("howItWorks.subtitle")}
           </p>
         </motion.div>
 
@@ -176,7 +178,7 @@ export const HowItWorks = () => {
                     onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
                     className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-all hover:scale-105"
                   >
-                    Começar Agora
+                    {t("common.getStarted")}
                   </button>
                 </div>
 

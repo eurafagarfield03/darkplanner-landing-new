@@ -8,7 +8,12 @@
     "guarantee": "7-day guarantee",
     "secure": "Secure",
     "contact": "Contact",
-    "talkOnWhatsApp": "Chat on WhatsApp"
+    "talkOnWhatsApp": "Chat on WhatsApp",
+    "immediateAccess": "Immediate access",
+    "sevenDayGuarantee": "7-day guarantee",
+    "tryFree": "7-day free trial",
+    "cancelAnytime": "Cancel anytime",
+    "totalGuarantee": "Full guarantee"
   },
   "navbar": {
     "resources": "Features",
@@ -87,10 +92,256 @@
       "channelInsights": "Channel Insights"
     }
   },
+  "howItWorks": {
+    "title": "How It Works",
+    "titleHighlight": "in Practice",
+    "subtitle": "10 tools that eliminate chaos and multiply your production",
+    "features": {
+      "dashboard": {
+        "label": "Dashboard",
+        "title": "Complete Dashboard",
+        "description": "View all metrics and tools in one place. Total control over your operation."
+      },
+      "management": {
+        "label": "Management",
+        "title": "Channel Management",
+        "description": "Manage multiple channels with professional organization. Each channel with its separate folders."
+      },
+      "audio": {
+        "label": "Audio",
+        "title": "AI Audio Generator",
+        "description": "Transform text into audio with over 190 ultra-realistic Premium Voices and speed control. We automatically generate the .srt file perfectly synchronized with speech for you to import into Premiere/CapCut."
+      },
+      "editor": {
+        "label": "Editor",
+        "title": "Text Editor",
+        "description": "Character, word, and narration time counter. Export to SRT or TXT with one click."
+      },
+      "prompts": {
+        "label": "Prompts",
+        "title": "Prompt Library",
+        "description": "Save and organize all prompts that work. Quick search and tags to find in seconds."
+      },
+      "references": {
+        "label": "References",
+        "title": "Channel References",
+        "description": "Organize reference channels by niche. Never lose an inspiration again."
+      },
+      "srt": {
+        "label": "SRT",
+        "title": "Subtitle Generator",
+        "description": "Create professional subtitles for CapCut automatically. Optimized presets."
+      },
+      "divider": {
+        "label": "Divider",
+        "title": "Text Divider",
+        "description": "Split long texts into smaller parts for different platforms."
+      },
+      "viral": {
+        "label": "Viral",
+        "title": "Viral Finder",
+        "description": "Find videos that are exploding now. Filter by views, country, and date."
+      },
+      "community": {
+        "label": "Community",
+        "title": "Exclusive Community",
+        "description": "Connect with other creators on WhatsApp. Real experience exchange and networking."
+      }
+    }
+  },
   "faq": {
     "title": "Frequently Asked",
     "titleHighlight": "Questions",
-    "subtitle": "Get your questions answered about Dark Planner"
+    "subtitle": "Get your questions answered before you start",
+    "questions": {
+      "audioGenerator": {
+        "question": "How does the AI Audio Generator work?",
+        "answer": "Super simple! Just 3 steps: 1) Choose one of the 190+ ultra-realistic premium multilingual voices (the same voice speaks any language!). 2) Paste your script and generate the audio with one click. 3) Download the MP3 audio file along with the perfectly synchronized SRT subtitle file, ready to import into Premiere, CapCut, or any editor."
+      },
+      "unlimited": {
+        "question": "Is audio generation unlimited?",
+        "answer": "The audio limit is daily, not monthly. Depending on your plan, you can generate 15 to 60 audios per day. This means you can generate hundreds of audios per month! The counter resets every day at midnight."
+      },
+      "charLimit": {
+        "question": "Is there a monthly character limit?",
+        "answer": "No! The character limit is per audio generation, not per month. So you can generate 50 audios in a day, each with up to 150 thousand characters (depending on the plan), no problem at all. Use it freely!"
+      },
+      "voiceQuality": {
+        "question": "Are the voices really professional quality?",
+        "answer": "Yes! We use cutting-edge voice synthesis technology with over 190 ultra-realistic premium voices. They're indistinguishable from human narrators, perfect for Dark channels that need studio quality without spending fortunes on voice-over."
+      },
+      "capcut": {
+        "question": "Can I use the audios in CapCut and Premiere?",
+        "answer": "Absolutely! You get the audio in high-quality MP3 + SRT file with automatically synchronized subtitles. Just drag and drop into CapCut, Premiere, DaVinci, or any editor. The subtitles already come at the right time!"
+      },
+      "viralNiches": {
+        "question": "What is Viral Niches and how does it work?",
+        "answer": "Viral Niches automatically monitors YouTube 24/7 looking for channels that are exploding. When we detect a new channel with viral potential, you receive a notification in the system warning that a new niche is booming. This way you always stay one step ahead of the competition!"
+      },
+      "channels": {
+        "question": "How many channels can I use?",
+        "answer": "As many as you want! You can create and manage unlimited channels. There's no project limit on any plan. Dark Planner creators manage from 2 to 15+ channels simultaneously."
+      },
+      "niche": {
+        "question": "Does it work for any Dark niche?",
+        "answer": "Yes! Dark Planner was created to organize any type of faceless channel: curiosities, lists, mysteries, technology, finance, history, science, etc."
+      },
+      "difficulty": {
+        "question": "Is it hard to use?",
+        "answer": "No! The interface was designed to be intuitive. In 5 minutes you'll be generating your first audios and organizing your channels."
+      },
+      "cancel": {
+        "question": "Can I cancel anytime?",
+        "answer": "Yes! The subscription is recurring but you can cancel at any time without fines or fees. Your access continues until the end of the paid period."
+      },
+      "guarantee": {
+        "question": "Is there a guarantee?",
+        "answer": "Yes! You have 7 days to test all features. If you don't like it for any reason, we'll refund 100% of the value. No questions asked."
+      },
+      "install": {
+        "question": "Do I need to install any program?",
+        "answer": "No! Dark Planner works 100% online. Just access it through the browser from any device."
+      }
+    }
+  },
+  "cta": {
+    "badge": "Limited Offer",
+    "title": "Time to organize and",
+    "titleHighlight": "multiply",
+    "subtitle": "You already know how to create content. Now learn to truly scale."
+  },
+  "creatorStory": {
+    "title": "Why I created",
+    "titleHighlight": "Dark Planner",
+    "subtitle": "The story of someone who lived the problem firsthand",
+    "creatorName": "Rafael Garfield",
+    "creatorRole": "Creator of Dark Planner",
+    "story": {
+      "p1": "In 2023, I was managing 4 dark channels.",
+      "p1b": "I spent more time looking for files than creating content. Prompts lost in old ChatGPT conversations. Scripts saved without clear names. Thumbnail references scattered across 3 different folders.",
+      "p2": "One day,",
+      "p2b": "I lost a complete script",
+      "p2c": "that had taken work to make. I spent 2 hours looking for it. That's when I realized:",
+      "p2d": "the problem wasn't lack of time or talent. It was pure disorganization.",
+      "p3": "I created Dark Planner first for myself. Then I showed it to some creator friends. They asked for access. In 3 months,",
+      "p3b": "my production tripled",
+      "p3c": "and I was helping dozens of creators do the same.",
+      "p4": "Today, Dark Planner organizes thousands of videos and saves hundreds of hours per week for creators who are truly scaling."
+    }
+  },
+  "beforeAfter": {
+    "title": "Recognize this",
+    "titleHighlight": "routine",
+    "subtitle": "If you've ever lost hours looking for files or redoing work you already had done, you need Dark Planner",
+    "cta": "Yes, I want to organize my production now",
+    "problems": {
+      "prompt": {
+        "title": "\"Where did I save that prompt?\"",
+        "description": "You lose 30+ minutes looking for prompts in old ChatGPT conversations or loose text files"
+      },
+      "thumbnail": {
+        "title": "\"Which thumbnail was for this?\"",
+        "description": "When uploading, you don't remember which thumbnail reference to use because you didn't write it down anywhere"
+      },
+      "script": {
+        "title": "\"Which video is this script for?\"",
+        "description": "Scripts saved randomly without connection to video titles cause total confusion"
+      }
+    }
+  },
+  "finalCta": {
+    "guarantee": {
+      "title": "7-Day",
+      "titleHighlight": "Guarantee",
+      "description": "Test for 7 full days. If you don't feel you're saving time, we'll refund 100% of your money.",
+      "note": "No questions asked. No bureaucracy."
+    },
+    "cta": {
+      "title": "Organize and",
+      "titleHighlight": "multiply your results",
+      "description": "While you're reading this, other creators are already scaling with Dark Planner."
+    }
+  },
+  "audioGenerator": {
+    "badge": "Ultra-Realistic Voices",
+    "title": "AI Audio",
+    "titleHighlight": "Generator",
+    "subtitle": "Transform text into audio with ultra-realistic voices. Over 190 premium voices for your Dark videos.",
+    "features": {
+      "voices": {
+        "title": "190+ Premium Voices",
+        "description": "Complete library of professional voices"
+      },
+      "realistic": {
+        "title": "Ultra-Realistic",
+        "description": "Cutting-edge AI technology"
+      },
+      "fast": {
+        "title": "Fast",
+        "description": "Generate audios in seconds"
+      },
+      "easy": {
+        "title": "Easy",
+        "description": "Paste text and click generate"
+      }
+    },
+    "list": {
+      "speed": "🎚️ Adjustable speed (0.5x - 1.5x)",
+      "volume": "🔊 Customizable volume (0.5x - 2.0x)",
+      "wordsPerLine": "📝 Subtitle: Words per line (1-15)",
+      "casing": "🔤 Subtitle: Normal, UPPERCASE, or lowercase"
+    },
+    "highlight": "✨ Generate audio + subtitle already adjusted in one click!",
+    "cta": "Try Audio Generator"
+  },
+  "viralNiches": {
+    "badge": "🔥 Viral Niches",
+    "title": "Discover the",
+    "titleHighlight": "Most Promising Niches",
+    "subtitle": "Intelligent system that categorizes channels by growth potential. Find opportunities before the competition.",
+    "cta": "Explore Niches",
+    "categories": {
+      "exploding": {
+        "title": "Exploding",
+        "description": "Channels with less than 15 days posting and over 100k views"
+      },
+      "trending": {
+        "title": "Trending",
+        "description": "Channels between 15 and 60 days posting and over 500k views"
+      },
+      "growing": {
+        "title": "Growing",
+        "description": "Channels between 15 and 60 days posting and between 100k and 500k views"
+      },
+      "newChannels": {
+        "title": "New Channels",
+        "description": "Channels with less than 30 days posting and between 50k and 100k views"
+      },
+      "others": {
+        "title": "Others",
+        "description": "Channels that don't fit other categories (permanent history)"
+      }
+    }
+  },
+  "channelInsights": {
+    "badge": "📊 Channel Insights",
+    "title": "Professional Analysis",
+    "titleHighlight": "of Any Channel",
+    "subtitle": "Understand what makes a channel grow. Complete metrics, content analysis, and actionable insights.",
+    "features": {
+      "metrics": "Growth and engagement metrics",
+      "titles": "Analysis of titles and thumbnails that work",
+      "patterns": "Success pattern identification"
+    },
+    "cta": "Analyze Channels"
+  },
+  "dashboard": {
+    "imageAlt": "Dark Planner Dashboard - Complete system for managing Dark channels",
+    "pills": {
+      "management": "📊 Channel Management",
+      "viralNiches": "🎯 Viral Niches",
+      "prompts": "✨ Saved Prompts"
+    }
   },
   "footer": {
     "description": "Complete system for faceless channel creators.",

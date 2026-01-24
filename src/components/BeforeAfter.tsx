@@ -1,25 +1,28 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Search, Image, FileText } from "lucide-react";
-
-const problems = [
-  {
-    icon: Search,
-    title: '"Onde salvei aquele prompt?"',
-    description: "Você perde 30+ minutos procurando prompts em conversas antigas do ChatGPT ou arquivos de texto soltos",
-  },
-  {
-    icon: Image,
-    title: '"Qual thumbnail era dessa?"',
-    description: "Na hora do upload, você não lembra qual referência de thumbnail usar porque não anotou em lugar nenhum",
-  },
-  {
-    icon: FileText,
-    title: '"Esse roteiro é de qual vídeo?"',
-    description: "Roteiros salvos aleatoriamente sem conexão com os títulos dos vídeos causam confusão total",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export const BeforeAfter = () => {
+  const { t } = useTranslation();
+
+  const problems = [
+    {
+      icon: Search,
+      title: t("beforeAfter.problems.prompt.title"),
+      description: t("beforeAfter.problems.prompt.description"),
+    },
+    {
+      icon: Image,
+      title: t("beforeAfter.problems.thumbnail.title"),
+      description: t("beforeAfter.problems.thumbnail.description"),
+    },
+    {
+      icon: FileText,
+      title: t("beforeAfter.problems.script.title"),
+      description: t("beforeAfter.problems.script.description"),
+    },
+  ];
+
   return (
     <section className="py-24 px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-destructive/5 via-transparent to-transparent pointer-events-none"></div>
@@ -27,10 +30,10 @@ export const BeforeAfter = () => {
       <div className="container max-w-6xl relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black mb-4">
-            Reconhece essa <span className="text-destructive">rotina</span>?
+            {t("beforeAfter.title")} <span className="text-destructive">{t("beforeAfter.titleHighlight")}</span>?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Se você já perdeu horas procurando arquivos ou refazendo trabalho que já tinha pronto, você precisa do Dark Planner
+            {t("beforeAfter.subtitle")}
           </p>
         </div>
 
@@ -56,8 +59,9 @@ export const BeforeAfter = () => {
           <Button 
             size="lg" 
             className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white px-6 md:px-12 py-6 md:py-7 text-base md:text-lg font-black rounded-full glow-effect"
+            onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Sim, quero organizar minha produção agora
+            {t("beforeAfter.cta")}
             <ArrowRight className="w-5 h-5 md:w-6 md:h-6 ml-2" />
           </Button>
         </div>
