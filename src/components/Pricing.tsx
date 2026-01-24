@@ -140,6 +140,16 @@ export const Pricing = () => {
     },
   ];
 
+  // Filter plans: international shows only LITE, PRO, PLUS (skip BASIC)
+  const displayPlans = isInternational 
+    ? allPlans.filter(plan => plan.name !== t("pricing.plans.basic.name"))
+    : allPlans;
+
+  // Adjust grid columns based on number of plans
+  const gridCols = isInternational 
+    ? "grid-cols-1 md:grid-cols-3 lg:grid-cols-3" 
+    : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4";
+
   return (
     <section className="py-16 md:py-24 px-4" id="pricing">
       <div className="max-w-7xl mx-auto">
@@ -159,8 +169,8 @@ export const Pricing = () => {
         </motion.div>
 
         {/* Todos os planos lado a lado */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 items-center">
-          {allPlans.map((plan, index) => (
+        <div className={`grid ${gridCols} gap-4 lg:gap-6 items-center max-w-5xl mx-auto`}>
+          {displayPlans.map((plan, index) => (
             <PlanCard key={plan.name} plan={plan} index={index} t={t} currencySymbol={currencySymbol} />
           ))}
         </div>
