@@ -293,7 +293,7 @@ export const Pricing = () => {
             asChild
           >
             <a 
-              href="https://api.whatsapp.com/send/?phone=5577988744698&text=Ol%C3%A1%21+Quero+comprar+um+plano+personalizado.&type=phone_number&app_absent=0" 
+              href="https://wa.me/5577988744698?text=Ol%C3%A1%21%20Quero%20comprar%20um%20plano%20personalizado." 
               target="_blank" 
               rel="noopener noreferrer"
             >
