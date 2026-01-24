@@ -15,6 +15,7 @@ import { FAQ } from "@/components/FAQ";
 import { Pricing } from "@/components/Pricing";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   return (
@@ -47,6 +48,7 @@ const Index = () => {
       <SectionDivider />
       <FinalCTA />
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };
