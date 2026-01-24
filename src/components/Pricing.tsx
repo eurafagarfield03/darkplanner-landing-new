@@ -5,15 +5,19 @@ import { getCheckoutURL } from "@/lib/affiliate-tracking";
 import { useTranslation } from "react-i18next";
 
 export const Pricing = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  
+  // Check if international (not PT-BR)
+  const isInternational = i18n.language !== 'pt-BR';
+  const currencySymbol = isInternational ? '$' : 'R$';
 
-  // Plan data with translation keys
+  // Plan data with translation keys - prices vary by region
   const allPlans = [
     {
       name: t("pricing.plans.basic.name"),
       periodLabel: t("pricing.monthly"),
       subtitle: t("pricing.plans.basic.subtitle"),
-      price: "49,90",
+      price: isInternational ? "9.99" : "49,90",
       period: t("pricing.perMonth"),
       features: [
         { text: t("pricing.features.audioGenerator"), highlight: true, icon: Check },
@@ -28,10 +32,12 @@ export const Pricing = () => {
       ],
       audioFeatures: {
         audiosPerDay: 15,
-        maxChars: "80 mil",
+        maxChars: isInternational ? "80k" : "80 mil",
       },
       cta: t("common.getStarted"),
-      paymentUrl: "https://pay.kirvano.com/5cb87d4f-3150-4b00-bd2b-c91369512239",
+      paymentUrl: isInternational 
+        ? "https://pay.kirvano.com/5cb87d4f-3150-4b00-bd2b-c91369512239" // TODO: Add international payment link
+        : "https://pay.kirvano.com/5cb87d4f-3150-4b00-bd2b-c91369512239",
       popular: false,
       badge: null,
       badgeIcon: null,
@@ -41,7 +47,7 @@ export const Pricing = () => {
       name: t("pricing.plans.lite.name"),
       periodLabel: t("pricing.monthly"),
       subtitle: t("pricing.plans.lite.subtitle"),
-      price: "79,90",
+      price: isInternational ? "14.99" : "79,90",
       period: t("pricing.perMonth"),
       features: [
         { text: t("pricing.features.audioGenerator"), highlight: true, icon: Check },
@@ -56,10 +62,12 @@ export const Pricing = () => {
       ],
       audioFeatures: {
         audiosPerDay: 25,
-        maxChars: "120 mil",
+        maxChars: isInternational ? "120k" : "120 mil",
       },
       cta: t("common.getStarted"),
-      paymentUrl: "https://pay.kirvano.com/ca7b9f83-6b1b-444a-aefa-b34454db213c",
+      paymentUrl: isInternational 
+        ? "https://pay.kirvano.com/ca7b9f83-6b1b-444a-aefa-b34454db213c" // TODO: Add international payment link
+        : "https://pay.kirvano.com/ca7b9f83-6b1b-444a-aefa-b34454db213c",
       popular: false,
       badge: null,
       badgeIcon: null,
@@ -69,7 +77,7 @@ export const Pricing = () => {
       name: t("pricing.plans.pro.name"),
       periodLabel: t("pricing.monthly"),
       subtitle: t("pricing.plans.pro.subtitle"),
-      price: "109,90",
+      price: isInternational ? "19.99" : "109,90",
       period: t("pricing.perMonth"),
       features: [
         { text: t("pricing.features.audioGenerator"), highlight: true, icon: Check },
@@ -86,10 +94,12 @@ export const Pricing = () => {
       blockedFeatures: null,
       audioFeatures: {
         audiosPerDay: 50,
-        maxChars: "150 mil",
+        maxChars: isInternational ? "150k" : "150 mil",
       },
       cta: t("pricing.plans.pro.cta"),
-      paymentUrl: "https://pay.kirvano.com/a5698a44-0780-4af0-8176-4c1ba41ae597",
+      paymentUrl: isInternational 
+        ? "https://pay.kirvano.com/a5698a44-0780-4af0-8176-4c1ba41ae597" // TODO: Add international payment link
+        : "https://pay.kirvano.com/a5698a44-0780-4af0-8176-4c1ba41ae597",
       popular: true,
       badge: t("pricing.plans.pro.badge"),
       badgeIcon: Star,
@@ -99,7 +109,7 @@ export const Pricing = () => {
       name: t("pricing.plans.plus.name"),
       periodLabel: t("pricing.monthly"),
       subtitle: t("pricing.plans.plus.subtitle"),
-      price: "149,90",
+      price: isInternational ? "29.99" : "149,90",
       period: t("pricing.perMonth"),
       features: [
         { text: t("pricing.features.audioGenerator"), highlight: true, icon: Check },
@@ -117,10 +127,12 @@ export const Pricing = () => {
       blockedFeatures: null,
       audioFeatures: {
         audiosPerDay: 60,
-        maxChars: "200 mil",
+        maxChars: isInternational ? "200k" : "200 mil",
       },
       cta: t("pricing.plans.plus.cta"),
-      paymentUrl: "https://pay.kirvano.com/5a583fa7-f20d-4e42-808a-1fa736c78be5",
+      paymentUrl: isInternational 
+        ? "https://pay.kirvano.com/5a583fa7-f20d-4e42-808a-1fa736c78be5" // TODO: Add international payment link
+        : "https://pay.kirvano.com/5a583fa7-f20d-4e42-808a-1fa736c78be5",
       popular: false,
       badge: t("pricing.plans.plus.badge"),
       badgeIcon: Rocket,
@@ -149,7 +161,7 @@ export const Pricing = () => {
         {/* Todos os planos lado a lado */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 items-center">
           {allPlans.map((plan, index) => (
-            <PlanCard key={plan.name} plan={plan} index={index} t={t} />
+            <PlanCard key={plan.name} plan={plan} index={index} t={t} currencySymbol={currencySymbol} />
           ))}
         </div>
 
@@ -208,9 +220,10 @@ interface PlanCardProps {
   };
   index: number;
   t: (key: string) => string;
+  currencySymbol: string;
 }
 
-const PlanCard = ({ plan, index, t }: PlanCardProps) => {
+const PlanCard = ({ plan, index, t, currencySymbol }: PlanCardProps) => {
   const BadgeIcon = plan.badgeIcon;
   const hasBlockedFeatures = plan.blockedFeatures && plan.blockedFeatures.length > 0;
 
@@ -246,7 +259,7 @@ const PlanCard = ({ plan, index, t }: PlanCardProps) => {
 
       <div className="mb-4">
         <div className="flex items-baseline gap-1">
-          <span className="text-xs text-muted-foreground">R$</span>
+          <span className="text-xs text-muted-foreground">{currencySymbol}</span>
           <span className={`font-black ${plan.popular ? 'text-4xl md:text-5xl text-primary' : 'text-2xl md:text-3xl'}`}>{plan.price}</span>
           <span className="text-xs text-muted-foreground">{plan.period}</span>
         </div>
