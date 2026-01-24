@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { Shield, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 export const FinalCTA = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-16 md:py-24 px-4">
       <div className="max-w-4xl mx-auto space-y-12">
@@ -19,14 +22,14 @@ export const FinalCTA = () => {
           </div>
 
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4">
-            Garantia de <span className="text-gradient">7 Dias</span>
+            {t("finalCta.guarantee.title")} <span className="text-gradient">{t("finalCta.guarantee.titleHighlight")}</span>
           </h2>
 
           <p className="text-muted-foreground max-w-xl mx-auto mb-6">
-            Teste por 7 dias completos. Se não sentir que está economizando tempo, devolvemos 100% do seu dinheiro.
+            {t("finalCta.guarantee.description")}
           </p>
 
-          <p className="text-primary font-bold">Sem perguntas. Sem burocracia.</p>
+          <p className="text-primary font-bold">{t("finalCta.guarantee.note")}</p>
         </motion.div>
 
         {/* Final CTA */}
@@ -41,11 +44,11 @@ export const FinalCTA = () => {
           
           <div className="relative z-10">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4">
-              Organize e <span className="text-gradient">multiplique seus resultados</span>
+              {t("finalCta.cta.title")} <span className="text-gradient">{t("finalCta.cta.titleHighlight")}</span>
             </h2>
 
             <p className="text-muted-foreground max-w-xl mx-auto mb-8">
-              Enquanto você está lendo isso, outros creators já estão escalando com o Dark Planner.
+              {t("finalCta.cta.description")}
             </p>
 
             <Button 
@@ -53,18 +56,18 @@ export const FinalCTA = () => {
               className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 px-8 py-6 text-base font-bold rounded-xl glow-effect"
               onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Começar Agora
+              {t("common.getStarted")}
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
 
             <div className="flex flex-wrap items-center justify-center gap-4 mt-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-primary" />
-                <span>Acesso imediato</span>
+                <span>{t("common.immediateAccess")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-primary" />
-                <span>Garantia de 7 dias</span>
+                <span>{t("common.sevenDayGuarantee")}</span>
               </div>
             </div>
           </div>

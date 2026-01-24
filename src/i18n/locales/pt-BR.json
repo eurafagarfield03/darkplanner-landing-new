@@ -8,7 +8,12 @@
     "guarantee": "7 dias garantia",
     "secure": "Seguro",
     "contact": "Contato",
-    "talkOnWhatsApp": "Falar no WhatsApp"
+    "talkOnWhatsApp": "Falar no WhatsApp",
+    "immediateAccess": "Acesso imediato",
+    "sevenDayGuarantee": "Garantia de 7 dias",
+    "tryFree": "Teste 7 dias grátis",
+    "cancelAnytime": "Cancele quando quiser",
+    "totalGuarantee": "Garantia total"
   },
   "navbar": {
     "resources": "Recursos",
@@ -87,10 +92,256 @@
       "channelInsights": "Insights de Canal"
     }
   },
+  "howItWorks": {
+    "title": "Como Funciona",
+    "titleHighlight": "na Prática",
+    "subtitle": "10 ferramentas que eliminam o caos e multiplicam sua produção",
+    "features": {
+      "dashboard": {
+        "label": "Dashboard",
+        "title": "Dashboard Completo",
+        "description": "Visualize todas as métricas e ferramentas em um só lugar. Controle total sobre sua operação."
+      },
+      "management": {
+        "label": "Gestão",
+        "title": "Gestão de Canais",
+        "description": "Gerencie múltiplos canais com organização profissional. Cada canal com suas pastas separadas."
+      },
+      "audio": {
+        "label": "Áudio",
+        "title": "Gerador de Áudio IA",
+        "description": "Transforme texto em áudio com mais de 190 Vozes Premium ultra-realistas e controle de velocidade. Geramos automaticamente o arquivo .srt sincronizado perfeitamente com a fala para você importar no Premiere/CapCut."
+      },
+      "editor": {
+        "label": "Editor",
+        "title": "Editor de Texto",
+        "description": "Contador de caracteres, palavras e tempo de narração. Exporte para SRT ou TXT com um clique."
+      },
+      "prompts": {
+        "label": "Prompts",
+        "title": "Biblioteca de Prompts",
+        "description": "Salve e organize todos os prompts que funcionam. Busca rápida e tags para encontrar em segundos."
+      },
+      "references": {
+        "label": "Referências",
+        "title": "Referências de Canais",
+        "description": "Organize canais de referência por nicho. Nunca mais perca uma inspiração."
+      },
+      "srt": {
+        "label": "SRT",
+        "title": "Gerador de Legendas",
+        "description": "Crie legendas profissionais para CapCut automaticamente. Presets otimizados."
+      },
+      "divider": {
+        "label": "Divisor",
+        "title": "Divisor de Texto",
+        "description": "Divida textos longos em partes menores para diferentes plataformas."
+      },
+      "viral": {
+        "label": "Virais",
+        "title": "Buscador de Virais",
+        "description": "Encontre vídeos que estão explodindo agora. Filtre por views, país e data."
+      },
+      "community": {
+        "label": "Comunidade",
+        "title": "Comunidade Exclusiva",
+        "description": "Conecte-se com outros creators no WhatsApp. Troca de experiências e networking real."
+      }
+    }
+  },
   "faq": {
     "title": "Perguntas",
-    "titleHighlight": "frequentes",
-    "subtitle": "Tire suas dúvidas sobre o Dark Planner"
+    "titleHighlight": "Frequentes",
+    "subtitle": "Tire suas dúvidas antes de começar",
+    "questions": {
+      "audioGenerator": {
+        "question": "Como funciona o Gerador de Áudio IA?",
+        "answer": "Super simples! São apenas 3 passos: 1) Escolha uma das mais de 190 vozes premium ultra-realistas e multilíngues (a mesma voz fala em qualquer idioma!). 2) Cole seu roteiro e gere o áudio com um clique. 3) Baixe o arquivo de áudio MP3 junto com o arquivo SRT de legendas sincronizado perfeitamente, pronto para importar no Premiere, CapCut ou qualquer editor."
+      },
+      "unlimited": {
+        "question": "A geração de áudio é ilimitada?",
+        "answer": "O limite de áudios é diário, não mensal. Dependendo do seu plano, você pode gerar de 15 a 60 áudios por dia. Isso significa que no mês você pode gerar centenas de áudios! O contador reseta todo dia à meia-noite."
+      },
+      "charLimit": {
+        "question": "Tem limite de caracteres por mês?",
+        "answer": "Não! O limite de caracteres é por geração de áudio, não por mês. Ou seja, você pode gerar 50 áudios no dia, cada um com até 150 mil caracteres (dependendo do plano), sem problema nenhum. Use à vontade!"
+      },
+      "voiceQuality": {
+        "question": "As vozes são realmente de qualidade profissional?",
+        "answer": "Sim! Utilizamos tecnologia de ponta em síntese de voz com mais de 190 vozes premium ultra-realistas. São vozes indistinguíveis de narradores humanos, perfeitas para canais Dark que precisam de qualidade de estúdio sem gastar fortunas com locução."
+      },
+      "capcut": {
+        "question": "Posso usar os áudios no CapCut e Premiere?",
+        "answer": "Com certeza! Você recebe o áudio em MP3 de alta qualidade + arquivo SRT com as legendas sincronizadas automaticamente. É só arrastar e soltar no CapCut, Premiere, DaVinci ou qualquer editor. As legendas já vêm no tempo certo!"
+      },
+      "viralNiches": {
+        "question": "O que é o Nichos Virais e como funciona?",
+        "answer": "O Nichos Virais monitora automaticamente o YouTube 24h por dia buscando canais que estão explodindo. Quando detectamos um novo canal com potencial viral, você recebe uma notificação no sistema avisando que um novo nicho está bombando. Assim você fica sempre um passo à frente da concorrência!"
+      },
+      "channels": {
+        "question": "Posso usar em quantos canais?",
+        "answer": "Sim! Você pode criar e gerenciar quantos canais quiser. Não há limite de projetos em nenhum plano. Creators do Dark Planner gerenciam de 2 a 15+ canais simultaneamente."
+      },
+      "niche": {
+        "question": "Funciona para qualquer nicho Dark?",
+        "answer": "Sim! O Dark Planner foi criado para organizar qualquer tipo de canal faceless: curiosidades, listas, mistérios, tecnologia, finanças, história, ciência, etc."
+      },
+      "difficulty": {
+        "question": "É difícil de usar?",
+        "answer": "Não! A interface foi pensada para ser intuitiva. Em 5 minutos você já estará gerando seus primeiros áudios e organizando seus canais."
+      },
+      "cancel": {
+        "question": "Posso cancelar quando quiser?",
+        "answer": "Sim! A assinatura é recorrente mas você pode cancelar a qualquer momento sem multas ou taxas. Seu acesso continua até o fim do período pago."
+      },
+      "guarantee": {
+        "question": "Tem garantia?",
+        "answer": "Sim! Você tem 7 dias para testar todos os recursos. Se não gostar por qualquer motivo, devolvemos 100% do valor. Sem perguntas."
+      },
+      "install": {
+        "question": "Preciso instalar algum programa?",
+        "answer": "Não! O Dark Planner funciona 100% online. Basta acessar pelo navegador de qualquer dispositivo."
+      }
+    }
+  },
+  "cta": {
+    "badge": "Oferta Limitada",
+    "title": "Hora de organizar e",
+    "titleHighlight": "multiplicar",
+    "subtitle": "Você já sabe criar conteúdo. Agora aprenda a escalar de verdade."
+  },
+  "creatorStory": {
+    "title": "Por que eu criei o",
+    "titleHighlight": "Dark Planner",
+    "subtitle": "A história de quem viveu o problema na pele",
+    "creatorName": "Rafael Garfield",
+    "creatorRole": "Criador do Dark Planner",
+    "story": {
+      "p1": "Em 2023, eu gerenciava 4 canais dark.",
+      "p1b": "Passava mais tempo procurando arquivos do que criando conteúdo. Prompts perdidos em conversas antigas do ChatGPT. Roteiros salvos sem nome claro. Referências de thumbnails espalhadas em 3 pastas diferentes.",
+      "p2": "Um dia,",
+      "p2b": "perdi um roteiro completo",
+      "p2c": "que tinha dado trabalho fazer. Passei 2 horas procurando. Foi quando percebi:",
+      "p2d": "o problema não era falta de tempo ou talento. Era desorganização pura.",
+      "p3": "Criei o Dark Planner primeiro pra mim. Depois mostrei pra alguns amigos creators. Eles pediram acesso. Em 3 meses,",
+      "p3b": "minha produção triplicou",
+      "p3c": "e eu estava ajudando dezenas de creators a fazer o mesmo.",
+      "p4": "Hoje, o Dark Planner organiza milhares de vídeos e economiza centenas de horas por semana pra creators que estão escalando de verdade."
+    }
+  },
+  "beforeAfter": {
+    "title": "Reconhece essa",
+    "titleHighlight": "rotina",
+    "subtitle": "Se você já perdeu horas procurando arquivos ou refazendo trabalho que já tinha pronto, você precisa do Dark Planner",
+    "cta": "Sim, quero organizar minha produção agora",
+    "problems": {
+      "prompt": {
+        "title": "\"Onde salvei aquele prompt?\"",
+        "description": "Você perde 30+ minutos procurando prompts em conversas antigas do ChatGPT ou arquivos de texto soltos"
+      },
+      "thumbnail": {
+        "title": "\"Qual thumbnail era dessa?\"",
+        "description": "Na hora do upload, você não lembra qual referência de thumbnail usar porque não anotou em lugar nenhum"
+      },
+      "script": {
+        "title": "\"Esse roteiro é de qual vídeo?\"",
+        "description": "Roteiros salvos aleatoriamente sem conexão com os títulos dos vídeos causam confusão total"
+      }
+    }
+  },
+  "finalCta": {
+    "guarantee": {
+      "title": "Garantia de",
+      "titleHighlight": "7 Dias",
+      "description": "Teste por 7 dias completos. Se não sentir que está economizando tempo, devolvemos 100% do seu dinheiro.",
+      "note": "Sem perguntas. Sem burocracia."
+    },
+    "cta": {
+      "title": "Organize e",
+      "titleHighlight": "multiplique seus resultados",
+      "description": "Enquanto você está lendo isso, outros creators já estão escalando com o Dark Planner."
+    }
+  },
+  "audioGenerator": {
+    "badge": "Vozes Ultra-Realistas",
+    "title": "Gerador de Áudio",
+    "titleHighlight": "com IA",
+    "subtitle": "Transforme texto em áudio com vozes ultra-realistas. Mais de 190 vozes premium para seus vídeos Dark.",
+    "features": {
+      "voices": {
+        "title": "+190 Vozes Premium",
+        "description": "Biblioteca completa de vozes profissionais"
+      },
+      "realistic": {
+        "title": "Ultra-Realista",
+        "description": "Tecnologia de IA de última geração"
+      },
+      "fast": {
+        "title": "Rápido",
+        "description": "Gere áudios em segundos"
+      },
+      "easy": {
+        "title": "Fácil",
+        "description": "Cole o texto e clique em gerar"
+      }
+    },
+    "list": {
+      "speed": "🎚️ Velocidade ajustável (0.5x - 1.5x)",
+      "volume": "🔊 Volume personalizável (0.5x - 2.0x)",
+      "wordsPerLine": "📝 Legenda: Palavras por linha (1-15)",
+      "casing": "🔤 Legenda: Normal, MAIÚSCULA ou minúscula"
+    },
+    "highlight": "✨ Gere áudio + legenda já ajustados em um clique!",
+    "cta": "Experimentar Gerador de Áudio"
+  },
+  "viralNiches": {
+    "badge": "🔥 Nichos Virais",
+    "title": "Descubra os",
+    "titleHighlight": "Nichos Mais Promissores",
+    "subtitle": "Sistema inteligente que categoriza canais por potencial de crescimento. Encontre oportunidades antes da concorrência.",
+    "cta": "Explorar Nichos",
+    "categories": {
+      "exploding": {
+        "title": "Explodindo",
+        "description": "Canais com menos de 15 dias postando e mais de 100 mil visualizações"
+      },
+      "trending": {
+        "title": "Em Alta",
+        "description": "Canais entre 15 e 60 dias postando e mais de 500 mil visualizações"
+      },
+      "growing": {
+        "title": "Crescendo",
+        "description": "Canais entre 15 e 60 dias postando e entre 100 mil e 500 mil visualizações"
+      },
+      "newChannels": {
+        "title": "Novos Canais",
+        "description": "Canais com menos de 30 dias postando e entre 50 mil e 100 mil visualizações"
+      },
+      "others": {
+        "title": "Outros",
+        "description": "Canais que não se encaixam nas outras categorias (histórico permanente)"
+      }
+    }
+  },
+  "channelInsights": {
+    "badge": "📊 Insights de Canal",
+    "title": "Análise Profissional",
+    "titleHighlight": "de Qualquer Canal",
+    "subtitle": "Entenda o que faz um canal crescer. Métricas completas, análise de conteúdo e insights acionáveis.",
+    "features": {
+      "metrics": "Métricas de crescimento e engajamento",
+      "titles": "Análise de títulos e thumbnails que funcionam",
+      "patterns": "Identificação de padrões de sucesso"
+    },
+    "cta": "Analisar Canais"
+  },
+  "dashboard": {
+    "imageAlt": "Dark Planner Dashboard - Sistema completo para gerenciar canais Dark",
+    "pills": {
+      "management": "📊 Gestão de Canais",
+      "viralNiches": "🎯 Nichos Virais",
+      "prompts": "✨ Prompts Salvos"
+    }
   },
   "footer": {
     "description": "Sistema completo para creators de canais faceless.",

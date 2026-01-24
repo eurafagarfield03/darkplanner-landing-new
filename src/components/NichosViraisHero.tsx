@@ -4,44 +4,46 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Zap, TrendingUp, BarChart3, Users, FolderOpen } from "lucide-react";
 import nichosImage1 from "@/assets/nichos-virais-new.png";
 import nichosImage2 from "@/assets/nichos-virais-alt.png";
-
-const categories = [
-  {
-    icon: Zap,
-    title: "Explodindo",
-    description: "Canais com menos de 15 dias postando e mais de 100 mil visualizações",
-    color: "text-yellow-500"
-  },
-  {
-    icon: TrendingUp,
-    title: "Em Alta",
-    description: "Canais entre 15 e 60 dias postando e mais de 500 mil visualizações",
-    color: "text-primary"
-  },
-  {
-    icon: BarChart3,
-    title: "Crescendo",
-    description: "Canais entre 15 e 60 dias postando e entre 100 mil e 500 mil visualizações",
-    color: "text-green-500"
-  },
-  {
-    icon: Users,
-    title: "Novos Canais",
-    description: "Canais com menos de 30 dias postando e entre 50 mil e 100 mil visualizações",
-    color: "text-blue-500"
-  },
-  {
-    icon: FolderOpen,
-    title: "Outros",
-    description: "Canais que não se encaixam nas outras categorias (histórico permanente)",
-    color: "text-muted-foreground"
-  }
-];
+import { useTranslation } from "react-i18next";
 
 const images = [nichosImage1, nichosImage2];
 
 export const NichosViraisHero = () => {
+  const { t } = useTranslation();
   const [currentImage, setCurrentImage] = useState(0);
+
+  const categories = [
+    {
+      icon: Zap,
+      title: t("viralNiches.categories.exploding.title"),
+      description: t("viralNiches.categories.exploding.description"),
+      color: "text-yellow-500"
+    },
+    {
+      icon: TrendingUp,
+      title: t("viralNiches.categories.trending.title"),
+      description: t("viralNiches.categories.trending.description"),
+      color: "text-primary"
+    },
+    {
+      icon: BarChart3,
+      title: t("viralNiches.categories.growing.title"),
+      description: t("viralNiches.categories.growing.description"),
+      color: "text-green-500"
+    },
+    {
+      icon: Users,
+      title: t("viralNiches.categories.newChannels.title"),
+      description: t("viralNiches.categories.newChannels.description"),
+      color: "text-blue-500"
+    },
+    {
+      icon: FolderOpen,
+      title: t("viralNiches.categories.others.title"),
+      description: t("viralNiches.categories.others.description"),
+      color: "text-muted-foreground"
+    }
+  ];
 
   const nextImage = () => {
     setCurrentImage((prev) => (prev + 1) % images.length);
@@ -64,15 +66,15 @@ export const NichosViraisHero = () => {
             className="space-y-6"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary">
-              <span className="text-sm font-semibold">🔥 Nichos Virais</span>
+              <span className="text-sm font-semibold">{t("viralNiches.badge")}</span>
             </div>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
-              Descubra os <span className="text-gradient">Nichos Mais Promissores</span>
+              {t("viralNiches.title")} <span className="text-gradient">{t("viralNiches.titleHighlight")}</span>
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Sistema inteligente que categoriza canais por potencial de crescimento. Encontre oportunidades antes da concorrência.
+              {t("viralNiches.subtitle")}
             </p>
             
             <ul className="space-y-4">
@@ -92,7 +94,7 @@ export const NichosViraisHero = () => {
               onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-primary-foreground px-8 py-6 text-base font-bold rounded-xl glow-effect"
             >
-              Explorar Nichos
+              {t("viralNiches.cta")}
             </Button>
           </motion.div>
 
@@ -110,7 +112,7 @@ export const NichosViraisHero = () => {
                   <motion.img
                     key={currentImage}
                     src={images[currentImage]}
-                    alt={`Interface de Nichos Virais do Dark Planner - Tela ${currentImage + 1}`}
+                    alt={t("viralNiches.titleHighlight")}
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -100 }}
