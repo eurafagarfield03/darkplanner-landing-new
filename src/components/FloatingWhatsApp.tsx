@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export const FloatingWhatsApp = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,7 +48,7 @@ export const FloatingWhatsApp = () => {
               transition={{ delay: 0.2 }}
               className="hidden sm:block bg-background/95 backdrop-blur-sm text-foreground text-sm font-medium px-4 py-2 rounded-full shadow-lg border border-border"
             >
-              Dúvidas? Fale conosco!
+              {t("floatingWhatsApp.tooltip")}
             </motion.span>
 
             {/* Button */}

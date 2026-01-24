@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16 px-4">
       {/* Ambient Background */}
@@ -30,7 +33,7 @@ export const Hero = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-primary/20">
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-muted-foreground">
-              Criado por equipe que gerencia +15 canais Dark com +50M views
+              {t("hero.badge")}
             </span>
           </div>
         </motion.div>
@@ -42,9 +45,9 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.1] mb-8"
         >
-          <span className="text-gradient">Organize, Planeje e Escale</span>
+          <span className="text-gradient">{t("hero.title1")}</span>
           <br />
-          <span className="text-foreground">Seus Canais Dark</span>
+          <span className="text-foreground">{t("hero.title2")}</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -54,9 +57,9 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          Centralize prompts, roteiros, thumbnails e multiplique sua produção.
+          {t("hero.subtitle")}
           <br className="hidden md:block" />
-          <span className="text-foreground font-medium">De 1 vídeo por dia para 15+ vídeos.</span>
+          <span className="text-foreground font-medium">{t("hero.subtitleHighlight")}</span>
         </motion.p>
 
         {/* CTA Button */}
@@ -71,7 +74,7 @@ export const Hero = () => {
             className="group relative px-8 py-4 bg-gradient-to-r from-primary to-secondary rounded-full font-bold text-primary-foreground text-lg transition-all duration-300 hover:scale-105 glow-effect"
           >
             <span className="flex items-center gap-2">
-              Quero Organizar Meus Canais
+              {t("hero.cta")}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
           </button>
@@ -80,7 +83,7 @@ export const Hero = () => {
             onClick={() => window.location.href = 'https://app.darkplanner.com.br/'}
             className="px-8 py-4 rounded-full font-semibold text-muted-foreground hover:text-foreground transition-colors"
           >
-            Já tenho conta
+            {t("hero.hasAccount")}
           </button>
         </motion.div>
 
@@ -93,15 +96,15 @@ export const Hero = () => {
         >
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-success" />
-            <span>500+ Creators ativos</span>
+            <span>{t("hero.trust.creators")}</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-success" />
-            <span>10K+ Vídeos organizados</span>
+            <span>{t("hero.trust.videos")}</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-success" />
-            <span>Garantia de 7 dias</span>
+            <span>{t("hero.trust.guarantee")}</span>
           </div>
         </motion.div>
       </div>

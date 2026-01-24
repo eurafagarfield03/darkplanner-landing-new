@@ -1,0 +1,107 @@
+{
+  "common": {
+    "login": "Iniciar sesión",
+    "startNow": "Comenzar ahora",
+    "start": "Comenzar",
+    "learnMore": "Saber más",
+    "getStarted": "Comenzar Ahora",
+    "guarantee": "7 días de garantía",
+    "secure": "Seguro",
+    "contact": "Contacto",
+    "talkOnWhatsApp": "Hablar en WhatsApp"
+  },
+  "navbar": {
+    "resources": "Recursos",
+    "viralNiches": "Nichos Virales",
+    "audioGenerator": "Generador de Audio",
+    "price": "Precios",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "badge": "Creado por un equipo que gestiona +15 canales Dark con +50M vistas",
+    "title1": "Organiza, Planifica y Escala",
+    "title2": "Tus Canales Dark",
+    "subtitle": "Centraliza prompts, guiones, thumbnails y multiplica tu producción.",
+    "subtitleHighlight": "De 1 video por día a 15+ videos.",
+    "cta": "Quiero Organizar Mis Canales",
+    "hasAccount": "Ya tengo cuenta",
+    "trust": {
+      "creators": "500+ Creadores activos",
+      "videos": "10K+ Videos organizados",
+      "guarantee": "Garantía de 7 días"
+    }
+  },
+  "pricing": {
+    "title": "Elige tu",
+    "titleHighlight": "plan",
+    "subtitle": "De básico a profesional, tenemos el plan ideal para ti",
+    "monthly": "mensual",
+    "perMonth": "/mes",
+    "audiosPerDay": "audios",
+    "perDay": "/día",
+    "upTo": "Hasta",
+    "charsPerAudio": "caracteres por audio",
+    "customPlan": {
+      "title": "Plan Personalizado",
+      "description": "¿Necesitas algo diferente? Contáctanos para crear un plan a tu medida."
+    },
+    "plans": {
+      "basic": {
+        "name": "BASIC",
+        "subtitle": "Para quienes solo necesitan TTS"
+      },
+      "lite": {
+        "name": "LITE",
+        "subtitle": "Más audios para productores"
+      },
+      "pro": {
+        "name": "PRO",
+        "subtitle": "Sistema completo + acceso inmediato",
+        "badge": "⭐ MÁS VENDIDO",
+        "cta": "🔥 Obtener PRO"
+      },
+      "plus": {
+        "name": "PLUS",
+        "subtitle": "Máximo poder para profesionales",
+        "badge": "MÁS PODER",
+        "cta": "Obtener PLUS"
+      }
+    },
+    "features": {
+      "audioGenerator": "Generador de Audio IA",
+      "noLoyalty": "Sin compromiso",
+      "cancelAnytime": "Cancela cuando quieras",
+      "unlimitedChannels": "Canales ilimitados",
+      "promptLibrary": "Biblioteca de prompts",
+      "scriptManagement": "Gestión de guiones",
+      "srtGenerator": "Generador de SRT",
+      "viralVideosImmediate": "Videos Virales INMEDIATO",
+      "viralNichesImmediate": "Nichos Virales INMEDIATO",
+      "nicheListImmediate": "Lista de Nichos INMEDIATO",
+      "channelInsightsImmediate": "Insights de Canal INMEDIATO",
+      "prioritySupport": "Soporte prioritario",
+      "whatsappCommunity": "Comunidad WhatsApp",
+      "viralVideos": "Videos Virales",
+      "viralNiches": "Nichos Virales",
+      "nicheList": "Lista de Nichos",
+      "channelInsights": "Insights de Canal"
+    }
+  },
+  "faq": {
+    "title": "Preguntas",
+    "titleHighlight": "frecuentes",
+    "subtitle": "Resuelve tus dudas sobre Dark Planner"
+  },
+  "footer": {
+    "description": "Sistema completo para creadores de canales faceless.",
+    "copyright": "© 2025 Dark Planner • Todos los derechos reservados",
+    "terms": "Términos de uso",
+    "privacy": "Política de privacidad"
+  },
+  "floatingWhatsApp": {
+    "tooltip": "¿Dudas? ¡Habla con nosotros!"
+  },
+  "languageSelector": {
+    "language": "Idioma"
+  }
+}

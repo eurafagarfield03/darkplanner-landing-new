@@ -3,16 +3,19 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { LanguageSelector } from "./LanguageSelector";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   const menuItems = [
-    { href: "#how-it-works", label: "Recursos" },
-    { href: "#nichos-virais", label: "Nichos Virais" },
-    { href: "#audio-generator", label: "Gerador de Áudio" },
-    { href: "#pricing", label: "Preço" },
-    { href: "#faq", label: "FAQ" },
+    { href: "#how-it-works", label: t("navbar.resources") },
+    { href: "#nichos-virais", label: t("navbar.viralNiches") },
+    { href: "#audio-generator", label: t("navbar.audioGenerator") },
+    { href: "#pricing", label: t("navbar.price") },
+    { href: "#faq", label: t("navbar.faq") },
   ];
 
   const handleMenuClick = (href: string) => {
@@ -46,30 +49,32 @@ export const Navbar = () => {
         </div>
 
         {/* Desktop Buttons */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-2">
+          <LanguageSelector />
           <Button 
             variant="ghost" 
             className="font-bold text-sm md:text-base"
             onClick={() => window.location.href = 'https://app.darkplanner.com.br/'}
           >
-            Login
+            {t("common.login")}
           </Button>
           <Button 
             className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity font-bold text-sm md:text-base px-4 md:px-6"
             onClick={() => handleMenuClick('#pricing')}
           >
-            Comece agora
+            {t("common.startNow")}
           </Button>
         </div>
 
         {/* Mobile Menu */}
         <div className="flex md:hidden items-center gap-2">
+          <LanguageSelector />
           <Button 
             size="sm"
             className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity font-bold text-xs px-3"
             onClick={() => handleMenuClick('#pricing')}
           >
-            Começar
+            {t("common.start")}
           </Button>
           
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -106,13 +111,13 @@ export const Navbar = () => {
                       window.location.href = 'https://app.darkplanner.com.br/';
                     }}
                   >
-                    Login
+                    {t("common.login")}
                   </Button>
                   <Button 
                     className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity font-bold"
                     onClick={() => handleMenuClick('#pricing')}
                   >
-                    Comece agora
+                    {t("common.startNow")}
                   </Button>
                 </div>
               </div>

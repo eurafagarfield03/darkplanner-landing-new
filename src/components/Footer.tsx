@@ -1,6 +1,9 @@
 import logo from "@/assets/logo.png";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="py-12 px-6 border-t border-border">
       <div className="container max-w-6xl">
@@ -13,15 +16,15 @@ export const Footer = () => {
             <span className="font-bold text-lg">Dark Planner</span>
           </div>
           <p className="text-sm text-muted-foreground max-w-md">
-            Sistema completo para creators de canais faceless.
+            {t("footer.description")}
           </p>
           
           <div className="pt-6 border-t border-border w-full max-w-2xl">
-            <p className="text-sm text-muted-foreground mb-2">© 2025 Dark Planner • Todos os direitos reservados</p>
+            <p className="text-sm text-muted-foreground mb-2">{t("footer.copyright")}</p>
             <p className="text-sm text-muted-foreground">
-              <a href="#" className="hover:text-foreground transition-colors">Termos de uso</a>
+              <a href="#" className="hover:text-foreground transition-colors">{t("footer.terms")}</a>
               {" • "}
-              <a href="#" className="hover:text-foreground transition-colors">Política de privacidade</a>
+              <a href="#" className="hover:text-foreground transition-colors">{t("footer.privacy")}</a>
             </p>
           </div>
         </div>

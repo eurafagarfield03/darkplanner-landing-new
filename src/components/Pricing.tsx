@@ -1,137 +1,216 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Check, Clock, Zap, Gift, Shield, Lock, Volume2, Flame, Crown, Star, Headphones, Rocket } from "lucide-react";
+import { Check, Zap, Shield, Lock, Volume2, Crown, Star, Headphones, Rocket } from "lucide-react";
 import { getCheckoutURL } from "@/lib/affiliate-tracking";
+import { useTranslation } from "react-i18next";
 
-// Todos os planos em ordem de preço
-const allPlans = [
-  {
-    name: "BASIC",
-    periodLabel: "mensal",
-    subtitle: "Para quem só precisa de TTS",
-    price: "49,90",
-    period: "/mês",
-    features: [
-      { text: "Gerador de Áudio IA", highlight: true, icon: Check },
-      { text: "Sem fidelidade", highlight: false },
-      { text: "Cancele quando quiser", highlight: false },
-    ],
-    blockedFeatures: [
-      "Vídeos Virais",
-      "Nichos Virais",
-      "Lista de Nichos",
-      "Insights de Canal",
-    ],
-    audioFeatures: {
-      audiosPerDay: 15,
-      maxChars: "80 mil",
-    },
-    cta: "Começar Agora",
-    paymentUrl: "https://pay.kirvano.com/5cb87d4f-3150-4b00-bd2b-c91369512239",
-    popular: false,
-    badge: null,
-    badgeIcon: null,
-    tier: "audio",
-  },
-  {
-    name: "LITE",
-    periodLabel: "mensal",
-    subtitle: "Mais áudios para produtores",
-    price: "79,90",
-    period: "/mês",
-    features: [
-      { text: "Gerador de Áudio IA", highlight: true, icon: Check },
-      { text: "Sem fidelidade", highlight: false },
-      { text: "Cancele quando quiser", highlight: false },
-    ],
-    blockedFeatures: [
-      "Vídeos Virais",
-      "Nichos Virais",
-      "Lista de Nichos",
-      "Insights de Canal",
-    ],
-    audioFeatures: {
-      audiosPerDay: 25,
-      maxChars: "120 mil",
-    },
-    cta: "Começar Agora",
-    paymentUrl: "https://pay.kirvano.com/ca7b9f83-6b1b-444a-aefa-b34454db213c",
-    popular: false,
-    badge: null,
-    badgeIcon: null,
-    tier: "audio",
-  },
-  {
-    name: "PRO",
-    periodLabel: "mensal",
-    subtitle: "Sistema completo + acesso imediato",
-    price: "109,90",
-    period: "/mês",
-    features: [
-      { text: "Gerador de Áudio IA", highlight: true, icon: Check },
-      { text: "Canais ilimitados", highlight: false },
-      { text: "Biblioteca de prompts", highlight: false },
-      { text: "Gestão de roteiros", highlight: false },
-      { text: "Gerador de SRT", highlight: false },
-      { text: "Vídeos Virais IMEDIATO", highlight: true, icon: Zap },
-      { text: "Nichos Virais IMEDIATO", highlight: true, icon: Zap },
-      { text: "Lista de Nichos IMEDIATO", highlight: true, icon: Zap },
-      { text: "Insights de Canal IMEDIATO", highlight: true, icon: Zap },
-      { text: "Comunidade WhatsApp", highlight: false },
-    ],
-    blockedFeatures: null,
-    audioFeatures: {
-      audiosPerDay: 50,
-      maxChars: "150 mil",
-    },
-    cta: "🔥 Garantir PRO",
-    paymentUrl: "https://pay.kirvano.com/a5698a44-0780-4af0-8176-4c1ba41ae597",
-    popular: true,
-    badge: "⭐ MAIS VENDIDO",
-    badgeIcon: Star,
-    tier: "complete",
-  },
-  {
-    name: "PLUS",
-    periodLabel: "mensal",
-    subtitle: "Máximo poder para profissionais",
-    price: "149,90",
-    period: "/mês",
-    features: [
-      { text: "Gerador de Áudio IA", highlight: true, icon: Check },
-      { text: "Canais ilimitados", highlight: false },
-      { text: "Biblioteca de prompts", highlight: false },
-      { text: "Gestão de roteiros", highlight: false },
-      { text: "Gerador de SRT", highlight: false },
-      { text: "Vídeos Virais IMEDIATO", highlight: true, icon: Zap },
-      { text: "Nichos Virais IMEDIATO", highlight: true, icon: Zap },
-      { text: "Lista de Nichos IMEDIATO", highlight: true, icon: Zap },
-      { text: "Insights de Canal IMEDIATO", highlight: true, icon: Zap },
-      { text: "Suporte prioritário", highlight: true, icon: Crown },
-      { text: "Comunidade WhatsApp", highlight: false },
-    ],
-    blockedFeatures: null,
-    audioFeatures: {
-      audiosPerDay: 60,
-      maxChars: "200 mil",
-    },
-    cta: "Garantir PLUS",
-    paymentUrl: "https://pay.kirvano.com/5a583fa7-f20d-4e42-808a-1fa736c78be5",
-    popular: false,
-    badge: "MAIS PODER",
-    badgeIcon: Rocket,
-    tier: "complete",
-  },
-];
+export const Pricing = () => {
+  const { t } = useTranslation();
 
+  // Plan data with translation keys
+  const allPlans = [
+    {
+      name: t("pricing.plans.basic.name"),
+      periodLabel: t("pricing.monthly"),
+      subtitle: t("pricing.plans.basic.subtitle"),
+      price: "49,90",
+      period: t("pricing.perMonth"),
+      features: [
+        { text: t("pricing.features.audioGenerator"), highlight: true, icon: Check },
+        { text: t("pricing.features.noLoyalty"), highlight: false },
+        { text: t("pricing.features.cancelAnytime"), highlight: false },
+      ],
+      blockedFeatures: [
+        t("pricing.features.viralVideos"),
+        t("pricing.features.viralNiches"),
+        t("pricing.features.nicheList"),
+        t("pricing.features.channelInsights"),
+      ],
+      audioFeatures: {
+        audiosPerDay: 15,
+        maxChars: "80 mil",
+      },
+      cta: t("common.getStarted"),
+      paymentUrl: "https://pay.kirvano.com/5cb87d4f-3150-4b00-bd2b-c91369512239",
+      popular: false,
+      badge: null,
+      badgeIcon: null,
+      tier: "audio",
+    },
+    {
+      name: t("pricing.plans.lite.name"),
+      periodLabel: t("pricing.monthly"),
+      subtitle: t("pricing.plans.lite.subtitle"),
+      price: "79,90",
+      period: t("pricing.perMonth"),
+      features: [
+        { text: t("pricing.features.audioGenerator"), highlight: true, icon: Check },
+        { text: t("pricing.features.noLoyalty"), highlight: false },
+        { text: t("pricing.features.cancelAnytime"), highlight: false },
+      ],
+      blockedFeatures: [
+        t("pricing.features.viralVideos"),
+        t("pricing.features.viralNiches"),
+        t("pricing.features.nicheList"),
+        t("pricing.features.channelInsights"),
+      ],
+      audioFeatures: {
+        audiosPerDay: 25,
+        maxChars: "120 mil",
+      },
+      cta: t("common.getStarted"),
+      paymentUrl: "https://pay.kirvano.com/ca7b9f83-6b1b-444a-aefa-b34454db213c",
+      popular: false,
+      badge: null,
+      badgeIcon: null,
+      tier: "audio",
+    },
+    {
+      name: t("pricing.plans.pro.name"),
+      periodLabel: t("pricing.monthly"),
+      subtitle: t("pricing.plans.pro.subtitle"),
+      price: "109,90",
+      period: t("pricing.perMonth"),
+      features: [
+        { text: t("pricing.features.audioGenerator"), highlight: true, icon: Check },
+        { text: t("pricing.features.unlimitedChannels"), highlight: false },
+        { text: t("pricing.features.promptLibrary"), highlight: false },
+        { text: t("pricing.features.scriptManagement"), highlight: false },
+        { text: t("pricing.features.srtGenerator"), highlight: false },
+        { text: t("pricing.features.viralVideosImmediate"), highlight: true, icon: Zap },
+        { text: t("pricing.features.viralNichesImmediate"), highlight: true, icon: Zap },
+        { text: t("pricing.features.nicheListImmediate"), highlight: true, icon: Zap },
+        { text: t("pricing.features.channelInsightsImmediate"), highlight: true, icon: Zap },
+        { text: t("pricing.features.whatsappCommunity"), highlight: false },
+      ],
+      blockedFeatures: null,
+      audioFeatures: {
+        audiosPerDay: 50,
+        maxChars: "150 mil",
+      },
+      cta: t("pricing.plans.pro.cta"),
+      paymentUrl: "https://pay.kirvano.com/a5698a44-0780-4af0-8176-4c1ba41ae597",
+      popular: true,
+      badge: t("pricing.plans.pro.badge"),
+      badgeIcon: Star,
+      tier: "complete",
+    },
+    {
+      name: t("pricing.plans.plus.name"),
+      periodLabel: t("pricing.monthly"),
+      subtitle: t("pricing.plans.plus.subtitle"),
+      price: "149,90",
+      period: t("pricing.perMonth"),
+      features: [
+        { text: t("pricing.features.audioGenerator"), highlight: true, icon: Check },
+        { text: t("pricing.features.unlimitedChannels"), highlight: false },
+        { text: t("pricing.features.promptLibrary"), highlight: false },
+        { text: t("pricing.features.scriptManagement"), highlight: false },
+        { text: t("pricing.features.srtGenerator"), highlight: false },
+        { text: t("pricing.features.viralVideosImmediate"), highlight: true, icon: Zap },
+        { text: t("pricing.features.viralNichesImmediate"), highlight: true, icon: Zap },
+        { text: t("pricing.features.nicheListImmediate"), highlight: true, icon: Zap },
+        { text: t("pricing.features.channelInsightsImmediate"), highlight: true, icon: Zap },
+        { text: t("pricing.features.prioritySupport"), highlight: true, icon: Crown },
+        { text: t("pricing.features.whatsappCommunity"), highlight: false },
+      ],
+      blockedFeatures: null,
+      audioFeatures: {
+        audiosPerDay: 60,
+        maxChars: "200 mil",
+      },
+      cta: t("pricing.plans.plus.cta"),
+      paymentUrl: "https://pay.kirvano.com/5a583fa7-f20d-4e42-808a-1fa736c78be5",
+      popular: false,
+      badge: t("pricing.plans.plus.badge"),
+      badgeIcon: Rocket,
+      tier: "complete",
+    },
+  ];
+
+  return (
+    <section className="py-16 md:py-24 px-4" id="pricing">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
+            {t("pricing.title")} <span className="text-gradient">{t("pricing.titleHighlight")}</span>
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            {t("pricing.subtitle")}
+          </p>
+        </motion.div>
+
+        {/* Todos os planos lado a lado */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 items-center">
+          {allPlans.map((plan, index) => (
+            <PlanCard key={plan.name} plan={plan} index={index} t={t} />
+          ))}
+        </div>
+
+        {/* Plano Personalizado */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="mt-10 glass-card rounded-2xl border border-border p-6 md:p-8 text-center max-w-3xl mx-auto"
+        >
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <Headphones className="w-6 h-6 text-primary" />
+            <h3 className="text-xl md:text-2xl font-black">{t("pricing.customPlan.title")}</h3>
+          </div>
+          <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
+            {t("pricing.customPlan.description")}
+          </p>
+          <Button
+            size="lg"
+            variant="outline"
+            className="font-bold text-base px-8 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            asChild
+          >
+            <a 
+              href="https://wa.me/5577988744698?text=Ol%C3%A1%21%20Quero%20comprar%20um%20plano%20personalizado." 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              💬 {t("common.talkOnWhatsApp")}
+            </a>
+          </Button>
+        </motion.div>
+
+      </div>
+    </section>
+  );
+};
 
 interface PlanCardProps {
-  plan: typeof allPlans[0];
+  plan: {
+    name: string;
+    periodLabel: string;
+    subtitle: string;
+    price: string;
+    period: string;
+    features: { text: string; highlight: boolean; icon?: React.ComponentType<{ className?: string }> }[];
+    blockedFeatures: string[] | null;
+    audioFeatures: { audiosPerDay: number; maxChars: string };
+    cta: string;
+    paymentUrl: string;
+    popular: boolean;
+    badge: string | null;
+    badgeIcon: React.ComponentType<{ className?: string }> | null;
+    tier: string;
+  };
   index: number;
-  isPopular?: boolean;
+  t: (key: string) => string;
 }
 
-const PlanCard = ({ plan, index, isPopular = false }: PlanCardProps) => {
+const PlanCard = ({ plan, index, t }: PlanCardProps) => {
   const BadgeIcon = plan.badgeIcon;
   const hasBlockedFeatures = plan.blockedFeatures && plan.blockedFeatures.length > 0;
 
@@ -177,16 +256,16 @@ const PlanCard = ({ plan, index, isPopular = false }: PlanCardProps) => {
       <div className={`glass-card rounded-xl p-3 mb-3 border border-primary/20 bg-gradient-to-r from-primary/5 to-secondary/5 ${plan.popular ? 'p-4' : ''}`}>
         <div className="flex items-center gap-2 mb-2">
           <Volume2 className={`text-primary ${plan.popular ? 'w-5 h-5' : 'w-4 h-4'}`} />
-          <span className={`font-bold text-primary ${plan.popular ? 'text-sm' : 'text-xs'}`}>Gerador de Áudio IA</span>
+          <span className={`font-bold text-primary ${plan.popular ? 'text-sm' : 'text-xs'}`}>{t("pricing.features.audioGenerator")}</span>
         </div>
         <ul className={`space-y-1.5 ${plan.popular ? 'text-sm' : 'text-xs'}`}>
           <li className="flex items-center gap-2 text-muted-foreground">
             <Check className="w-3 h-3 text-success flex-shrink-0" />
-            <span><strong className="text-foreground">{plan.audioFeatures.audiosPerDay} áudios</strong>/dia</span>
+            <span><strong className="text-foreground">{plan.audioFeatures.audiosPerDay} {t("pricing.audiosPerDay")}</strong>{t("pricing.perDay")}</span>
           </li>
           <li className="flex items-center gap-2 text-muted-foreground">
             <Check className="w-3 h-3 text-success flex-shrink-0" />
-            <span>Até <strong className="text-foreground">{plan.audioFeatures.maxChars}</strong> caracteres por áudio</span>
+            <span>{t("pricing.upTo")} <strong className="text-foreground">{plan.audioFeatures.maxChars}</strong> {t("pricing.charsPerAudio")}</span>
           </li>
         </ul>
       </div>
@@ -234,75 +313,13 @@ const PlanCard = ({ plan, index, isPopular = false }: PlanCardProps) => {
       <div className={`flex items-center justify-center gap-3 mt-3 text-muted-foreground ${plan.popular ? 'text-sm' : 'text-xs'}`}>
         <div className="flex items-center gap-1">
           <Shield className="w-3 h-3" />
-          <span>7 dias garantia</span>
+          <span>{t("common.guarantee")}</span>
         </div>
         <div className="flex items-center gap-1">
           <Lock className="w-3 h-3" />
-          <span>Seguro</span>
+          <span>{t("common.secure")}</span>
         </div>
       </div>
     </motion.div>
-  );
-};
-
-export const Pricing = () => {
-  return (
-    <section className="py-16 md:py-24 px-4" id="pricing">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
-            Escolha seu <span className="text-gradient">plano</span>
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Do básico ao profissional, temos o plano ideal para você
-          </p>
-        </motion.div>
-
-        {/* Todos os planos lado a lado */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 items-center">
-          {allPlans.map((plan, index) => (
-            <PlanCard key={plan.name} plan={plan} index={index} />
-          ))}
-        </div>
-
-        {/* Plano Personalizado */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="mt-10 glass-card rounded-2xl border border-border p-6 md:p-8 text-center max-w-3xl mx-auto"
-        >
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <Headphones className="w-6 h-6 text-primary" />
-            <h3 className="text-xl md:text-2xl font-black">Plano Personalizado</h3>
-          </div>
-          <p className="text-muted-foreground mb-6 max-w-lg mx-auto">
-            Precisa de algo diferente? Entre em contato conosco para criar um plano sob medida para suas necessidades.
-          </p>
-          <Button
-            size="lg"
-            variant="outline"
-            className="font-bold text-base px-8 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-            asChild
-          >
-            <a 
-              href="https://wa.me/5577988744698?text=Ol%C3%A1%21%20Quero%20comprar%20um%20plano%20personalizado." 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              💬 Falar no WhatsApp
-            </a>
-          </Button>
-        </motion.div>
-
-      </div>
-    </section>
   );
 };
