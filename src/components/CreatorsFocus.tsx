@@ -1,31 +1,34 @@
 import { motion } from "framer-motion";
 import { MessageCircle, Rocket, Zap, Users } from "lucide-react";
-
-const benefits = [
-  {
-    icon: MessageCircle,
-    title: "Grupo Exclusivo",
-    description: "WhatsApp com creators que escalam canais Dark. Networking real."
-  },
-  {
-    icon: Rocket,
-    title: "Atualizações Mensais",
-    description: "Novas ferramentas baseadas 100% no feedback da comunidade."
-  },
-  {
-    icon: Zap,
-    title: "Suporte Rápido",
-    description: "Equipe em português pronta para ajudar. Respostas em até 2h."
-  }
-];
-
-const stats = [
-  { number: "500+", label: "Creators" },
-  { number: "15+", label: "Canais gerenciados" },
-  { number: "50M+", label: "Views totais" }
-];
+import { useTranslation } from "react-i18next";
 
 export const CreatorsFocus = () => {
+  const { t } = useTranslation();
+
+  const benefits = [
+    {
+      icon: MessageCircle,
+      titleKey: "creatorsFocus.benefits.group.title",
+      descriptionKey: "creatorsFocus.benefits.group.description"
+    },
+    {
+      icon: Rocket,
+      titleKey: "creatorsFocus.benefits.updates.title",
+      descriptionKey: "creatorsFocus.benefits.updates.description"
+    },
+    {
+      icon: Zap,
+      titleKey: "creatorsFocus.benefits.support.title",
+      descriptionKey: "creatorsFocus.benefits.support.description"
+    }
+  ];
+
+  const stats = [
+    { number: "500+", labelKey: "creatorsFocus.stats.creators" },
+    { number: "15+", labelKey: "creatorsFocus.stats.channels" },
+    { number: "50M+", labelKey: "creatorsFocus.stats.views" }
+  ];
+
   return (
     <section className="py-16 md:py-24 px-4">
       <div className="max-w-6xl mx-auto">
@@ -39,15 +42,15 @@ export const CreatorsFocus = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-primary/20 mb-6">
             <Users className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Comunidade</span>
+            <span className="text-sm font-medium text-primary">{t("creatorsFocus.badge")}</span>
           </div>
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6">
-            Feita <span className="text-gradient">por creators, para creators</span>
+            {t("creatorsFocus.title")} <span className="text-gradient">{t("creatorsFocus.titleHighlight")}</span>
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Diferente de softwares genéricos, o Dark Planner é construído com base nas necessidades reais de quem produz conteúdo faceless.
+            {t("creatorsFocus.subtitle")}
           </p>
         </motion.div>
 
@@ -68,7 +71,7 @@ export const CreatorsFocus = () => {
                 {stat.number}
               </div>
               <div className="text-xs md:text-sm text-muted-foreground">
-                {stat.label}
+                {t(stat.labelKey)}
               </div>
             </div>
           ))}
@@ -90,11 +93,11 @@ export const CreatorsFocus = () => {
               </div>
               
               <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
-                {benefit.title}
+                {t(benefit.titleKey)}
               </h3>
               
               <p className="text-muted-foreground leading-relaxed">
-                {benefit.description}
+                {t(benefit.descriptionKey)}
               </p>
             </motion.div>
           ))}
