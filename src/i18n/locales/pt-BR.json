@@ -520,5 +520,25 @@
         "Economiza 8+ horas e produz 3-5x mais"
       ]
     }
+  },
+  "privacy": {
+    "title": "Política de Privacidade - DarkPlanner Tools",
+    "noCollection": {
+      "title": "Não Coletamos Dados",
+      "description": "O DarkPlanner Tools não coleta, armazena nem transmite dados pessoais dos usuários."
+    },
+    "localStorage": {
+      "title": "Armazenamento Local",
+      "description": "Todos os dados (preferências, projetos e imagens de personagens) são armazenados localmente no navegador do usuário usando Chrome Storage API e IndexedDB."
+    },
+    "external": {
+      "title": "Comunicação Externa",
+      "description": "A única comunicação externa é com darkplanner.com.br para validação opcional de licença."
+    },
+    "contact": {
+      "title": "Contato"
+    },
+    "lastUpdate": "Última atualização",
+    "updateDate": "Fevereiro 2026"
   }
 }

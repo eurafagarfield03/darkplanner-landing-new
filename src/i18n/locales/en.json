@@ -520,5 +520,25 @@
         "Save 8+ hours and produce 3-5x more"
       ]
     }
+  },
+  "privacy": {
+    "title": "Privacy Policy - DarkPlanner Tools",
+    "noCollection": {
+      "title": "No Data Collection",
+      "description": "DarkPlanner Tools does not collect, store, or transmit any personal user data."
+    },
+    "localStorage": {
+      "title": "Local Storage",
+      "description": "All data (preferences, projects, and character images) are stored locally in the user's browser using Chrome Storage API and IndexedDB."
+    },
+    "external": {
+      "title": "External Communication",
+      "description": "The only external communication is with darkplanner.com.br for optional license validation."
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "lastUpdate": "Last updated",
+    "updateDate": "February 2026"
   }
 }
