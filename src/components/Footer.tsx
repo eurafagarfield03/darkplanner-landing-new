@@ -24,7 +24,7 @@ export const Footer = () => {
             <p className="text-sm text-muted-foreground">
               <a href="#" className="hover:text-foreground transition-colors">{t("footer.terms")}</a>
               {" • "}
-              <a href="#" className="hover:text-foreground transition-colors">{t("footer.privacy")}</a>
+              <a href="/privacy" className="hover:text-foreground transition-colors">{t("footer.privacy")}</a>
             </p>
           </div>
         </div>
