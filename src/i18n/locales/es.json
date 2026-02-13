@@ -4,7 +4,7 @@
     "startNow": "Comenzar ahora",
     "start": "Comenzar",
     "learnMore": "Saber más",
-    "getStarted": "Comenzar Ahora",
+    "getStarted": "Acceder al Sistema Elite",
     "guarantee": "7 días de garantía",
     "secure": "Seguro",
     "contact": "Contacto",
@@ -24,12 +24,12 @@
   },
   "hero": {
     "pioneer": "La Primera Plataforma 100% Enfocada en Creadores Dark",
-    "badge": "Creado por un equipo que gestiona +15 canales Dark con +50M vistas",
-    "title1": "Organiza, Planifica y Crea con Calidad",
-    "title2": "Tus Canales Dark",
-    "subtitle": "Centraliza prompts, guiones, thumbnails y optimiza tu proceso creativo.",
-    "subtitleHighlight": "Más tiempo para crear contenido que realmente performa.",
-    "cta": "Quiero Organizar Mis Canales",
+    "badge": "Creado por quien ya gestionó +50 millones de vistas en canales Dark",
+    "title1": "El Sistema Detrás de Canales Dark",
+    "title2": "de Alto Nivel",
+    "subtitle": "No se trata de publicar más.",
+    "subtitleHighlight": "Se trata de producir contenido que impone respeto.",
+    "cta": "Entrar al Próximo Nivel",
     "hasAccount": "Ya tengo cuenta",
     "trust": {
       "creators": "500+ Creadores activos",
@@ -54,21 +54,21 @@
     "plans": {
       "basic": {
         "name": "BASIC",
-        "subtitle": "Para quienes solo necesitan TTS"
+        "subtitle": "Para quienes solo quieren voz profesional"
       },
       "lite": {
         "name": "LITE",
-        "subtitle": "Más audios para productores"
+        "subtitle": "Para quienes están comenzando a estructurar proceso"
       },
       "pro": {
         "name": "PRO",
-        "subtitle": "Sistema completo + acceso inmediato",
-        "badge": "⭐ MÁS VENDIDO",
+        "subtitle": "Sistema completo para creadores serios",
+        "badge": "⭐ MÁS ELEGIDO",
         "cta": "🔥 Obtener PRO"
       },
       "plus": {
         "name": "PLUS",
-        "subtitle": "Máximo poder para profesionales",
+        "subtitle": "Infraestructura máxima para quienes tratan su canal como empresa",
         "badge": "MÁS PODER",
         "cta": "Obtener PLUS"
       }
@@ -94,9 +94,9 @@
     }
   },
   "howItWorks": {
-    "title": "Cómo Funciona",
-    "titleHighlight": "en la Práctica",
-    "subtitle": "10 herramientas que eliminan el caos y elevan la calidad de tu contenido",
+    "title": "Qué es",
+    "titleHighlight": "Dark Planner",
+    "subtitle": "La infraestructura invisible detrás de canales Dark que crecen con estándar",
     "features": {
       "dashboard": {
         "label": "Dashboard",
@@ -110,7 +110,7 @@
       },
       "audio": {
         "label": "Audio",
-        "title": "Generador de Audio IA",
+        "title": "Voces Ultra-Realistas",
         "description": "Transforma texto en audio con más de 190 Voces Premium ultra-realistas y control de velocidad. Generamos automáticamente el archivo .srt sincronizado perfectamente con el habla para importar en Premiere/CapCut."
       },
       "editor": {
@@ -120,7 +120,7 @@
       },
       "prompts": {
         "label": "Prompts",
-        "title": "Biblioteca de Prompts",
+        "title": "Biblioteca Estratégica de Prompts",
         "description": "Guarda y organiza todos los prompts que funcionan. Búsqueda rápida y etiquetas para encontrar en segundos."
       },
       "references": {
@@ -145,8 +145,8 @@
       },
       "community": {
         "label": "Comunidad",
-        "title": "Comunidad Exclusiva",
-        "description": "Conéctate con otros creadores en WhatsApp. Intercambio de experiencias y networking real."
+        "title": "Comunidad Seleccionada",
+        "description": "Conéctate con otros creadores en WhatsApp. Ambiente estratégico y networking real."
       }
     }
   },
@@ -207,9 +207,9 @@
   },
   "cta": {
     "badge": "Oferta Limitada",
-    "title": "Hora de organizar y",
-    "titleHighlight": "profesionalizar",
-    "subtitle": "Ya sabes crear contenido. Ahora aprende a crear con calidad de verdad."
+    "title": "Estructura tu canal",
+    "titleHighlight": "como un profesional",
+    "subtitle": "Ya tienes el talento. Ahora ten el sistema."
   },
   "creatorStory": {
     "title": "Por qué creé",
@@ -227,26 +227,26 @@
       "p3": "Creé Dark Planner primero para mí. Después lo mostré a algunos amigos creadores. Pidieron acceso. En 3 meses,",
       "p3b": "la calidad de mis videos se disparó",
       "p3c": "y estaba ayudando a decenas de creadores a hacer lo mismo.",
-      "p4": "Hoy, Dark Planner organiza miles de videos y ahorra cientos de horas por semana para creadores que están creando contenido de calidad de verdad."
+      "p4": "Hoy, Dark Planner organiza miles de videos y ahorra cientos de horas por semana para creadores que operan sus canales como verdaderos profesionales."
     }
   },
   "beforeAfter": {
-    "title": "¿Reconoces esta",
-    "titleHighlight": "rutina",
-    "subtitle": "Si alguna vez perdiste horas buscando archivos o rehaciendo trabajo que ya tenías listo, necesitas Dark Planner",
-    "cta": "Sí, quiero organizar mi producción ahora",
+    "title": "El Dolor",
+    "titleHighlight": "Invisible",
+    "subtitle": "El mayor miedo del creador Dark serio? Ser solo \"uno más\".",
+    "cta": "Acceder al Sistema Elite",
     "problems": {
       "prompt": {
-        "title": "\"¿Dónde guardé ese prompt?\"",
-        "description": "Pierdes 30+ minutos buscando prompts en conversaciones antiguas de ChatGPT o archivos de texto sueltos"
+        "title": "Tener vistas, pero no identidad",
+        "description": "Creces, pero tu contenido no se diferencia. Sin estándar, sin personalidad, sin sistema."
       },
       "thumbnail": {
-        "title": "\"¿Cuál thumbnail era de este?\"",
-        "description": "Al subir, no recuerdas qué referencia de thumbnail usar porque no lo anotaste en ningún lugar"
+        "title": "Crecer sin construir estándar",
+        "description": "Viralizar una vez es suerte. Construir consistencia es método. Sin estructura, cada video es un reinicio."
       },
       "script": {
-        "title": "\"¿Este guion es de cuál video?\"",
-        "description": "Guiones guardados aleatoriamente sin conexión con los títulos de los videos causan confusión total"
+        "title": "Viralizar sin dominar proceso",
+        "description": "Sabes que tienes potencial para mucho más. Pero sin infraestructura de élite, el talento se vuelve frustración."
       }
     }
   },
@@ -258,16 +258,16 @@
       "note": "Sin preguntas. Sin burocracia."
     },
     "cta": {
-      "title": "Organiza y",
-      "titleHighlight": "profesionaliza tus resultados",
-      "description": "Mientras lees esto, otros creadores ya están creando con calidad usando Dark Planner."
+      "title": "Puedes seguir improvisando.",
+      "titleHighlight": "O puedes estructurar como profesional.",
+      "description": "Garantía de 7 días. Acceso inmediato."
     }
   },
   "audioGenerator": {
-    "badge": "Voces Ultra-Realistas",
+    "badge": "Estándar Cinematográfico",
     "title": "Generador de Audio",
     "titleHighlight": "con IA",
-    "subtitle": "Transforma texto en audio con voces ultra-realistas. Más de 190 voces premium para tus videos Dark.",
+    "subtitle": "+190 voces premium. Ultra-realistas. Tu contenido deja de sonar genérico. Pasa a sonar profesional.",
     "features": {
       "voices": {
         "title": "+190 Voces Premium",
@@ -287,8 +287,8 @@
       }
     },
     "list": {
-      "speed": "🎚️ Velocidad ajustable (0.5x - 1.5x)",
-      "volume": "🔊 Volumen personalizable (0.5x - 2.0x)",
+      "speed": "🎚️ Control total de velocidad (0.5x - 1.5x)",
+      "volume": "🔊 Control total de tono (0.5x - 2.0x)",
       "wordsPerLine": "📝 Subtítulo: Palabras por línea (1-15)",
       "casing": "🔤 Subtítulo: Normal, MAYÚSCULA o minúscula"
     },
@@ -296,10 +296,10 @@
     "cta": "Probar Generador de Audio"
   },
   "viralNiches": {
-    "badge": "🔥 Nichos Virales",
-    "title": "Descubre los",
-    "titleHighlight": "Nichos Más Prometedores",
-    "subtitle": "Sistema inteligente que categoriza canales por potencial de crecimiento. Encuentra oportunidades antes que la competencia.",
+    "badge": "🔥 Inteligencia Anticipada",
+    "title": "Nichos",
+    "titleHighlight": "Virales",
+    "subtitle": "La élite no persigue tendencias. Entra antes. Nuestro sistema identifica oportunidades antes que la competencia.",
     "cta": "Explorar Nichos",
     "categories": {
       "exploding": {
@@ -325,14 +325,14 @@
     }
   },
   "channelInsights": {
-    "badge": "📊 Insights de Canal",
-    "title": "Análisis Profesional",
-    "titleHighlight": "de Cualquier Canal",
-    "subtitle": "Entiende qué hace crecer un canal. Métricas completas, análisis de contenido e insights accionables.",
+    "badge": "📊 Insights Profesionales",
+    "title": "Insights Profesionales",
+    "titleHighlight": "de Canal",
+    "subtitle": "No es solo ver números. Es entender patrones. La calidad deja pistas. Nosotros mostramos dónde mirar.",
     "features": {
-      "metrics": "Métricas de crecimiento y engagement",
-      "titles": "Análisis de títulos y thumbnails que funcionan",
-      "patterns": "Identificación de patrones de éxito"
+      "metrics": "Estructuras de títulos que enganchan",
+      "titles": "Thumbnails que convierten clics",
+      "patterns": "Frecuencia estratégica y crecimiento sostenible"
     },
     "cta": "Analizar Canales"
   },
@@ -345,7 +345,7 @@
     }
   },
   "footer": {
-    "description": "Sistema completo para creadores de canales faceless.",
+    "description": "El sistema detrás de canales Dark de alto nivel.",
     "copyright": "© 2025 Dark Planner • Todos los derechos reservados",
     "terms": "Términos de uso",
     "privacy": "Política de privacidad"
@@ -357,10 +357,10 @@
     "language": "Idioma"
   },
   "creatorsFocus": {
-    "badge": "Comunidad",
-    "title": "Hecha",
-    "titleHighlight": "por creadores, para creadores",
-    "subtitle": "A diferencia de software genérico, Dark Planner está construido basado en las necesidades reales de quienes producen contenido faceless.",
+    "badge": "Comunidad Seleccionada",
+    "title": "No es un grupo lleno.",
+    "titleHighlight": "Es un ambiente estratégico.",
+    "subtitle": "Creadores que tratan YouTube como negocio. Actualizaciones mensuales basadas en feedback real.",
     "stats": {
       "creators": "Creadores",
       "channels": "Canales gestionados",
@@ -368,60 +368,60 @@
     },
     "benefits": {
       "group": {
-        "title": "Grupo Exclusivo",
-        "description": "WhatsApp con creadores que crean contenido Dark de calidad. Networking real."
+        "title": "Creadores Serios",
+        "description": "WhatsApp con creadores que tratan su canal como negocio. Networking real."
       },
       "updates": {
         "title": "Actualizaciones Mensuales",
-        "description": "Nuevas herramientas basadas 100% en feedback de la comunidad."
+        "description": "Nuevas herramientas basadas 100% en feedback real de la comunidad."
       },
       "support": {
-        "title": "Soporte Rápido",
-        "description": "Equipo listo para ayudar. Respuestas en hasta 2h."
+        "title": "Soporte Directo",
+        "description": "Soporte rápido. Directo. Respuestas en hasta 2h."
       }
     }
   },
   "problemSolution": {
-    "problemTitle": "Lo que estás",
-    "problemHighlight": "perdiendo",
-    "problemSubtitle": "Cada día sin sistema es dinero y tiempo desperdiciados",
-    "solutionTitle": "La",
-    "solutionHighlight": "solución completa",
-    "solutionSubtitle": "Sistema profesional para organizar y crear contenido de calidad",
-    "transition": "Con Dark Planner",
+    "problemTitle": "El Dolor Que",
+    "problemHighlight": "Nadie Ve",
+    "problemSubtitle": "Publicas. Creces. Algunos videos se viralizan. Pero en el fondo sabes:",
+    "solutionTitle": "Creadores Comunes Hacen Videos.",
+    "solutionHighlight": "Creadores de Élite Construyen Sistemas.",
+    "solutionSubtitle": "Dark Planner no fue creado para principiantes curiosos. Fue creado para quienes quieren operar como profesionales.",
+    "transition": "La diferencia no está en el talento. Está en el método.",
     "problems": {
       "time": {
-        "title": "Tiempo desperdiciado",
-        "description": "2-3 horas por día buscando archivos, prompts y referencias dispersas."
+        "title": "Proceso improvisado",
+        "description": "Ideas dispersas. Guiones inconsistentes. Referencias perdidas."
       },
       "consistency": {
-        "title": "Cero consistencia",
-        "description": "Hiciste un video viral, pero no puedes replicarlo porque no tienes sistema."
+        "title": "Éxito que no se replica",
+        "description": "Sabes que tienes potencial para mucho más. Pero falta estructura de élite."
       },
       "production": {
-        "title": "Sin planificación",
-        "description": "Creas sin storyboard ni estrategia. Contenido amateur que YouTube no recomienda."
+        "title": "Y eso duele",
+        "description": "Porque tienes talento. Pero sin sistema, el talento se vuelve frustración."
       }
     },
     "solutions": {
       "centralized": {
-        "title": "Todo centralizado",
-        "description": "Prompts, guiones, thumbnails y referencias en un solo lugar."
+        "title": "Estructura de guion",
+        "description": "Biblioteca estratégica de prompts y organización de alto nivel."
       },
       "replicate": {
-        "title": "Replica éxitos",
-        "description": "Guarda videos virales y adapta lo que ya funcionó."
+        "title": "Inteligencia de nichos",
+        "description": "Análisis profundo de canales y voces ultra-realistas."
       },
       "scale": {
-        "title": "Crea con calidad",
-        "description": "Storyboard, guion estructurado y audio profesional en cada video."
+        "title": "Método profesional",
+        "description": "Todo pensado para elevar el nivel de tu contenido."
       }
     }
   },
   "toolsGrid": {
     "title": "10 herramientas",
     "titleHighlight": "en un solo lugar",
-    "subtitle": "Todo lo que necesitas para crear contenido profesional",
+    "subtitle": "Todo lo que necesitas para operar tus canales como profesional",
     "tools": {
       "channelManagement": {
         "name": "Gestión de Canales",
@@ -470,7 +470,7 @@
     "statsTitleHighlight": "lo prueban",
     "stats": {
       "creators": "Creadores activos",
-      "videos": "Videos organizados",
+      "videos": "Proyectos organizados",
       "increase": "Aumento promedio",
       "hours": "Ahorradas/semana"
     },
@@ -496,28 +496,28 @@
   },
   "comparison": {
     "title": "La diferencia entre",
-    "titleHighlight1": "contenido amateur",
+    "titleHighlight1": "Amateur",
     "titleAnd": "y",
-    "titleHighlight2": "contenido profesional",
-    "subtitle": "No es falta de ideas. Es falta de organización.",
+    "titleHighlight2": "Élite",
+    "subtitle": "La diferencia no está en el talento. Está en el método.",
     "without": {
-      "title": "Sin Dark Planner",
+      "title": "Amateur",
       "items": [
-        "Prompts perdidos en conversaciones antiguas",
-        "Guiones sin conexión con los videos",
-        "Thumbnails olvidadas al subir",
-        "Canales de referencia guardados aleatoriamente",
-        "Pierdes 2-3 horas por día buscando archivos"
+        "Trabaja en la improvisación",
+        "Depende de la suerte para viralizar",
+        "Empieza cada video desde cero",
+        "Sin estándar ni identidad",
+        "Contenido que YouTube no recomienda"
       ]
     },
     "with": {
-      "title": "Con Dark Planner",
+      "title": "Élite",
       "items": [
-        "Prompts organizados con búsqueda rápida",
-        "Guiones conectados directamente al video",
-        "Referencias siempre a mano para subir",
-        "Biblioteca organizada por nicho",
-        "Ahorras horas y creas contenido que YouTube recomienda"
+        "Trabaja con estructura",
+        "Replica patrones de éxito",
+        "Construye activos a largo plazo",
+        "Identidad y consistencia en cada video",
+        "Contenido que impone respeto"
       ]
     }
   },
