@@ -25,15 +25,15 @@
   "hero": {
     "pioneer": "1ª Plataforma do Brasil 100% focada em Criadores Dark",
     "badge": "Criado por equipe que gerencia +15 canais Dark com +50M views",
-    "title1": "Organize, Planeje e Escale",
+    "title1": "Organize, Planeje e Crie com Qualidade",
     "title2": "Seus Canais Dark",
-    "subtitle": "Centralize prompts, roteiros, thumbnails e multiplique sua produção.",
-    "subtitleHighlight": "De 1 vídeo por dia para 15+ vídeos.",
+    "subtitle": "Centralize prompts, roteiros, thumbnails e otimize seu processo criativo.",
+    "subtitleHighlight": "Mais tempo para criar conteúdo que realmente performa.",
     "cta": "Quero Organizar Meus Canais",
     "hasAccount": "Já tenho conta",
     "trust": {
       "creators": "500+ Creators ativos",
-      "videos": "10K+ Vídeos organizados",
+      "videos": "10K+ Projetos organizados",
       "guarantee": "Garantia de 7 dias"
     }
   },
@@ -96,7 +96,7 @@
   "howItWorks": {
     "title": "Como Funciona",
     "titleHighlight": "na Prática",
-    "subtitle": "10 ferramentas que eliminam o caos e multiplicam sua produção",
+    "subtitle": "10 ferramentas que eliminam o caos e elevam a qualidade do seu conteúdo",
     "features": {
       "dashboard": {
         "label": "Dashboard",
@@ -208,8 +208,8 @@
   "cta": {
     "badge": "Oferta Limitada",
     "title": "Hora de organizar e",
-    "titleHighlight": "multiplicar",
-    "subtitle": "Você já sabe criar conteúdo. Agora aprenda a escalar de verdade."
+    "titleHighlight": "profissionalizar",
+    "subtitle": "Você já sabe criar conteúdo. Agora aprenda a criar com qualidade de verdade."
   },
   "creatorStory": {
     "title": "Por que eu criei o",
@@ -225,9 +225,9 @@
       "p2c": "que tinha dado trabalho fazer. Passei 2 horas procurando. Foi quando percebi:",
       "p2d": "o problema não era falta de tempo ou talento. Era desorganização pura.",
       "p3": "Criei o Dark Planner primeiro pra mim. Depois mostrei pra alguns amigos creators. Eles pediram acesso. Em 3 meses,",
-      "p3b": "minha produção triplicou",
+      "p3b": "a qualidade dos meus vídeos disparou",
       "p3c": "e eu estava ajudando dezenas de creators a fazer o mesmo.",
-      "p4": "Hoje, o Dark Planner organiza milhares de vídeos e economiza centenas de horas por semana pra creators que estão escalando de verdade."
+      "p4": "Hoje, o Dark Planner organiza milhares de vídeos e economiza centenas de horas por semana pra creators que estão criando conteúdo de qualidade de verdade."
     }
   },
   "beforeAfter": {
@@ -259,8 +259,8 @@
     },
     "cta": {
       "title": "Organize e",
-      "titleHighlight": "multiplique seus resultados",
-      "description": "Enquanto você está lendo isso, outros creators já estão escalando com o Dark Planner."
+      "titleHighlight": "profissionalize seus resultados",
+      "description": "Enquanto você está lendo isso, outros creators já estão criando com qualidade usando o Dark Planner."
     }
   },
   "audioGenerator": {
@@ -369,7 +369,7 @@
     "benefits": {
       "group": {
         "title": "Grupo Exclusivo",
-        "description": "WhatsApp com creators que escalam canais Dark. Networking real."
+        "description": "WhatsApp com creators que criam conteúdo Dark de qualidade. Networking real."
       },
       "updates": {
         "title": "Atualizações Mensais",
@@ -387,7 +387,7 @@
     "problemSubtitle": "Cada dia sem sistema é dinheiro e tempo jogados fora",
     "solutionTitle": "A",
     "solutionHighlight": "solução completa",
-    "solutionSubtitle": "Sistema profissional para organizar e escalar seus canais",
+    "solutionSubtitle": "Sistema profissional para organizar e criar conteúdo de qualidade",
     "transition": "Com Dark Planner",
     "problems": {
       "time": {
@@ -399,8 +399,8 @@
         "description": "Fez um vídeo viral, mas não consegue replicar porque não tem sistema."
       },
       "production": {
-        "title": "Produção travada",
-        "description": "Só consegue 2-3 vídeos/semana enquanto concorrentes passam na frente."
+        "title": "Sem planejamento",
+        "description": "Cria sem storyboard nem estratégia. Conteúdo amador que o YouTube não recomenda."
       }
     },
     "solutions": {
@@ -413,15 +413,15 @@
         "description": "Salve vídeos virais e adapte o que já funcionou."
       },
       "scale": {
-        "title": "Escale produção",
-        "description": "De 2-3 vídeos por semana para 15+ vídeos."
+        "title": "Crie com qualidade",
+        "description": "Storyboard, roteiro estruturado e áudio profissional em cada vídeo."
       }
     }
   },
   "toolsGrid": {
     "title": "10 ferramentas",
     "titleHighlight": "em um lugar",
-    "subtitle": "Tudo que você precisa para escalar seus canais Dark",
+    "subtitle": "Tudo que você precisa para criar conteúdo profissional",
     "tools": {
       "channelManagement": {
         "name": "Gestão de Canais",
@@ -480,7 +480,7 @@
       "carlos": {
         "name": "Carlos M.",
         "role": "3 Canais Dark • 150K inscritos",
-        "content": "Tinha prompts soltos em 3 docs diferentes. Agora tá tudo aqui. Produção subiu 300%."
+        "content": "Tinha prompts soltos em 3 docs diferentes. Agora tá tudo aqui. Qualidade e organização subiram demais."
       },
       "ana": {
         "name": "Ana Ribeiro",
@@ -490,15 +490,15 @@
       "marcos": {
         "name": "Marcos Silva",
         "role": "5 canais • 400K total",
-        "content": "Gerencio 5 canais sozinho com o Planner. Escalo sem contratar ninguém."
+        "content": "Gerencio 5 canais sozinho com o Planner. Crio conteúdo profissional sozinho."
       }
     }
   },
   "comparison": {
     "title": "A diferença entre",
-    "titleHighlight1": "1 vídeo",
+    "titleHighlight1": "conteúdo amador",
     "titleAnd": "e",
-    "titleHighlight2": "5 por dia",
+    "titleHighlight2": "conteúdo profissional",
     "subtitle": "Não é falta de ideias. É falta de organização.",
     "without": {
       "title": "Sem Dark Planner",
@@ -517,7 +517,7 @@
         "Roteiros conectados diretamente ao vídeo",
         "Referências sempre à mão para upload",
         "Biblioteca organizada por nicho",
-        "Economiza 8+ horas e produz 3-5x mais"
+        "Economiza horas e cria conteúdo que o YouTube recomenda"
       ]
     }
   },
